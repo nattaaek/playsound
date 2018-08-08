@@ -1,26 +1,88 @@
 //
-//  Chapter1_25.swift
+//  Chapter1_31.swift
 //  playsound
 //
-//  Created by student on 8/7/18.
+//  Created by student on 8/8/18.
 //  Copyright © 2018 harvestidea. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
+class Chapter1_31: UIViewController, AVAudioPlayerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
-class Chapter1_25: UIViewController, AVAudioPlayerDelegate,UICollectionViewDelegate, UICollectionViewDataSource {
+    var totalPaint: Int = 0
     
-    
-    @IBAction func nextPage(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_26") as! Chapter1_26
-        vc.pictureColor = currentColor
-        self.present(vc, animated: true, completion: nil)
+    @IBAction func topright(_ sender: Any) {
+        if currentColor == "pink" {
+            totalPaint += 1
+            if totalPaint == 5 {
+                nextPage()
+            }
+        }
+        else {
+            wrongColor()
+        }
+    }
+    @IBAction func topleft(_ sender: Any) {
+        if currentColor == "pink" {
+            totalPaint += 1
+            if totalPaint == 5 {
+                nextPage()
+            }
+        }
+        else {
+            wrongColor()
+        }
+    }
+    @IBAction func center(_ sender: Any) {
+        if currentColor == "pink" {
+            totalPaint += 1
+            if totalPaint == 5 {
+                nextPage()
+            }
+        }
+        else {
+            wrongColor()
+        }
+    }
+    @IBAction func bottomright(_ sender: Any) {
+        if currentColor == "pink" {
+            totalPaint += 1
+            if totalPaint == 5 {
+                nextPage()
+            }
+        }
+        else {
+            wrongColor()
+        }
+    }
+    @IBAction func bottomleft(_ sender: Any) {
+        if currentColor == "pink" {
+            totalPaint += 1
+            if totalPaint == 5 {
+                nextPage()
+            }
+        }
+        else {
+            wrongColor()
+        }
     }
     
+    func nextPage() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_32")
+        self.present(vc!, animated: true, completion: nil)
+    }
+    
+    func wrongColor() {
+        let alert = UIAlertController(title: "Wrong color", message: "you choose wrong color", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     var currentColor: String = ""
-    let colors = ["black","blue","brown","cyan","green","magenta","orange","purple","red","yellow","salmon","lavender"]
+    let colors = ["pink","blue","brown","cyan","green","magenta","orange","purple","red","yellow","salmon","lavender"]
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -37,11 +99,11 @@ class Chapter1_25: UIViewController, AVAudioPlayerDelegate,UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = colorsPalette.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         
-      
-
+        
+        
         switch colors[indexPath.row] {
-        case "black":
-            cell.backgroundColor = UIColor.black
+        case "pink":
+            cell.backgroundColor = UIColor(red: 255/255, green: 192/255, blue: 203/255, alpha: 1.0)
         case "blue":
             cell.backgroundColor = UIColor.blue
         case "brown":
@@ -71,14 +133,14 @@ class Chapter1_25: UIViewController, AVAudioPlayerDelegate,UICollectionViewDeleg
         return cell
     }
     
-
+    
     @IBOutlet weak var colorsPalette: UICollectionView!
     
     var conversationSound: AVAudioPlayer = AVAudioPlayer()
     var isShow = 1
     
     @IBOutlet weak var colorPalette: UIView!
-
+    
     @IBAction func showColorPalete(_ sender: Any) {
         
         if isShow == 0 {
@@ -88,15 +150,6 @@ class Chapter1_25: UIViewController, AVAudioPlayerDelegate,UICollectionViewDeleg
         else {
             colorPalette.isHidden = false
             isShow = 0
-        }
-    }
-    
-    @objc func removeSubview(){
-        print("Start remove sibview")
-        if let viewWithTag = self.view.viewWithTag(100) {
-            viewWithTag.removeFromSuperview()
-        }else{
-            print("No!")
         }
     }
     
