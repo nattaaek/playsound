@@ -1,29 +1,86 @@
 //
-//  Chapter1_32.swift
+//  Chapter1_34.swift
 //  playsound
 //
-//  Created by student on 8/8/18.
+//  Created by student on 8/9/18.
 //  Copyright © 2018 harvestidea. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class Chapter1_32: UIViewController, AVAudioPlayerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class Chapter1_34: UIViewController, AVAudioPlayerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
+
+    var totalPaint: Int = 0
     
-    
-    @IBAction func nextPage(_ sender: Any) {
+    @IBAction func topright(_ sender: Any) {
         if currentColor == "brown" {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_33")
-            self.present(vc!, animated: true, completion: nil)
+            totalPaint += 1
+            if totalPaint == 5 {
+                nextPage()
+            }
         }
         else {
-            let alert = UIAlertController(title: "Wrong color", message: "you choose wrong color", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            wrongColor()
         }
     }
+    @IBAction func topleft(_ sender: Any) {
+        if currentColor == "brown" {
+            totalPaint += 1
+            if totalPaint == 5 {
+                nextPage()
+            }
+        }
+        else {
+            wrongColor()
+        }
+    }
+    @IBAction func center(_ sender: Any) {
+        if currentColor == "brown" {
+            totalPaint += 1
+            if totalPaint == 5 {
+                nextPage()
+            }
+        }
+        else {
+            wrongColor()
+        }
+    }
+    @IBAction func bottomright(_ sender: Any) {
+        if currentColor == "brown" {
+            totalPaint += 1
+            if totalPaint == 5 {
+                nextPage()
+            }
+        }
+        else {
+            wrongColor()
+        }
+    }
+    @IBAction func bottomleft(_ sender: Any) {
+        if currentColor == "brown" {
+            totalPaint += 1
+            if totalPaint == 5 {
+                nextPage()
+            }
+        }
+        else {
+            wrongColor()
+        }
+    }
+    
+    func nextPage() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_35")
+        self.present(vc!, animated: true, completion: nil)
+    }
+    
+    func wrongColor() {
+        let alert = UIAlertController(title: "Wrong color", message: "you choose wrong color", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     var currentColor: String = ""
     let colors = ["pink","blue","brown","cyan","green","magenta","orange","purple","red","yellow","salmon","lavender"]
@@ -118,4 +175,5 @@ class Chapter1_32: UIViewController, AVAudioPlayerDelegate, UICollectionViewData
         self.colorsPalette.delegate = self
         self.colorsPalette.dataSource = self
     }
+
 }
