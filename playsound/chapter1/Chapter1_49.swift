@@ -1,26 +1,28 @@
 //
-//  Chapter1_23.swift
+//  Chapter1_49.swift
 //  playsound
 //
-//  Created by student on 8/7/18.
+//  Created by student on 9/4/18.
 //  Copyright © 2018 harvestidea. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class Chapter1_23: UIViewController, AVAudioPlayerDelegate {
+class Chapter1_49: UIViewController, AVAudioPlayerDelegate {
 
+
+    
     var conversationSound: AVAudioPlayer = AVAudioPlayer()
     
-    @IBOutlet weak var btnNext: UIButton!
     @IBAction func nextPage(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_24")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_48")
         self.present(vc!, animated: true, completion: nil)
     }
+    @IBOutlet weak var btnNext: UIButton!
     func audioPlay() {
         
-        let path = Bundle.main.path(forResource: "p21clapwithsound.mp3", ofType: nil)!
+        let path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
         let url = URL(fileURLWithPath: path)
         do {
             conversationSound = try AVAudioPlayer(contentsOf: url)
@@ -42,4 +44,5 @@ class Chapter1_23: UIViewController, AVAudioPlayerDelegate {
         audioPlay()
         
     }
+
 }

@@ -1,41 +1,46 @@
 //
-//  Chapter1_40.swift
+//  Chapter1_40_3.swift
 //  playsound
 //
-//  Created by student on 8/9/18.
+//  Created by student on 9/4/18.
 //  Copyright © 2018 harvestidea. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class Chapter1_40: UIViewController, AVAudioPlayerDelegate {
-
+class Chapter1_40_3: UIViewController, AVAudioPlayerDelegate {
     var conversationSound: AVAudioPlayer = AVAudioPlayer()
     var answer = ""
-
-    @IBOutlet weak var choiceAnswer: UIImageView!
-    @IBAction func lionAnswer(_ sender: Any) {
-        if answer == "low"{
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_40_2")
-            self.present(vc!, animated: false, completion: nil)
-            choiceAnswer.image = UIImage(named: "correct.png")
-        }else {
+    
+    @IBAction func birdAnswer(_ sender: Any) {
+        if answer == "high" {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_41")
+            self.present(vc!, animated: true, completion: nil)
+        }else{
             let alert = UIAlertController(title: "Error", message: "wrong choice", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
     
-    @IBAction func birdAnswer(_ sender: Any) {
-        if answer == "high" {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_40_2")
-            self.present(vc!, animated: false, completion: nil)
+    
+    @IBAction func lionAnswer(_ sender: Any) {
+        if answer == "low" {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_41")
+            self.present(vc!, animated: true, completion: nil)
         }else{
             let alert = UIAlertController(title: "Error", message: "wrong choice", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        audioPlay()
+        // Do any additional setup after loading the view.
     }
     
     func audioPlay() {
@@ -60,12 +65,4 @@ class Chapter1_40: UIViewController, AVAudioPlayerDelegate {
             print(error)
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        audioPlay()
-        
-    }
-
 }

@@ -14,7 +14,7 @@ class Chapter1_21: UIViewController, AVAudioPlayerDelegate {
     var conversationSound: AVAudioPlayer = AVAudioPlayer()
 
     @IBAction func nextPage(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_21")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_22")
         self.present(vc!, animated: true, completion: nil)
     }
     

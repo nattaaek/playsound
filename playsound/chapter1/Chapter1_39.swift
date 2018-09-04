@@ -20,7 +20,7 @@ class Chapter1_39: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var btnNext: UIButton!
     func audioPlay() {
         
-        let path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
+        let path = Bundle.main.path(forResource: "p5lownote.mp3", ofType: nil)!
         let url = URL(fileURLWithPath: path)
         do {
             conversationSound = try AVAudioPlayer(contentsOf: url)
