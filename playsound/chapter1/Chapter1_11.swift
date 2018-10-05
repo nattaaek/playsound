@@ -10,12 +10,15 @@ import UIKit
 import AVFoundation
 
 class Chapter1_11: UIViewController, AVAudioPlayerDelegate {
-
-    @IBAction func nextPage(_ sender: Any) {
+    
+    func nextPage() {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_12")
         self.present(vc!, animated: false, completion: nil)
     }
-    @IBOutlet weak var nextBtn: UIButton!
+    
+
+    
+    
     var conversationSound: AVAudioPlayer = AVAudioPlayer()
     
     var currentAnswer: String = ""
@@ -25,7 +28,7 @@ class Chapter1_11: UIViewController, AVAudioPlayerDelegate {
         answer = "high"
         if answer == currentAnswer {
             answer2.image = UIImage(named: "correct.png")
-            nextBtn.isHidden = false
+           nextPage()
         }
         else {
             let alert = UIAlertController(title: "wrong answer", message: "please listen again", preferredStyle: .alert)
@@ -37,7 +40,7 @@ class Chapter1_11: UIViewController, AVAudioPlayerDelegate {
         answer = "low"
         if answer == currentAnswer {
             answer2.image = UIImage(named: "correct.png")
-            nextBtn.isHidden = false
+            nextPage()
         }
         else {
             let alert = UIAlertController(title: "wrong answer", message: "please listen again", preferredStyle: .alert)
@@ -75,7 +78,6 @@ class Chapter1_11: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextBtn.isHidden = true
         
         audioPlay()
         

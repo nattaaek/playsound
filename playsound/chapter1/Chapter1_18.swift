@@ -26,7 +26,7 @@ class Chapter1_18: UIViewController, AVAudioPlayerDelegate {
     @IBAction func finger1(_ sender: Any) {
         if currentColor == "red" {
             countFinger += 1
-            if countFinger == 2 {
+            if countFinger == 3 {
                 btnNext.isHidden = false
             }
             finger1Style.isHidden = true
@@ -41,7 +41,7 @@ class Chapter1_18: UIViewController, AVAudioPlayerDelegate {
     @IBAction func finger2(_ sender: Any) {
         if currentColor == "blue" {
             countFinger += 1
-            if countFinger == 2 {
+            if countFinger == 3 {
                 btnNext.isHidden = false
             }
             finger2Style.isHidden = true
@@ -52,8 +52,19 @@ class Chapter1_18: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
+    @IBOutlet weak var finger3Style: UIButton!
     @IBAction func finger3(_ sender: Any) {
-        wrongFingure()
+        if currentColor == "ring" {
+            countFinger += 1
+            if countFinger == 3 {
+                btnNext.isHidden = false
+            }
+            finger3Style.isHidden = true
+        } else {
+            let alert = UIAlertController(title: "Wrong choice", message: "You choose wrong fingure", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func finger4(_ sender: Any) {
@@ -72,6 +83,9 @@ class Chapter1_18: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var btnNext: UIButton!
     
+    @IBAction func ring(_ sender: Any) {
+        currentColor = "ring"
+    }
     @IBAction func redColor(_ sender: Any) {
         currentColor = "red"
     }

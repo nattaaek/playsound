@@ -14,9 +14,15 @@ class Chapter1_25: UIViewController, AVAudioPlayerDelegate,UICollectionViewDeleg
     
     
     @IBAction func nextPage(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_26") as! Chapter1_26
-        vc.pictureColor = currentColor
-        self.present(vc, animated: true, completion: nil)
+        if currentColor != "" {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_26") as! Chapter1_26
+            vc.pictureColor = currentColor
+            self.present(vc, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Please select color to fill the star", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     var currentColor: String = ""
@@ -32,6 +38,8 @@ class Chapter1_25: UIViewController, AVAudioPlayerDelegate,UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         currentColor = colors[indexPath.row]
+        removeColor()
+
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -81,6 +89,17 @@ class Chapter1_25: UIViewController, AVAudioPlayerDelegate,UICollectionViewDeleg
 
     @IBAction func showColorPalete(_ sender: Any) {
         
+        if isShow == 0 {
+            colorPalette.isHidden = true
+            isShow = 1
+        }
+        else {
+            colorPalette.isHidden = false
+            isShow = 0
+        }
+    }
+    
+    func removeColor() {
         if isShow == 0 {
             colorPalette.isHidden = true
             isShow = 1

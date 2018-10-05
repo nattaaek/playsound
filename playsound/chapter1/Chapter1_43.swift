@@ -12,7 +12,16 @@ import AVFoundation
 class Chapter1_43: UIViewController, AVAudioPlayerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
 
-    
+    func removeColor() {
+        if isShow == 0 {
+            colorPalette.isHidden = true
+            isShow = 1
+        }
+        else {
+            colorPalette.isHidden = false
+            isShow = 0
+        }
+    }
     
     @IBAction func nextPage(_ sender: Any) {
         if currentColor == "red" {
@@ -39,6 +48,7 @@ class Chapter1_43: UIViewController, AVAudioPlayerDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         currentColor = colors[indexPath.row]
+        removeColor()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

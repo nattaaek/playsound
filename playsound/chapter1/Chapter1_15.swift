@@ -87,7 +87,7 @@ class Chapter1_15: UIViewController, AVAudioPlayerDelegate {
     
     
     @IBAction func hand5(_ sender: Any) {
-        if currentColor == "red" {
+        if currentColor == "blue" {
             countHands += 1
             if countHands == 5 {
                 btnNext.isHidden = false

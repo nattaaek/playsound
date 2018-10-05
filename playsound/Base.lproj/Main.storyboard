@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Znj-cB-mKN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6Gb-AI-aln">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -359,18 +360,6 @@
                                     <action selector="leg1Answer:" destination="1kl-bn-imn" eventType="touchUpInside" id="h7d-f1-exN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0o-5Z-DyC">
-                                <rect key="frame" x="914" y="684" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="right-arrow.png"/>
-                                <connections>
-                                    <action selector="nextPage:" destination="YHm-cS-cV9" eventType="touchUpInside" id="9zo-VH-KUK"/>
-                                    <action selector="nextPage:" destination="G8f-e6-Rqk" eventType="touchUpInside" id="DKA-ay-UUL"/>
-                                    <action selector="nextPage:" destination="1kl-bn-imn" eventType="touchUpInside" id="PYz-u8-XQ3"/>
-                                    <action selector="nextPage:" destination="6Hz-hq-4Rx" eventType="touchUpInside" id="WH5-eD-8QN"/>
-                                    <action selector="nextPage:" destination="f64-v0-Fle" eventType="touchUpInside" id="XTR-hU-ui7"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FgV-QR-MAm">
                                 <rect key="frame" x="781" y="182" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -392,7 +381,6 @@
                         <outlet property="answer1" destination="FgV-QR-MAm" id="Lnq-Nv-HF7"/>
                         <outlet property="head1" destination="eP2-fd-z6Y" id="qq6-2c-eTe"/>
                         <outlet property="leg1" destination="bAt-Gs-lea" id="68F-Nq-vBl"/>
-                        <outlet property="nextBtn" destination="e0o-5Z-DyC" id="Nhf-ag-O7F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DlG-hN-Fhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -532,7 +520,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUs-dV-JJx">
-                                <rect key="frame" x="64" y="216" width="203" height="202"/>
+                                <rect key="frame" x="64" y="216" width="203" height="552"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -542,7 +530,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ML-gd-sLb">
-                                <rect key="frame" x="275" y="412" width="120" height="129"/>
+                                <rect key="frame" x="275" y="412" width="120" height="356"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -552,7 +540,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMk-95-8zZ">
-                                <rect key="frame" x="437" y="240" width="150" height="265"/>
+                                <rect key="frame" x="437" y="240" width="150" height="528"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -562,7 +550,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKj-gZ-NGW">
-                                <rect key="frame" x="629" y="383" width="151" height="144"/>
+                                <rect key="frame" x="629" y="383" width="151" height="385"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -572,7 +560,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bp-V3-ZzK">
-                                <rect key="frame" x="824" y="333" width="133" height="111"/>
+                                <rect key="frame" x="824" y="333" width="133" height="435"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -860,6 +848,16 @@
                                     <action selector="finger5:" destination="pTj-t9-P8e" eventType="touchUpInside" id="4FC-Sb-HC9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvC-Of-7HC">
+                                <rect key="frame" x="134" y="238" width="259" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ring:" destination="pTj-t9-P8e" eventType="touchUpInside" id="dTo-oP-ejz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -867,6 +865,7 @@
                         <outlet property="btnNext" destination="h7N-9m-6gn" id="JeI-LB-sZm"/>
                         <outlet property="finger1Style" destination="FUf-Wn-ZD0" id="jjc-Jm-HX9"/>
                         <outlet property="finger2Style" destination="Vbn-yU-o6A" id="XSy-cf-ZvO"/>
+                        <outlet property="finger3Style" destination="fyw-FM-VHO" id="2YD-Ul-Shq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9l-Sd-WPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2545,19 +2544,6 @@
                                 <rect key="frame" x="786" y="362" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxL-Vv-GOM">
-                                <rect key="frame" x="910" y="684" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="right-arrow.png"/>
-                                <connections>
-                                    <action selector="nextPage:" destination="YLY-eU-lt6" eventType="touchUpInside" id="Beg-r2-R7K"/>
-                                    <action selector="nextPage:" destination="1kl-bn-imn" eventType="touchUpInside" id="Ln0-OY-kAF"/>
-                                    <action selector="nextPage:" destination="YHm-cS-cV9" eventType="touchUpInside" id="RCj-Ot-zmn"/>
-                                    <action selector="nextPage:" destination="G8f-e6-Rqk" eventType="touchUpInside" id="SOn-fF-USB"/>
-                                    <action selector="nextPage:" destination="6Hz-hq-4Rx" eventType="touchUpInside" id="hki-ZI-Mh2"/>
-                                    <action selector="nextPage:" destination="f64-v0-Fle" eventType="touchUpInside" id="pU1-sv-iIx"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="correct.png" translatesAutoresizingMaskIntoConstraints="NO" id="MjZ-a9-E1V">
                                 <rect key="frame" x="786" y="190" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2587,7 +2573,6 @@
                     </view>
                     <connections>
                         <outlet property="answer2" destination="pCG-Be-AoE" id="kC6-Q0-syb"/>
-                        <outlet property="nextBtn" destination="TxL-Vv-GOM" id="wSC-Fh-FGM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8VM-12-I5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3482,10 +3467,10 @@
             </objects>
             <point key="canvasLocation" x="31856" y="-531"/>
         </scene>
-        <!--View Controller-->
+        <!--Chapter152-->
         <scene sceneID="TAA-nN-wp3">
             <objects>
-                <viewController id="Jce-sS-cri" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chapter1_52" id="Jce-sS-cri" customClass="Chapter1_52" customModule="playsound" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j8L-Vj-hNK"/>
                         <viewControllerLayoutGuide type="bottom" id="kZJ-Wb-4Ec"/>
@@ -3498,18 +3483,147 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbm-mC-PIA">
+                                <rect key="frame" x="0.0" y="283" width="57" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showColorPalete:" destination="Jce-sS-cri" eventType="touchUpInside" id="0dV-Ev-FNq"/>
+                                    <action selector="showColorPalete:" destination="KEh-Sz-eEN" eventType="touchUpInside" id="Wj3-T3-M2t"/>
+                                    <action selector="showColorPalete:" destination="tdN-of-4FX" eventType="touchUpInside" id="cyc-uy-Suo"/>
+                                    <action selector="showColorPalete:" destination="qFl-2m-dzD" eventType="touchUpInside" id="sS5-vS-E6b"/>
+                                </connections>
+                            </button>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u50-wg-23F">
+                                <rect key="frame" x="0.0" y="207" width="415" height="389"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXS-pB-DHu">
+                                        <rect key="frame" x="178" y="351" width="58" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Hide"/>
+                                        <connections>
+                                            <action selector="showColorPalete:" destination="Jce-sS-cri" eventType="touchUpInside" id="NoN-RE-iIc"/>
+                                            <action selector="showColorPalete:" destination="qFl-2m-dzD" eventType="touchUpInside" id="WCg-m2-nWl"/>
+                                            <action selector="showColorPalete:" destination="KEh-Sz-eEN" eventType="touchUpInside" id="WvN-Fx-jjU"/>
+                                            <action selector="showColorPalete:" destination="84e-pm-iRI" eventType="touchUpInside" id="ydi-N1-L8x"/>
+                                            <action selector="showColorPalete:" destination="tdN-of-4FX" eventType="touchUpInside" id="yua-jK-vJF"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Palette" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5F-DO-Mw8">
+                                        <rect key="frame" x="10" y="23" width="99" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uh1-vW-C0q">
+                                        <rect key="frame" x="10" y="64" width="395" height="261"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IC9-7K-dtq">
+                                            <size key="itemSize" width="80" height="80"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="cell" id="eWC-oI-VDB">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                                <color key="backgroundColor" red="0.92941176469999998" green="0.52156862749999999" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udC-KW-qzP">
+                                <rect key="frame" x="400" y="438" width="60" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="blackBtn:" destination="Jce-sS-cri" eventType="touchUpInside" id="AP4-ia-2en"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p18-zY-l6X">
+                                <rect key="frame" x="490" y="438" width="60" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="blackBtn:" destination="Jce-sS-cri" eventType="touchUpInside" id="XYR-P2-MXp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0my-Zk-KdO">
+                                <rect key="frame" x="940" y="696" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="right-arrow.png"/>
+                                <connections>
+                                    <action selector="nextPage:" destination="tS4-CN-voG" eventType="touchUpInside" id="0J0-Df-7fW"/>
+                                    <action selector="nextPage:" destination="YoQ-Q8-aET" eventType="touchUpInside" id="10T-33-dVb"/>
+                                    <action selector="nextPage:" destination="pTj-t9-P8e" eventType="touchUpInside" id="3LK-Bb-AqV"/>
+                                    <action selector="nextPage:" destination="HcU-OO-3BG" eventType="touchUpInside" id="4ms-Fp-m4T"/>
+                                    <action selector="nextPage:" destination="Yt7-ea-jeA" eventType="touchUpInside" id="6Wq-gS-SSb"/>
+                                    <action selector="nextPage:" destination="ieo-7H-75v" eventType="touchUpInside" id="Acp-8E-fz5"/>
+                                    <action selector="nextPage:" destination="f0Z-7G-lhk" eventType="touchUpInside" id="EL4-Mv-Uf7"/>
+                                    <action selector="nextPage:" destination="G8f-e6-Rqk" eventType="touchUpInside" id="Grh-Dp-WQ9"/>
+                                    <action selector="nextPage:" destination="2M1-hB-fPf" eventType="touchUpInside" id="HDP-8m-WNy"/>
+                                    <action selector="nextPage:" destination="Raq-Qw-KKC" eventType="touchUpInside" id="INo-4u-ImW"/>
+                                    <action selector="nextPage:" destination="EcO-Ml-RpC" eventType="touchUpInside" id="JLJ-r9-elx"/>
+                                    <action selector="nextPage:" destination="M4n-Qy-5Hy" eventType="touchUpInside" id="OOr-oH-D2r"/>
+                                    <action selector="nextPage:" destination="FzT-lw-TfX" eventType="touchUpInside" id="R5X-fg-6u9"/>
+                                    <action selector="nextPage:" destination="sUC-sz-QGU" eventType="touchUpInside" id="UFk-Yi-KHM"/>
+                                    <action selector="nextPage:" destination="yzV-aB-oIb" eventType="touchUpInside" id="UXQ-LA-ulz"/>
+                                    <action selector="nextPage:" destination="HzC-bY-Cmi" eventType="touchUpInside" id="VnF-8v-1jw"/>
+                                    <action selector="nextPage:" destination="hNF-Sh-9Op" eventType="touchUpInside" id="WNy-Kq-KKe"/>
+                                    <action selector="nextPage:" destination="f64-v0-Fle" eventType="touchUpInside" id="WVh-Xs-EJl"/>
+                                    <action selector="nextPage:" destination="zwp-MW-4XB" eventType="touchUpInside" id="ZsT-cy-woe"/>
+                                    <action selector="nextPage:" destination="YHm-cS-cV9" eventType="touchUpInside" id="a0f-t7-ha0"/>
+                                    <action selector="nextPage:" destination="1kl-bn-imn" eventType="touchUpInside" id="aFl-uZ-qmN"/>
+                                    <action selector="nextPage:" destination="vTd-uO-WpQ" eventType="touchUpInside" id="bmN-gx-hLt"/>
+                                    <action selector="nextPage:" destination="5Cs-od-Z6V" eventType="touchUpInside" id="fqn-n7-O76"/>
+                                    <action selector="nextPage:" destination="Znj-cB-mKN" eventType="touchUpInside" id="hIB-aw-M19"/>
+                                    <action selector="nextPage:" destination="Emj-i0-8Js" eventType="touchUpInside" id="hfo-UR-3ER"/>
+                                    <action selector="nextPage:" destination="C5C-JK-9PN" eventType="touchUpInside" id="hvt-gb-7ks"/>
+                                    <action selector="nextPage:" destination="roC-Zr-4dB" eventType="touchUpInside" id="iha-gh-cK3"/>
+                                    <action selector="nextPage:" destination="6Hz-hq-4Rx" eventType="touchUpInside" id="kYx-CT-eoA"/>
+                                    <action selector="nextPage:" destination="fxb-AI-dmt" eventType="touchUpInside" id="mUF-Wa-M5y"/>
+                                    <action selector="nextPage:" destination="esk-oa-bpO" eventType="touchUpInside" id="phY-R0-uVJ"/>
+                                    <action selector="nextPage:" destination="OsW-hM-ivd" eventType="touchUpInside" id="pzu-Ph-fw4"/>
+                                    <action selector="nextPage:" destination="7da-rB-Skb" eventType="touchUpInside" id="r4S-2W-IfC"/>
+                                    <action selector="nextPage:" destination="qHe-lt-CZE" eventType="touchUpInside" id="wt0-7H-ak9"/>
+                                    <action selector="nextPage:" destination="rPZ-eZ-X4b" eventType="touchUpInside" id="y3C-rP-f31"/>
+                                    <action selector="nextPage:" destination="DQb-ch-cZT" eventType="touchUpInside" id="yfB-Zs-SSw"/>
+                                    <action selector="nextPage:" destination="Jce-sS-cri" eventType="touchUpInside" id="zLA-MR-GRN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="colorPalette" destination="u50-wg-23F" id="rst-sV-Lva"/>
+                        <outlet property="colorsPalette" destination="Uh1-vW-C0q" id="LTW-ML-RKL"/>
+                        <outlet property="nextBtn" destination="0my-Zk-KdO" id="Yz6-RW-ho3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wE1-DF-mtb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32521" y="-530"/>
+            <point key="canvasLocation" x="32520.703124999996" y="-530.46875"/>
         </scene>
-        <!--View Controller-->
+        <!--Chapter153-->
         <scene sceneID="Rdz-zz-0n7">
             <objects>
-                <viewController id="6Gb-AI-aln" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chapter1_53" id="6Gb-AI-aln" customClass="Chapter1_53" customModule="playsound" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Ct-NT-0fN"/>
                         <viewControllerLayoutGuide type="bottom" id="hme-Fe-0Gl"/>
@@ -3522,13 +3636,742 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-qV-AnR">
+                                <rect key="frame" x="940" y="696" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="right-arrow.png"/>
+                                <connections>
+                                    <action selector="nextPage:" destination="yzV-aB-oIb" eventType="touchUpInside" id="1Qu-KD-2eN"/>
+                                    <action selector="nextPage:" destination="zwp-MW-4XB" eventType="touchUpInside" id="1lW-Sr-iOw"/>
+                                    <action selector="nextPage:" destination="ieo-7H-75v" eventType="touchUpInside" id="2Vi-qx-YLe"/>
+                                    <action selector="nextPage:" destination="Yt7-ea-jeA" eventType="touchUpInside" id="3n1-rT-5w7"/>
+                                    <action selector="nextPage:" destination="EcO-Ml-RpC" eventType="touchUpInside" id="53M-qF-PWJ"/>
+                                    <action selector="nextPage:" destination="Jce-sS-cri" eventType="touchUpInside" id="5of-hu-7Ys"/>
+                                    <action selector="nextPage:" destination="fxb-AI-dmt" eventType="touchUpInside" id="DYI-EH-CJW"/>
+                                    <action selector="nextPage:" destination="f0Z-7G-lhk" eventType="touchUpInside" id="EyZ-yK-J0o"/>
+                                    <action selector="nextPage:" destination="HcU-OO-3BG" eventType="touchUpInside" id="Fgi-Iy-tRP"/>
+                                    <action selector="nextPage:" destination="6Gb-AI-aln" eventType="touchUpInside" id="FwP-d3-rdy"/>
+                                    <action selector="nextPage:" destination="DQb-ch-cZT" eventType="touchUpInside" id="G5R-db-Mhi"/>
+                                    <action selector="nextPage:" destination="Raq-Qw-KKC" eventType="touchUpInside" id="L87-4E-WMM"/>
+                                    <action selector="nextPage:" destination="vTd-uO-WpQ" eventType="touchUpInside" id="LyQ-dK-Smv"/>
+                                    <action selector="nextPage:" destination="1kl-bn-imn" eventType="touchUpInside" id="OYb-r8-Kb1"/>
+                                    <action selector="nextPage:" destination="FzT-lw-TfX" eventType="touchUpInside" id="Oar-E9-Nx0"/>
+                                    <action selector="nextPage:" destination="rPZ-eZ-X4b" eventType="touchUpInside" id="Pli-Y0-kdX"/>
+                                    <action selector="nextPage:" destination="tS4-CN-voG" eventType="touchUpInside" id="RMK-xs-flC"/>
+                                    <action selector="nextPage:" destination="YoQ-Q8-aET" eventType="touchUpInside" id="RSp-8C-hrQ"/>
+                                    <action selector="nextPage:" destination="YHm-cS-cV9" eventType="touchUpInside" id="SkM-Fx-iCj"/>
+                                    <action selector="nextPage:" destination="hNF-Sh-9Op" eventType="touchUpInside" id="WS7-EQ-1Js"/>
+                                    <action selector="nextPage:" destination="7da-rB-Skb" eventType="touchUpInside" id="Xkt-VE-bKT"/>
+                                    <action selector="nextPage:" destination="G8f-e6-Rqk" eventType="touchUpInside" id="bvZ-VB-qAA"/>
+                                    <action selector="nextPage:" destination="esk-oa-bpO" eventType="touchUpInside" id="cjb-Vb-HB0"/>
+                                    <action selector="nextPage:" destination="Znj-cB-mKN" eventType="touchUpInside" id="dkk-0H-kN0"/>
+                                    <action selector="nextPage:" destination="M4n-Qy-5Hy" eventType="touchUpInside" id="fPo-vJ-fAW"/>
+                                    <action selector="nextPage:" destination="roC-Zr-4dB" eventType="touchUpInside" id="h1h-k4-bw4"/>
+                                    <action selector="nextPage:" destination="Emj-i0-8Js" eventType="touchUpInside" id="hUi-Tb-bmf"/>
+                                    <action selector="nextPage:" destination="pTj-t9-P8e" eventType="touchUpInside" id="iUh-SH-YOu"/>
+                                    <action selector="nextPage:" destination="qHe-lt-CZE" eventType="touchUpInside" id="kfR-cX-Z48"/>
+                                    <action selector="nextPage:" destination="C5C-JK-9PN" eventType="touchUpInside" id="kom-eQ-gfj"/>
+                                    <action selector="nextPage:" destination="6Hz-hq-4Rx" eventType="touchUpInside" id="ljK-Kh-78Y"/>
+                                    <action selector="nextPage:" destination="sUC-sz-QGU" eventType="touchUpInside" id="mie-fZ-gWV"/>
+                                    <action selector="nextPage:" destination="2M1-hB-fPf" eventType="touchUpInside" id="sRw-g5-irx"/>
+                                    <action selector="nextPage:" destination="OsW-hM-ivd" eventType="touchUpInside" id="wWM-ZF-CcB"/>
+                                    <action selector="nextPage:" destination="HzC-bY-Cmi" eventType="touchUpInside" id="wvR-s2-tYZ"/>
+                                    <action selector="nextPage:" destination="5Cs-od-Z6V" eventType="touchUpInside" id="ww3-Nd-Jtq"/>
+                                    <action selector="nextPage:" destination="f64-v0-Fle" eventType="touchUpInside" id="yag-D7-wkV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FP7-iN-EK7">
+                                <rect key="frame" x="0.0" y="271" width="49" height="355"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oG-gv-1vD">
+                                <rect key="frame" x="489" y="0.0" width="494" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnNext" destination="JhV-qV-AnR" id="IWy-zk-91e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qyw-l9-ShJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33177.5390625" y="-541.40625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SSz-b3-Opn">
+            <objects>
+                <viewController id="F6V-LQ-lXv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X7z-bn-w2b"/>
+                        <viewControllerLayoutGuide type="bottom" id="f9b-Lf-ccM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aoe-Kh-5IL">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 54.png" translatesAutoresizingMaskIntoConstraints="NO" id="s3Z-Hc-IAN">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qyw-l9-ShJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rwa-zh-PK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33178" y="-541"/>
+            <point key="canvasLocation" x="33812.109375" y="-532.03125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a7c-nB-ddY">
+            <objects>
+                <viewController id="CXT-CO-wLI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1sI-H0-2H9"/>
+                        <viewControllerLayoutGuide type="bottom" id="zb4-gw-eLf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q59-sy-Dtm">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 55.png" translatesAutoresizingMaskIntoConstraints="NO" id="FHm-sd-Nkn">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7z-Gt-YqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34464" y="-532"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uc1-wX-rce">
+            <objects>
+                <viewController id="l8m-Hy-0sA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b90-6Y-gbD"/>
+                        <viewControllerLayoutGuide type="bottom" id="OZM-m0-fXO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kMK-a7-qPA">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 56.png" translatesAutoresizingMaskIntoConstraints="NO" id="oC1-RW-OlW">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdt-ex-kXL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35100" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lGy-gN-d1V">
+            <objects>
+                <viewController id="HrE-bg-YGz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SkR-qe-m5U"/>
+                        <viewControllerLayoutGuide type="bottom" id="yOV-6Z-Nzx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L0T-w4-hOb">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 57.png" translatesAutoresizingMaskIntoConstraints="NO" id="aAX-OS-9lA">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pMf-LQ-RnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35746" y="-532"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LCT-IS-trA">
+            <objects>
+                <viewController id="j84-Ji-Ptu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JEn-tu-uF4"/>
+                        <viewControllerLayoutGuide type="bottom" id="EA1-X2-fom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dUh-k8-0fc">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 58.png" translatesAutoresizingMaskIntoConstraints="NO" id="z8c-kA-Mnz">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zj1-zh-kwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36380" y="-532"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2mj-Pv-bHW">
+            <objects>
+                <viewController id="6sD-po-Y6H" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ph2-3X-Lcz"/>
+                        <viewControllerLayoutGuide type="bottom" id="zsy-C8-gXL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VFP-Xr-LkP">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 59.png" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-Ct-ejS">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwE-VH-MXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37011" y="-531"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yfO-fS-6r3">
+            <objects>
+                <viewController id="MqT-pi-r1e" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ejh-6C-Ogh"/>
+                        <viewControllerLayoutGuide type="bottom" id="EGV-mb-pLp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rzm-5T-wnU">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 60.png" translatesAutoresizingMaskIntoConstraints="NO" id="4IW-Ne-daG">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z68-9s-TSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37643" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XiP-7c-2Tx">
+            <objects>
+                <viewController id="IU2-NF-heO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3ny-On-WCC"/>
+                        <viewControllerLayoutGuide type="bottom" id="hrj-sQ-F2P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bRI-Fw-v5m">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 61.png" translatesAutoresizingMaskIntoConstraints="NO" id="jJT-6y-El9">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5o-DH-Ll0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38276" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="03i-OL-FKb">
+            <objects>
+                <viewController id="Oh9-lT-DgY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xNx-4E-RWz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pyc-4B-oHS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6pb-GR-5Ub">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 62.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dtj-h9-Ilk">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1Y-Bo-YBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38925" y="-531"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="68F-Ag-bGh">
+            <objects>
+                <viewController id="2wC-Gu-kbo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IgA-Ea-GkB"/>
+                        <viewControllerLayoutGuide type="bottom" id="BcA-zf-cZi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jk8-ev-BXT">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 63.png" translatesAutoresizingMaskIntoConstraints="NO" id="0ln-0b-afL">
+                                <rect key="frame" x="-1" y="-3" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V16-W8-5TB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39596" y="-532"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hgM-d0-CYR">
+            <objects>
+                <viewController id="Duc-Ri-ogf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JqI-TH-s6G"/>
+                        <viewControllerLayoutGuide type="bottom" id="SuE-dX-XWd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tIc-Wf-qxf">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 64.png" translatesAutoresizingMaskIntoConstraints="NO" id="jlH-KD-PI4">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D2c-8E-KQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40261" y="-531"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iCq-mf-SVq">
+            <objects>
+                <viewController id="JEi-8c-WcI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pu0-f8-snM"/>
+                        <viewControllerLayoutGuide type="bottom" id="L0q-8F-0Uo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KHH-3I-Wuc">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 65.png" translatesAutoresizingMaskIntoConstraints="NO" id="pDn-Vz-wnv">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0k-Qe-VTj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40893" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8G7-fw-Ich">
+            <objects>
+                <viewController id="13G-LS-0ir" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V1q-iO-sE9"/>
+                        <viewControllerLayoutGuide type="bottom" id="9vM-Io-Dfm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lvN-iu-wFX">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 65.png" translatesAutoresizingMaskIntoConstraints="NO" id="8au-cA-VRx">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hmN-jW-4h6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40893" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5pU-DV-B7y">
+            <objects>
+                <viewController id="E9x-f2-oRD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cWn-Ta-8XF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y7l-Jh-aCn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P9U-Ti-dlQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 65.png" translatesAutoresizingMaskIntoConstraints="NO" id="fue-ld-vaj">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kad-gL-KQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41527" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V4e-2Z-xeu">
+            <objects>
+                <viewController id="ueJ-IM-b4P" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HTu-gW-uEH"/>
+                        <viewControllerLayoutGuide type="bottom" id="iJB-dA-FJa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="czY-Uj-vpa">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 66.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZVc-yX-5xT">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kzd-fd-ps9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41527" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ApS-OR-3Vh">
+            <objects>
+                <viewController id="Ykj-zS-OP4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tcB-dL-EdA"/>
+                        <viewControllerLayoutGuide type="bottom" id="XSw-hM-Ff6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D4F-sP-aJV">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 67.png" translatesAutoresizingMaskIntoConstraints="NO" id="wYe-Xx-DUd">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLr-Rp-lbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42180" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qKN-Jy-1B0">
+            <objects>
+                <viewController id="qbd-FS-Ugh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fY6-TC-dbc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Evi-Xq-Mnn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oU0-6h-HBx">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 68.png" translatesAutoresizingMaskIntoConstraints="NO" id="us2-Wn-ifc">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MvR-kG-NCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42810" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8gh-H9-k2t">
+            <objects>
+                <viewController id="b8H-QP-ZbU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZfE-p3-2Nu"/>
+                        <viewControllerLayoutGuide type="bottom" id="2DI-dV-Yr8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sMJ-sb-bVS">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 69.png" translatesAutoresizingMaskIntoConstraints="NO" id="fVc-IQ-sOt">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFy-wq-77X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="43471" y="-532"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Lue-j8-2iq">
+            <objects>
+                <viewController id="XII-2h-I1P" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5rl-4f-57b"/>
+                        <viewControllerLayoutGuide type="bottom" id="5mR-8k-M45"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="txg-Kf-Ae6">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 70.png" translatesAutoresizingMaskIntoConstraints="NO" id="pg5-lq-Rey">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UUe-UM-Uez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44126" y="-532"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mwn-jJ-by6">
+            <objects>
+                <viewController id="zz5-N0-gA8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b0i-jM-55a"/>
+                        <viewControllerLayoutGuide type="bottom" id="lYY-Mx-kol"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d9T-iM-gpl">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 71.png" translatesAutoresizingMaskIntoConstraints="NO" id="5YJ-e2-WTh">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOI-KG-slB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44770" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zlb-yz-v22">
+            <objects>
+                <viewController id="HfF-tw-6Za" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TVz-X6-Jcv"/>
+                        <viewControllerLayoutGuide type="bottom" id="JVn-2d-Gnx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y3S-0d-2Na">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 72.png" translatesAutoresizingMaskIntoConstraints="NO" id="pPO-Kg-uS3">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Szf-nN-UcM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45414" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="naw-aw-8PF">
+            <objects>
+                <viewController id="uw8-M3-Ypx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="edE-DX-jES"/>
+                        <viewControllerLayoutGuide type="bottom" id="za1-mX-PRT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="En4-L6-Cpo">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 73.png" translatesAutoresizingMaskIntoConstraints="NO" id="ebt-io-RXJ">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zFu-AV-x7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46079" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oGe-Ud-ysb">
+            <objects>
+                <viewController id="Xhb-zk-rdw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3ER-VK-u9F"/>
+                        <viewControllerLayoutGuide type="bottom" id="dh3-Bt-GF5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZrD-Jl-flB">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 74.png" translatesAutoresizingMaskIntoConstraints="NO" id="br4-I1-Pzy">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6m-6C-SKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46709" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7ub-3i-XpB">
+            <objects>
+                <viewController id="z9x-dL-x1M" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fo7-3x-HPq"/>
+                        <viewControllerLayoutGuide type="bottom" id="pd1-UW-goW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PBR-i2-5Dv">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 75.png" translatesAutoresizingMaskIntoConstraints="NO" id="GIn-4n-cuH">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibQ-Y9-ntt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47334" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JtH-3A-fkH">
+            <objects>
+                <viewController id="sLz-qr-LBZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J7Z-Ik-S6W"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y5C-Gd-5nQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P4W-QI-Uul">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 76.png" translatesAutoresizingMaskIntoConstraints="NO" id="RxC-zB-XQi">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RRC-gg-2u6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47975" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iqe-vS-wFU">
+            <objects>
+                <viewController id="yLJ-t7-SH6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FK0-8R-HcQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZKO-UQ-rUZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dip-IN-pYj">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 76.png" translatesAutoresizingMaskIntoConstraints="NO" id="VwT-A4-jzz">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1i2-JF-SDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47975" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Xc0-dm-u6n">
+            <objects>
+                <viewController id="Dk4-Fx-j5V" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3gw-bd-hdI"/>
+                        <viewControllerLayoutGuide type="bottom" id="W0W-7m-hAA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="diC-oJ-qbr">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 76.png" translatesAutoresizingMaskIntoConstraints="NO" id="U5t-tG-E4H">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yt-cy-Kjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48640" y="-530"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hcU-PS-vZX">
+            <objects>
+                <viewController id="zWb-MA-IGY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HhS-aZ-I13"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tbh-hA-1rk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CUz-7W-nvQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 77.png" translatesAutoresizingMaskIntoConstraints="NO" id="gOi-30-Dzr">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XF0-oa-Jbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48640" y="-530"/>
         </scene>
     </scenes>
     <resources>
@@ -3579,8 +4422,32 @@
         <image name="Artboard 51.png" width="684" height="528"/>
         <image name="Artboard 52.png" width="684" height="528"/>
         <image name="Artboard 53.png" width="684" height="528"/>
+        <image name="Artboard 54.png" width="684" height="528"/>
+        <image name="Artboard 55.png" width="684" height="528"/>
+        <image name="Artboard 56.png" width="684" height="528"/>
+        <image name="Artboard 57.png" width="684" height="528"/>
+        <image name="Artboard 58.png" width="684" height="528"/>
+        <image name="Artboard 59.png" width="684" height="528"/>
         <image name="Artboard 6.png" width="684" height="528"/>
+        <image name="Artboard 60.png" width="684" height="528"/>
+        <image name="Artboard 61.png" width="684" height="528"/>
+        <image name="Artboard 62.png" width="684" height="528"/>
+        <image name="Artboard 63.png" width="684" height="528"/>
+        <image name="Artboard 64.png" width="684" height="528"/>
+        <image name="Artboard 65.png" width="684" height="528"/>
+        <image name="Artboard 66.png" width="684" height="528"/>
+        <image name="Artboard 67.png" width="684" height="528"/>
+        <image name="Artboard 68.png" width="684" height="528"/>
+        <image name="Artboard 69.png" width="684" height="528"/>
         <image name="Artboard 7.png" width="684" height="528"/>
+        <image name="Artboard 70.png" width="684" height="528"/>
+        <image name="Artboard 71.png" width="684" height="528"/>
+        <image name="Artboard 72.png" width="684" height="528"/>
+        <image name="Artboard 73.png" width="684" height="528"/>
+        <image name="Artboard 74.png" width="685" height="528"/>
+        <image name="Artboard 75.png" width="685" height="528"/>
+        <image name="Artboard 76.png" width="685" height="528"/>
+        <image name="Artboard 77.png" width="685" height="528"/>
         <image name="Artboard 8.png" width="684" height="528"/>
         <image name="Artboard 9.png" width="684" height="528"/>
         <image name="correct.png" width="64" height="64"/>

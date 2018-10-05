@@ -69,6 +69,17 @@ class Chapter1_31: UIViewController, AVAudioPlayerDelegate, UICollectionViewData
         }
     }
     
+    func removeColor() {
+        if isShow == 0 {
+            colorPalette.isHidden = true
+            isShow = 1
+        }
+        else {
+            colorPalette.isHidden = false
+            isShow = 0
+        }
+    }
+    
     func nextPage() {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_32")
         self.present(vc!, animated: true, completion: nil)
@@ -94,6 +105,7 @@ class Chapter1_31: UIViewController, AVAudioPlayerDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         currentColor = colors[indexPath.row]
+        removeColor()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

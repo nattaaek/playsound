@@ -25,6 +25,17 @@ class Chapter1_32: UIViewController, AVAudioPlayerDelegate, UICollectionViewData
         }
     }
     
+    func removeColor() {
+        if isShow == 0 {
+            colorPalette.isHidden = true
+            isShow = 1
+        }
+        else {
+            colorPalette.isHidden = false
+            isShow = 0
+        }
+    }
+    
     var currentColor: String = ""
     let colors = ["pink","blue","brown","cyan","green","magenta","orange","purple","red","yellow","salmon","lavender"]
     
@@ -38,6 +49,7 @@ class Chapter1_32: UIViewController, AVAudioPlayerDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         currentColor = colors[indexPath.row]
+        removeColor()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

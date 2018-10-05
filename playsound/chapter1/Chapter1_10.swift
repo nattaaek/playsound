@@ -21,15 +21,16 @@ class Chapter1_10: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var head1: UIButton!
     @IBOutlet weak var leg1: UIButton!
     
-    @IBAction func nextPage(_ sender: Any) {
+    func nextPage() {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_11")
         self.present(vc!, animated: false, completion: nil)
     }
+    
     @IBAction func head1Answer(_ sender: Any) {
         answer = "high"
         if answer == currentAnswer {
             answer1.image = UIImage(named: "correct.png")
-            nextBtn.isHidden = false
+            nextPage()
         }
         else {
             let alert = UIAlertController(title: "wrong answer", message: "please listen again", preferredStyle: .alert)
@@ -41,7 +42,7 @@ class Chapter1_10: UIViewController, AVAudioPlayerDelegate {
         answer = "low"
         if answer == currentAnswer {
             answer1.image = UIImage(named: "correct.png")
-            nextBtn.isHidden = false
+            nextPage()
         }
         else {
             let alert = UIAlertController(title: "wrong answer", message: "please listen again", preferredStyle: .alert)
@@ -50,7 +51,6 @@ class Chapter1_10: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
-    @IBOutlet weak var nextBtn: UIButton!
     
     func audioPlay() {
         var path: String
@@ -78,11 +78,8 @@ class Chapter1_10: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextBtn.isHidden = true
         
         audioPlay()
-
-        
         // Do any additional setup after loading the view.
     }
 
