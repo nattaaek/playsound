@@ -50,7 +50,7 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
     var frequencyCnt = 0
     var mic = AKMicrophone()
     var tracker = AKFrequencyTracker()
-
+    
     
 
     func audioPlayerDidFinishPlaying( _ player: AVAudioPlayer, successfully flag: Bool) {
@@ -59,17 +59,19 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
         let silence = AKBooster(tracker, gain: 0)
         AudioKit.output = silence
         try! AudioKit.start()
-        Timer.scheduledTimer( timeInterval: 0.9, target: self, selector: #selector(Chapter1_53.outputFrequency), userInfo: nil, repeats: true)
-
-
+        if frequencyCnt == 0 {
+            Timer.scheduledTimer( timeInterval: 0.95, target: self, selector: #selector(Chapter1_53.outputFrequency), userInfo: nil, repeats: true)
+        }
     }
-    var cCount = 0
-    var dCount = 0
+    var count = 0
     @objc func outputFrequency() {
         frequencyCnt += 1
         if frequencyCnt >= 8 {
-            if tracker.frequency == 261.6256 {
-                print("pass")
+            if count % 6 == 0 && tracker.frequency <= 302.3959 && tracker.frequency >= 285.4236 {
+                print("d")
+            }
+            else if count % 3 == 0 && tracker.frequency >= 254.2836 && tracker.frequency <=  269.4041{
+                print("c")
             }
             else {
                 print(tracker.frequency)
