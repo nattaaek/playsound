@@ -63,6 +63,30 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
             Timer.scheduledTimer( timeInterval: 0.95, target: self, selector: #selector(Chapter1_53.outputFrequency), userInfo: nil, repeats: true)
         }
     }
+    @IBOutlet weak var menuView: UIView!
+    
+    var isShow = 0
+    @IBAction func showMenu(_ sender: Any) {
+        
+        if isShow == 0 {
+            menuView.isHidden = true
+            isShow = 1
+        }
+        else {
+            menuView.isHidden = false
+            isShow = 0
+        }
+    }
+    
+    @IBAction func showPractice(_ sender: Any) {
+        if isShow == 0 {
+            menuPracticeMenu.isHidden = true
+            isShow = 1
+        } else {
+            menuPracticeMenu.isHidden = false
+            isShow = 0
+        }
+    }
     var count = 0
     @objc func outputFrequency() {
         frequencyCnt += 1
@@ -77,13 +101,15 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
                 print(tracker.frequency)
             }
         }
- 
     }
+    
+    @IBOutlet weak var menuPracticeMenu: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         btnNext.isHidden = true
-        
+        menuView.isHidden = true
+        menuPracticeMenu.isHidden = true
         audioPlay()
     }
 }
