@@ -9,6 +9,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="IXG-sQ-R1v">
+            <objects>
+                <viewController id="p2u-Ss-iQW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ruW-aU-li2"/>
+                        <viewControllerLayoutGuide type="bottom" id="XlE-eJ-g5C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OEU-vZ-2PB">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C66-8K-Iii">
+                                <rect key="frame" x="0.0" y="28" width="1024" height="740"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="203" id="A1i-XY-MTS">
+                                        <rect key="frame" x="0.0" y="28" width="1024" height="203"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A1i-XY-MTS" id="ETF-zc-0YN">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="202.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMR-VO-ODR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140.625" y="-577.34375"/>
+        </scene>
         <!--Chapter11-->
         <scene sceneID="LYD-Bt-37f">
             <objects>
@@ -3837,10 +3872,10 @@
             </objects>
             <point key="canvasLocation" x="33177.5390625" y="-541.40625"/>
         </scene>
-        <!--View Controller-->
+        <!--Chapter154-->
         <scene sceneID="SSz-b3-Opn">
             <objects>
-                <viewController id="F6V-LQ-lXv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chapter1_54" id="F6V-LQ-lXv" customClass="Chapter1_54" customModule="playsound" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X7z-bn-w2b"/>
                         <viewControllerLayoutGuide type="bottom" id="f9b-Lf-ccM"/>
@@ -3853,9 +3888,119 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Mv-3f-pNC">
+                                <rect key="frame" x="0.0" y="217" width="415" height="389"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-7w-E2N">
+                                        <rect key="frame" x="178" y="351" width="58" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Hide"/>
+                                        <connections>
+                                            <action selector="showColorPalete:" destination="KEh-Sz-eEN" eventType="touchUpInside" id="GYG-vT-V1g"/>
+                                            <action selector="showColorPalete:" destination="qFl-2m-dzD" eventType="touchUpInside" id="R0y-wY-TSX"/>
+                                            <action selector="showColorPalete:" destination="F6V-LQ-lXv" eventType="touchUpInside" id="Tdw-wQ-UwQ"/>
+                                            <action selector="showColorPalete:" destination="Jce-sS-cri" eventType="touchUpInside" id="hUB-Ny-RxO"/>
+                                            <action selector="showColorPalete:" destination="tdN-of-4FX" eventType="touchUpInside" id="mMf-hs-aMU"/>
+                                            <action selector="showColorPalete:" destination="84e-pm-iRI" eventType="touchUpInside" id="mmY-F0-gaH"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Palette" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQa-5J-AgS">
+                                        <rect key="frame" x="10" y="23" width="99" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Na-Lc-1v1">
+                                        <rect key="frame" x="10" y="64" width="395" height="261"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="56P-fs-Qbx">
+                                            <size key="itemSize" width="80" height="80"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="cell" id="Wrq-8M-rOy">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                                <color key="backgroundColor" red="0.92941176469999998" green="0.52156862749999999" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe9-1W-BDM">
+                                <rect key="frame" x="0.0" y="299" width="64" height="225"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="blackBtn:" destination="F6V-LQ-lXv" eventType="touchUpInside" id="A51-AN-agd"/>
+                                    <action selector="showColorPalete:" destination="F6V-LQ-lXv" eventType="touchUpInside" id="mgr-sb-3iw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01J-ig-fjM">
+                                <rect key="frame" x="940" y="684" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="right-arrow.png"/>
+                                <connections>
+                                    <action selector="nextPage:" destination="DQb-ch-cZT" eventType="touchUpInside" id="5kR-Xu-ALa"/>
+                                    <action selector="nextPage:" destination="Raq-Qw-KKC" eventType="touchUpInside" id="C0n-JU-sxB"/>
+                                    <action selector="nextPage:" destination="F6V-LQ-lXv" eventType="touchUpInside" id="D0j-cV-P42"/>
+                                    <action selector="nextPage:" destination="C5C-JK-9PN" eventType="touchUpInside" id="DfT-TF-73c"/>
+                                    <action selector="nextPage:" destination="f0Z-7G-lhk" eventType="touchUpInside" id="DgY-iW-jrj"/>
+                                    <action selector="nextPage:" destination="Jce-sS-cri" eventType="touchUpInside" id="EDG-PU-aGD"/>
+                                    <action selector="nextPage:" destination="M4n-Qy-5Hy" eventType="touchUpInside" id="G1e-cH-aGx"/>
+                                    <action selector="nextPage:" destination="yzV-aB-oIb" eventType="touchUpInside" id="GZn-gS-cyu"/>
+                                    <action selector="nextPage:" destination="ieo-7H-75v" eventType="touchUpInside" id="Hg8-1M-rh4"/>
+                                    <action selector="nextPage:" destination="OsW-hM-ivd" eventType="touchUpInside" id="I6h-px-40g"/>
+                                    <action selector="nextPage:" destination="fxb-AI-dmt" eventType="touchUpInside" id="I8Q-V7-Hao"/>
+                                    <action selector="nextPage:" destination="tS4-CN-voG" eventType="touchUpInside" id="IQe-FU-keH"/>
+                                    <action selector="nextPage:" destination="roC-Zr-4dB" eventType="touchUpInside" id="KIa-FR-FeA"/>
+                                    <action selector="nextPage:" destination="YoQ-Q8-aET" eventType="touchUpInside" id="Kr3-z1-K4e"/>
+                                    <action selector="nextPage:" destination="YHm-cS-cV9" eventType="touchUpInside" id="L5c-L4-vfH"/>
+                                    <action selector="nextPage:" destination="esk-oa-bpO" eventType="touchUpInside" id="Msz-b7-Obb"/>
+                                    <action selector="nextPage:" destination="FzT-lw-TfX" eventType="touchUpInside" id="NaM-4l-Ew9"/>
+                                    <action selector="nextPage:" destination="Yt7-ea-jeA" eventType="touchUpInside" id="OaY-19-66p"/>
+                                    <action selector="nextPage:" destination="EcO-Ml-RpC" eventType="touchUpInside" id="PJu-QB-eel"/>
+                                    <action selector="nextPage:" destination="pTj-t9-P8e" eventType="touchUpInside" id="RbB-cn-8OR"/>
+                                    <action selector="nextPage:" destination="HzC-bY-Cmi" eventType="touchUpInside" id="Sbi-nv-pmt"/>
+                                    <action selector="nextPage:" destination="HcU-OO-3BG" eventType="touchUpInside" id="WFe-yi-mcn"/>
+                                    <action selector="nextPage:" destination="7da-rB-Skb" eventType="touchUpInside" id="Wct-61-uK1"/>
+                                    <action selector="nextPage:" destination="vTd-uO-WpQ" eventType="touchUpInside" id="Xb0-bj-fTb"/>
+                                    <action selector="nextPage:" destination="1kl-bn-imn" eventType="touchUpInside" id="ZEd-OW-faL"/>
+                                    <action selector="nextPage:" destination="qHe-lt-CZE" eventType="touchUpInside" id="f4F-xQ-8zc"/>
+                                    <action selector="nextPage:" destination="rPZ-eZ-X4b" eventType="touchUpInside" id="g0w-Ga-b6Y"/>
+                                    <action selector="nextPage:" destination="Znj-cB-mKN" eventType="touchUpInside" id="gT7-tf-cJl"/>
+                                    <action selector="nextPage:" destination="G8f-e6-Rqk" eventType="touchUpInside" id="ite-vb-Lgr"/>
+                                    <action selector="nextPage:" destination="6Gb-AI-aln" eventType="touchUpInside" id="laj-Ma-Gf4"/>
+                                    <action selector="nextPage:" destination="zwp-MW-4XB" eventType="touchUpInside" id="nZL-8c-XVs"/>
+                                    <action selector="nextPage:" destination="2M1-hB-fPf" eventType="touchUpInside" id="ogo-hE-fYw"/>
+                                    <action selector="nextPage:" destination="sUC-sz-QGU" eventType="touchUpInside" id="qLa-fO-pc6"/>
+                                    <action selector="nextPage:" destination="f64-v0-Fle" eventType="touchUpInside" id="sRq-iW-FA1"/>
+                                    <action selector="nextPage:" destination="6Hz-hq-4Rx" eventType="touchUpInside" id="sfB-2c-eoC"/>
+                                    <action selector="nextPage:" destination="hNF-Sh-9Op" eventType="touchUpInside" id="siO-4e-L6L"/>
+                                    <action selector="nextPage:" destination="5Cs-od-Z6V" eventType="touchUpInside" id="tGw-BK-DzN"/>
+                                    <action selector="nextPage:" destination="Emj-i0-8Js" eventType="touchUpInside" id="yKK-IZ-jqF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="colorPalette" destination="7Mv-3f-pNC" id="zgi-5R-c2F"/>
+                        <outlet property="colorsPalette" destination="1Na-Lc-1v1" id="jaN-Qh-Ma9"/>
+                        <outlet property="nextBtn" destination="01J-ig-fjM" id="1TX-a7-b4n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rwa-zh-PK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0444FEC7217C726700D49E9E /* Chapter1_54.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444FEC6217C726700D49E9E /* Chapter1_54.swift */; };
 		3F355FE821180B59000BEFF2 /* Artboard 33.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F355FC721180B57000BEFF2 /* Artboard 33.png */; };
 		3F355FE921180B59000BEFF2 /* Artboard 28.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F355FC821180B57000BEFF2 /* Artboard 28.png */; };
 		3F355FEA21180B59000BEFF2 /* Artboard 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F355FC921180B57000BEFF2 /* Artboard 3.png */; };
@@ -195,6 +196,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0444FEC6217C726700D49E9E /* Chapter1_54.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_54.swift; sourceTree = "<group>"; };
 		0C0647321426F8D529A80804 /* Pods_playsound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playsound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103F1915D44ABD7B20E9B4B7 /* Pods-playsoundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playsoundUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-playsoundUITests/Pods-playsoundUITests.release.xcconfig"; sourceTree = "<group>"; };
 		233A92ACE8379EB06529AC43 /* Pods-playsoundUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playsoundUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-playsoundUITests/Pods-playsoundUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -545,6 +547,7 @@
 				3FB82768213E6E2E008F1196 /* Chapter1_40_3.swift */,
 				3FB82766213E6D03008F1196 /* Chapter1_40_2.swift */,
 				3FB8276A213E6F13008F1196 /* Chapter1_41.swift */,
+				0444FEC6217C726700D49E9E /* Chapter1_54.swift */,
 			);
 			path = chapter1;
 			sourceTree = "<group>";
@@ -991,6 +994,7 @@
 				3FB827A1213E7CF7008F1196 /* Chapter1_44.swift in Sources */,
 				3FB82767213E6D03008F1196 /* Chapter1_40_2.swift in Sources */,
 				3F35604B211834C2000BEFF2 /* Chapter1_5.swift in Sources */,
+				0444FEC7217C726700D49E9E /* Chapter1_54.swift in Sources */,
 				3FDAE88621196BEB00173A3C /* Chapter1_23.swift in Sources */,
 				3FDAE874211956DE00173A3C /* Chapter1_14.swift in Sources */,
 				3FEC61C4211C06E800B05A12 /* Chapter1_38.swift in Sources */,
