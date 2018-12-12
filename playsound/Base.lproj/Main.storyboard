@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6Gb-AI-aln">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6Gb-AI-aln">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -3706,50 +3706,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-qV-AnR">
-                                <rect key="frame" x="940" y="696" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="right-arrow.png"/>
-                                <connections>
-                                    <action selector="nextPage:" destination="yzV-aB-oIb" eventType="touchUpInside" id="1Qu-KD-2eN"/>
-                                    <action selector="nextPage:" destination="zwp-MW-4XB" eventType="touchUpInside" id="1lW-Sr-iOw"/>
-                                    <action selector="nextPage:" destination="ieo-7H-75v" eventType="touchUpInside" id="2Vi-qx-YLe"/>
-                                    <action selector="nextPage:" destination="Yt7-ea-jeA" eventType="touchUpInside" id="3n1-rT-5w7"/>
-                                    <action selector="nextPage:" destination="EcO-Ml-RpC" eventType="touchUpInside" id="53M-qF-PWJ"/>
-                                    <action selector="nextPage:" destination="Jce-sS-cri" eventType="touchUpInside" id="5of-hu-7Ys"/>
-                                    <action selector="nextPage:" destination="fxb-AI-dmt" eventType="touchUpInside" id="DYI-EH-CJW"/>
-                                    <action selector="nextPage:" destination="f0Z-7G-lhk" eventType="touchUpInside" id="EyZ-yK-J0o"/>
-                                    <action selector="nextPage:" destination="HcU-OO-3BG" eventType="touchUpInside" id="Fgi-Iy-tRP"/>
-                                    <action selector="nextPage:" destination="6Gb-AI-aln" eventType="touchUpInside" id="FwP-d3-rdy"/>
-                                    <action selector="nextPage:" destination="DQb-ch-cZT" eventType="touchUpInside" id="G5R-db-Mhi"/>
-                                    <action selector="nextPage:" destination="Raq-Qw-KKC" eventType="touchUpInside" id="L87-4E-WMM"/>
-                                    <action selector="nextPage:" destination="vTd-uO-WpQ" eventType="touchUpInside" id="LyQ-dK-Smv"/>
-                                    <action selector="nextPage:" destination="1kl-bn-imn" eventType="touchUpInside" id="OYb-r8-Kb1"/>
-                                    <action selector="nextPage:" destination="FzT-lw-TfX" eventType="touchUpInside" id="Oar-E9-Nx0"/>
-                                    <action selector="nextPage:" destination="rPZ-eZ-X4b" eventType="touchUpInside" id="Pli-Y0-kdX"/>
-                                    <action selector="nextPage:" destination="tS4-CN-voG" eventType="touchUpInside" id="RMK-xs-flC"/>
-                                    <action selector="nextPage:" destination="YoQ-Q8-aET" eventType="touchUpInside" id="RSp-8C-hrQ"/>
-                                    <action selector="nextPage:" destination="YHm-cS-cV9" eventType="touchUpInside" id="SkM-Fx-iCj"/>
-                                    <action selector="nextPage:" destination="hNF-Sh-9Op" eventType="touchUpInside" id="WS7-EQ-1Js"/>
-                                    <action selector="nextPage:" destination="7da-rB-Skb" eventType="touchUpInside" id="Xkt-VE-bKT"/>
-                                    <action selector="nextPage:" destination="G8f-e6-Rqk" eventType="touchUpInside" id="bvZ-VB-qAA"/>
-                                    <action selector="nextPage:" destination="esk-oa-bpO" eventType="touchUpInside" id="cjb-Vb-HB0"/>
-                                    <action selector="nextPage:" destination="Znj-cB-mKN" eventType="touchUpInside" id="dkk-0H-kN0"/>
-                                    <action selector="nextPage:" destination="M4n-Qy-5Hy" eventType="touchUpInside" id="fPo-vJ-fAW"/>
-                                    <action selector="nextPage:" destination="roC-Zr-4dB" eventType="touchUpInside" id="h1h-k4-bw4"/>
-                                    <action selector="nextPage:" destination="Emj-i0-8Js" eventType="touchUpInside" id="hUi-Tb-bmf"/>
-                                    <action selector="nextPage:" destination="pTj-t9-P8e" eventType="touchUpInside" id="iUh-SH-YOu"/>
-                                    <action selector="nextPage:" destination="qHe-lt-CZE" eventType="touchUpInside" id="kfR-cX-Z48"/>
-                                    <action selector="nextPage:" destination="C5C-JK-9PN" eventType="touchUpInside" id="kom-eQ-gfj"/>
-                                    <action selector="nextPage:" destination="6Hz-hq-4Rx" eventType="touchUpInside" id="ljK-Kh-78Y"/>
-                                    <action selector="nextPage:" destination="sUC-sz-QGU" eventType="touchUpInside" id="mie-fZ-gWV"/>
-                                    <action selector="nextPage:" destination="2M1-hB-fPf" eventType="touchUpInside" id="sRw-g5-irx"/>
-                                    <action selector="nextPage:" destination="OsW-hM-ivd" eventType="touchUpInside" id="wWM-ZF-CcB"/>
-                                    <action selector="nextPage:" destination="HzC-bY-Cmi" eventType="touchUpInside" id="wvR-s2-tYZ"/>
-                                    <action selector="nextPage:" destination="5Cs-od-Z6V" eventType="touchUpInside" id="ww3-Nd-Jtq"/>
-                                    <action selector="nextPage:" destination="f64-v0-Fle" eventType="touchUpInside" id="yag-D7-wkV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FP7-iN-EK7">
                                 <rect key="frame" x="0.0" y="271" width="37" height="355"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3863,7 +3819,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <outlet property="btnNext" destination="JhV-qV-AnR" id="IWy-zk-91e"/>
                         <outlet property="menuPracticeMenu" destination="iET-ls-EBW" id="tKw-dq-4ir"/>
                         <outlet property="menuView" destination="GfR-sP-zBH" id="idy-rB-ibb"/>
                     </connections>
