@@ -19,7 +19,13 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
         self.present(vc!, animated: true, completion: nil)
     }
     
-    @IBOutlet weak var btnNext: UIButton!
+    func stopTimer() {
+        if timer != nil {
+            timer.invalidate()
+            timer = nil
+        }
+    }
+    
     func audioPlay() {
         
         let path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
@@ -48,19 +54,25 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
     
     var timer: Timer!
     var frequencyCnt = 0
+    var playCount = 0
     var mic = AKMicrophone()
     var tracker = AKFrequencyTracker()
     
-    
 
     func audioPlayerDidFinishPlaying( _ player: AVAudioPlayer, successfully flag: Bool) {
-        songPlay()
         tracker = AKFrequencyTracker(mic)
         let silence = AKBooster(tracker, gain: 0)
         AudioKit.output = silence
         try! AudioKit.start()
-        if frequencyCnt == 0 {
-            Timer.scheduledTimer( timeInterval: 0.95, target: self, selector: #selector(Chapter1_53.outputFrequency), userInfo: nil, repeats: true)
+        if playCount == 0 {
+            songPlay()
+            timer = Timer.scheduledTimer( timeInterval: 0.95, target: self, selector: #selector(Chapter1_53.outputFrequency), userInfo: nil, repeats: true)
+                playCount = 1
+        }
+        else {
+            stopTimer()
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_54")
+            self.present(vc!, animated: true, completion: nil)
         }
     }
     @IBOutlet weak var menuView: UIView!
@@ -107,9 +119,40 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        btnNext.isHidden = true
         menuView.isHidden = true
         menuPracticeMenu.isHidden = true
         audioPlay()
+    }
+    
+    @IBOutlet weak var background: UIImageView!
+    
+    //change background notation to black
+    func notationOption() {
+        background.image = UIImage(named: "")
+    }
+    
+    //enable to show practice menu
+    func practiceMode()  {
+        menuPracticeMenu.isHidden = false
+    }
+    
+    //enable or disable sound of song
+    func hearItOption()  {
+        
+    }
+    
+    //enable or disable guide tab
+    func guideTabOptions() {
+        
+    }
+    
+    //enable or disable metronome
+    func metronomeOption()  {
+        
+    }
+    
+    //enable or disable accomp.
+    func accompOption()  {
+        
     }
 }
