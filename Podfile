@@ -5,6 +5,8 @@ target 'playsound' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'AudioKit'
+  pod 'AWSCore', '~> 2.7.0'
+
   # Pods for playsound
 
   target 'playsoundTests' do

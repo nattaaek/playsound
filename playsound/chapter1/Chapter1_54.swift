@@ -13,6 +13,50 @@ class Chapter1_54: UIViewController,UICollectionViewDelegate, UICollectionViewDa
 
     var currentColor: String = ""
     let colors = ["pink","blue","purple","cyan","green","magenta","orange","black","red","yellow","salmon","lavender"]
+    var colorsCount = 0
+    
+    
+    @IBOutlet weak var redCatButton: UIButton!
+    @IBAction func redCatButton(_ sender: Any) {
+        if currentColor == "red"{
+            colorsCount += 1
+            redCatButton.isHidden = true
+        }else {
+            let alert = UIAlertController(title: "Wrong color", message: "Please try again", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
+    @IBOutlet weak var blueDogButton: UIButton!
+    @IBAction func blueDogButton(_ sender: Any) {
+        if currentColor == "blue"{
+            colorsCount += 1
+            blueDogButton.isHidden = true
+        }else {
+            let alert = UIAlertController(title: "Wrong color", message: "Please try again", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @IBOutlet weak var elephantPurpleButton: UIButton!
+    @IBAction func elephantPurpleButton(_ sender: Any) {
+        if currentColor == "purple"{
+            colorsCount += 1
+            elephantPurpleButton.isHidden = true
+        }else {
+            let alert = UIAlertController(title: "Wrong color", message: "Please try again", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        if colorsCount == 3 {
+            nextBtn.isHidden = false
+        }
+    }
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -27,27 +71,11 @@ class Chapter1_54: UIViewController,UICollectionViewDelegate, UICollectionViewDa
         
         removeColor()
     }
-    var cnt = 0
-    @IBAction func blackBtn(_ sender: Any) {
-        
-        if currentColor == "black" {
-            cnt += 1
-        } else {
-            let alert = UIAlertController(title: "Wrong Color", message: "you choose wrong color", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        
-        if cnt == 2 {
-            nextBtn.isHidden = false
-        }
-    }
-    
-    
+
     @IBOutlet weak var nextBtn: UIButton!
     
     @IBAction func nextPage(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_53")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_55")
         self.present(vc!, animated: true, completion: nil)
     }
     
