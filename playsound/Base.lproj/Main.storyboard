@@ -3668,7 +3668,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Artboard 53.png" translatesAutoresizingMaskIntoConstraints="NO" id="p4u-fG-GcF">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GfR-sP-zBH">
@@ -3692,16 +3692,25 @@
                                         <rect key="frame" x="20" y="32" width="57" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Practice"/>
+                                        <connections>
+                                            <action selector="practiceButton:" destination="6Gb-AI-aln" eventType="touchUpInside" id="0yb-Mt-bSw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbG-hA-V90">
                                         <rect key="frame" x="20" y="156" width="56" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Perform"/>
+                                        <connections>
+                                            <action selector="performButton:" destination="6Gb-AI-aln" eventType="touchUpInside" id="Se1-i7-DKQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPb-hj-TRt">
                                         <rect key="frame" x="19" y="252" width="59" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Notation"/>
+                                        <connections>
+                                            <action selector="notationButton:" destination="6Gb-AI-aln" eventType="touchUpInside" id="cnT-LG-954"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3717,20 +3726,25 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oG-gv-1vD">
-                                <rect key="frame" x="489" y="0.0" width="494" height="42"/>
+                                <rect key="frame" x="489" y="20" width="494" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="showPractice:" destination="6Gb-AI-aln" eventType="touchUpInside" id="FZy-72-4Er"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iET-ls-EBW">
-                                <rect key="frame" x="489" y="0.0" width="502" height="146"/>
+                                <rect key="frame" x="487" y="20" width="502" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="boW-jD-k74">
                                         <rect key="frame" x="35" y="8" width="49" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="hearItChangeController:" destination="6Gb-AI-aln" eventType="valueChanged" id="UB8-tS-BIJ"/>
+                                        </connections>
                                     </switch>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XZQ-6M-4cB">
                                         <rect key="frame" x="126" y="8" width="49" height="31"/>
@@ -3748,26 +3762,28 @@
                                         <rect key="frame" x="421" y="8" width="49" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </switch>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VcZ-Yr-8hk">
-                                        <rect key="frame" x="90" y="109" width="140" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </slider>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gw9-mP-rfM">
                                         <rect key="frame" x="273" y="108" width="47" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="START"/>
+                                        <connections>
+                                            <action selector="practiceStartButton:" destination="6Gb-AI-aln" eventType="touchUpInside" id="EkT-QA-F5w"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KT-Ry-OUN">
                                         <rect key="frame" x="348" y="108" width="46" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="STOP"/>
+                                        <connections>
+                                            <action selector="practiceStopButton:" destination="6Gb-AI-aln" eventType="touchUpInside" id="DYu-aS-nW0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EG-py-rxc">
-                                        <rect key="frame" x="448" y="108" width="46" height="30"/>
+                                        <rect key="frame" x="455" y="108" width="32" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Hide"/>
                                         <connections>
-                                            <action selector="showPractice:" destination="6Gb-AI-aln" eventType="touchUpInside" id="Bil-PU-MKb"/>
+                                            <action selector="hidePracticeMenu:" destination="6Gb-AI-aln" eventType="touchUpInside" id="SiO-Xd-NlU"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HEAR IT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYH-PR-YmX">
@@ -3812,6 +3828,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="40" minValue="40" maxValue="208" translatesAutoresizingMaskIntoConstraints="NO" id="VcZ-Yr-8hk">
+                                        <rect key="frame" x="90" y="108" width="140" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="tempoSliderController:" destination="6Gb-AI-aln" eventType="valueChanged" id="jvQ-Yk-pwO"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -3819,8 +3842,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
+                        <outlet property="hearItSwitch" destination="boW-jD-k74" id="gic-iS-ju5"/>
                         <outlet property="menuPracticeMenu" destination="iET-ls-EBW" id="tKw-dq-4ir"/>
                         <outlet property="menuView" destination="GfR-sP-zBH" id="idy-rB-ibb"/>
+                        <outlet property="tempoSlider" destination="VcZ-Yr-8hk" id="R9r-fD-EaU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qyw-l9-ShJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

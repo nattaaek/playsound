@@ -11,131 +11,101 @@ import AVFoundation
 import AudioKit
 
 class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
-    var conversationSound: AVAudioPlayer = AVAudioPlayer()
-    var cntSong = 0
     
-
+    var audioPlayer = AVAudioPlayer()
     
-    func stopTimer() {
-        if timer != nil {
-            timer.invalidate()
-            timer = nil
-        }
-    }
+    let songs = ["StrongBeat","SubBeat","SubBeat","SubBeat","StrongBeat","SubBeat","SubBeat","SubBeat"]
+    let song = Bundle.main.url(forResource: "p272key", withExtension: "mp3")
     
-    func audioPlay() {
-        
-        let path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
-        let url = URL(fileURLWithPath: path)
-        do {
-            conversationSound = try AVAudioPlayer(contentsOf: url)
-            conversationSound.delegate = self
-            conversationSound.play()
-        } catch {
-            print(error)
-        }
-    }
+    var praceticeBool = false
     
-    func songPlay() {
-
-        let path = Bundle.main.path(forResource: "p42.mp3", ofType: nil)!
-        let url = URL(fileURLWithPath: path)
-        do {
-            conversationSound = try AVAudioPlayer(contentsOf: url)
-            conversationSound.delegate = self
-            conversationSound.play()
-        } catch {
-            print(error)
-        }
-    }
-    
-    var timer: Timer!
-    var frequencyCnt = 0
-    var playCount = 0
-    var mic = AKMicrophone()
-    var tracker = AKFrequencyTracker()
-    
-
-    func audioPlayerDidFinishPlaying( _ player: AVAudioPlayer, successfully flag: Bool) {
-        tracker = AKFrequencyTracker(mic)
-        let silence = AKBooster(tracker, gain: 0)
-        AudioKit.output = silence
-        try! AudioKit.start()
-        if playCount == 0 {
-            songPlay()
-            timer = Timer.scheduledTimer( timeInterval: 0.95, target: self, selector: #selector(Chapter1_53.outputFrequency), userInfo: nil, repeats: true)
-                playCount = 1
-        }
-        else {
-            stopTimer()
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_54")
-            self.present(vc!, animated: true, completion: nil)
-        }
-    }
+    //menu View
     @IBOutlet weak var menuView: UIView!
     
-    var isShow = 0
+    //show menu Button
     @IBAction func showMenu(_ sender: Any) {
-        
-        if isShow == 0 {
-            menuView.isHidden = true
-            isShow = 1
-        }
-        else {
-            menuView.isHidden = false
-            isShow = 0
-        }
+        menuView.isHidden = false
     }
     
+    //show practice menu Button
     @IBAction func showPractice(_ sender: Any) {
-        if isShow == 0 {
-            menuPracticeMenu.isHidden = true
-            isShow = 1
-        } else {
+        if praceticeBool {
             menuPracticeMenu.isHidden = false
-            isShow = 0
-        }
-    }
-    var count = 0
-    @objc func outputFrequency() {
-        frequencyCnt += 1
-        if frequencyCnt >= 8 {
-            if count % 6 == 0 && tracker.frequency <= 302.3959 && tracker.frequency >= 285.4236 {
-                print("d")
-            }
-            else if count % 3 == 0 && tracker.frequency >= 254.2836 && tracker.frequency <=  269.4041{
-                print("c")
-            }
-            else {
-                print(tracker.frequency)
-            }
         }
     }
     
+    @IBAction func hidePracticeMenu(_ sender: Any) {
+        menuPracticeMenu.isHidden = true
+    }
+    
+    //start practice song
+    @IBAction func practiceStartButton(_ sender: Any) {
+        songPlay()
+    }
+    //stop practice song
+    @IBAction func practiceStopButton(_ sender: Any) {
+        audioPlayer.stop()
+    }
+    
+    //menu Practice View
     @IBOutlet weak var menuPracticeMenu: UIView!
+    
+    //practice Button
+    @IBAction func practiceButton(_ sender: Any) {
+        practiceMode()
+    }
+    //notation Button
+    @IBAction func notationButton(_ sender: Any) {
+        notationOption()
+    }
+    //perform Button
+    @IBAction func performButton(_ sender: Any) {
+        praceticeBool = false
+        songPlay()
+    }
+    
+    
+    // HEAR IT Controller Section
+    @IBOutlet weak var hearItSwitch: UISwitch!
+
+    @IBAction func hearItChangeController(_ sender: Any) {
+        hearItOption()
+    }
+    
+    // Tempo Controller Section
+    @IBOutlet weak var tempoSlider: UISlider!
+    @IBAction func tempoSliderController(_ sender: Any) {
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         menuView.isHidden = true
         menuPracticeMenu.isHidden = true
-        audioPlay()
+        conversationPlay()
     }
-    
-    @IBOutlet weak var background: UIImageView!
     
     //change background notation to black
     func notationOption() {
-        background.image = UIImage(named: "")
+        let alert = UIAlertController(title: "alert", message: "background changed", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "okay", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     //enable to show practice menu
     func practiceMode()  {
         menuPracticeMenu.isHidden = false
+        praceticeBool = true
     }
     
     //enable or disable sound of song
     func hearItOption()  {
-        
+        if hearItSwitch.isOn {
+            audioPlayer.volume = 1.0
+        } else {
+            audioPlayer.volume = 0.0
+        }
     }
     
     //enable or disable guide tab
@@ -152,4 +122,41 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
     func accompOption()  {
         
     }
+    
+    //enable song to play
+    var selectedSong: String = ""
+    func songPlay(){
+        for index in 0..<songs.count {
+            print(Double(tempoSlider.value))
+            let when = DispatchTime.now() + Double(index) + 0.5
+
+            DispatchQueue.main.asyncAfter(deadline: when, execute: {
+             self.selectedSong = self.songs[index]
+             self.playSelectedSong()
+            })
+        }
+    }
+    
+    func playSelectedSong() {
+        let songURL = Bundle.main.url(forResource: selectedSong, withExtension: "wav")
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: songURL!)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        audioPlayer.play()
+    }
+    
+    //play conversation sound
+    func conversationPlay()  {
+        guard let conversationSound = Bundle.main.url(forResource: "p4highnote", withExtension: "mp3") else { return }
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: conversationSound)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
+        audioPlayer.play()
+    }
 }
+

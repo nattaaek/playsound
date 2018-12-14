@@ -84,6 +84,8 @@
 		3F7F1AC02112B1F000A48E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7F1ABE2112B1F000A48E23 /* LaunchScreen.storyboard */; };
 		3F7F1ACB2112B1F000A48E23 /* playsoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F1ACA2112B1F000A48E23 /* playsoundTests.swift */; };
 		3F7F1AD62112B1F000A48E23 /* playsoundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7F1AD52112B1F000A48E23 /* playsoundUITests.swift */; };
+		3F84F5D321C39A37002660EC /* SubBeat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3F84F5D121C39A37002660EC /* SubBeat.wav */; };
+		3F84F5D421C39A37002660EC /* StrongBeat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3F84F5D221C39A37002660EC /* StrongBeat.wav */; };
 		3FA1C885211AD2BD00A586A9 /* Chapter1_26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1C884211AD2BD00A586A9 /* Chapter1_26.swift */; };
 		3FA1C887211ADA5E00A586A9 /* Chapter1_27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1C886211ADA5E00A586A9 /* Chapter1_27.swift */; };
 		3FA1C889211ADBC000A586A9 /* Chapter1_28.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1C888211ADBC000A586A9 /* Chapter1_28.swift */; };
@@ -282,6 +284,8 @@
 		3F7F1AD12112B1F000A48E23 /* playsoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = playsoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7F1AD52112B1F000A48E23 /* playsoundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playsoundUITests.swift; sourceTree = "<group>"; };
 		3F7F1AD72112B1F000A48E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F84F5D121C39A37002660EC /* SubBeat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SubBeat.wav; sourceTree = "<group>"; };
+		3F84F5D221C39A37002660EC /* StrongBeat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = StrongBeat.wav; sourceTree = "<group>"; };
 		3FA1C884211AD2BD00A586A9 /* Chapter1_26.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_26.swift; sourceTree = "<group>"; };
 		3FA1C886211ADA5E00A586A9 /* Chapter1_27.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_27.swift; sourceTree = "<group>"; };
 		3FA1C888211ADBC000A586A9 /* Chapter1_28.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_28.swift; sourceTree = "<group>"; };
@@ -620,6 +624,7 @@
 		3F7F1AB42112B1F000A48E23 /* playsound */ = {
 			isa = PBXGroup;
 			children = (
+				3F84F5D021C39A1D002660EC /* beatSounds */,
 				3F35604721183424000BEFF2 /* assets */,
 				3F35600C21180E55000BEFF2 /* sounds */,
 				3F355FC621180B47000BEFF2 /* images */,
@@ -649,6 +654,15 @@
 				3F7F1AD72112B1F000A48E23 /* Info.plist */,
 			);
 			path = playsoundUITests;
+			sourceTree = "<group>";
+		};
+		3F84F5D021C39A1D002660EC /* beatSounds */ = {
+			isa = PBXGroup;
+			children = (
+				3F84F5D221C39A37002660EC /* StrongBeat.wav */,
+				3F84F5D121C39A37002660EC /* SubBeat.wav */,
+			);
+			path = beatSounds;
 			sourceTree = "<group>";
 		};
 		C1EF8D547F5D219C9B5DA76C /* Pods */ = {
@@ -810,6 +824,7 @@
 				3FB82798213E7537008F1196 /* Artboard 62.png in Resources */,
 				3FB8279B213E7537008F1196 /* Artboard 73.png in Resources */,
 				3F3560492118342F000BEFF2 /* right-arrow.png in Resources */,
+				3F84F5D321C39A37002660EC /* SubBeat.wav in Resources */,
 				3F35600521180B59000BEFF2 /* Artboard 4.png in Resources */,
 				3F35603321180E61000BEFF2 /* p.9_Low_Note.mp3 in Resources */,
 				3FEC61AC211C054400B05A12 /* Artboard 45.png in Resources */,
@@ -885,6 +900,7 @@
 				3F35603421180E61000BEFF2 /* p.8_High_Note.mp3 in Resources */,
 				3FEC61AA211C054400B05A12 /* Artboard 39.png in Resources */,
 				3F355FE921180B59000BEFF2 /* Artboard 28.png in Resources */,
+				3F84F5D421C39A37002660EC /* StrongBeat.wav in Resources */,
 				3F355FF221180B59000BEFF2 /* Artboard 17.png in Resources */,
 				3F35602E21180E61000BEFF2 /* p272key.mp3 in Resources */,
 				3F35600021180B59000BEFF2 /* Artboard 32.png in Resources */,
