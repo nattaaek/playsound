@@ -3761,6 +3761,9 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cfg-qj-DnU">
                                         <rect key="frame" x="421" y="8" width="49" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="recordController:" destination="6Gb-AI-aln" eventType="valueChanged" id="bMU-6o-DRF"/>
+                                        </connections>
                                     </switch>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gw9-mP-rfM">
                                         <rect key="frame" x="273" y="108" width="47" height="30"/>
@@ -3845,6 +3848,7 @@
                         <outlet property="hearItSwitch" destination="boW-jD-k74" id="gic-iS-ju5"/>
                         <outlet property="menuPracticeMenu" destination="iET-ls-EBW" id="tKw-dq-4ir"/>
                         <outlet property="menuView" destination="GfR-sP-zBH" id="idy-rB-ibb"/>
+                        <outlet property="recordSwitch" destination="cfg-qj-DnU" id="q0C-oV-VmK"/>
                         <outlet property="tempoSlider" destination="VcZ-Yr-8hk" id="R9r-fD-EaU"/>
                     </connections>
                 </viewController>

@@ -13,8 +13,10 @@ import AudioKit
 class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
     
     var audioPlayer = AVAudioPlayer()
+    var recordPlayer = AVAudioRecorder()
+    var recordingSession: AVAudioSession!
     
-    let songs = ["StrongBeat","SubBeat","SubBeat","SubBeat","StrongBeat","SubBeat","SubBeat","SubBeat"]
+    let songs = ["StrongBeat","SubBeat","SubBeat","SubBeat","StrongBeat","SubBeat","SubBeat","SubBeat","C","C","C","D","C","C","C"]
     let song = Bundle.main.url(forResource: "p272key", withExtension: "mp3")
     
     var praceticeBool = false
@@ -64,6 +66,12 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
         songPlay()
     }
     
+    //Record Sound Section
+    @IBOutlet weak var recordSwitch: UISwitch!
+    @IBAction func recordController(_ sender: Any) {
+        
+    }
+    
     
     // HEAR IT Controller Section
     @IBOutlet weak var hearItSwitch: UISwitch!
@@ -75,12 +83,15 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
     // Tempo Controller Section
     @IBOutlet weak var tempoSlider: UISlider!
     @IBAction func tempoSliderController(_ sender: Any) {
-        
+        print(String(format: "This value is :%i", Int(tempoSlider.value)))
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         menuView.isHidden = true
         menuPracticeMenu.isHidden = true
         conversationPlay()
@@ -128,11 +139,11 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
     func songPlay(){
         for index in 0..<songs.count {
             print(Double(tempoSlider.value))
-            let when = DispatchTime.now() + Double(index) + 0.5
-
+            let when = DispatchTime.now() + Double(index) * (60.0/tempoSlider.value)
             DispatchQueue.main.asyncAfter(deadline: when, execute: {
              self.selectedSong = self.songs[index]
              self.playSelectedSong()
+                print(index + 60/self.tempoSlider.value)
             })
         }
     }

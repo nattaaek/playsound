@@ -134,6 +134,8 @@
 		3FB827AB213E867E008F1196 /* Chapter1_49.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB827AA213E867E008F1196 /* Chapter1_49.swift */; };
 		3FB827AD213E871A008F1196 /* Chapter1_50.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB827AC213E871A008F1196 /* Chapter1_50.swift */; };
 		3FB827AF213E892B008F1196 /* Chapter1_51.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB827AE213E892B008F1196 /* Chapter1_51.swift */; };
+		3FC7976121C792F80029C4CF /* C.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FC7976021C792F80029C4CF /* C.wav */; };
+		3FC7976321C793050029C4CF /* D.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FC7976221C793050029C4CF /* D.wav */; };
 		3FDAE86C21193E8B00173A3C /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FDAE86B21193E8B00173A3C /* correct.png */; };
 		3FDAE86E2119498500173A3C /* Chapter1_11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDAE86D2119498500173A3C /* Chapter1_11.swift */; };
 		3FDAE8702119518F00173A3C /* Chapter1_12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDAE86F2119518F00173A3C /* Chapter1_12.swift */; };
@@ -334,6 +336,8 @@
 		3FB827AA213E867E008F1196 /* Chapter1_49.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_49.swift; sourceTree = "<group>"; };
 		3FB827AC213E871A008F1196 /* Chapter1_50.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_50.swift; sourceTree = "<group>"; };
 		3FB827AE213E892B008F1196 /* Chapter1_51.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_51.swift; sourceTree = "<group>"; };
+		3FC7976021C792F80029C4CF /* C.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = C.wav; sourceTree = "<group>"; };
+		3FC7976221C793050029C4CF /* D.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = D.wav; sourceTree = "<group>"; };
 		3FDAE86B21193E8B00173A3C /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
 		3FDAE86D2119498500173A3C /* Chapter1_11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_11.swift; sourceTree = "<group>"; };
 		3FDAE86F2119518F00173A3C /* Chapter1_12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_12.swift; sourceTree = "<group>"; };
@@ -659,6 +663,8 @@
 		3F84F5D021C39A1D002660EC /* beatSounds */ = {
 			isa = PBXGroup;
 			children = (
+				3FC7976021C792F80029C4CF /* C.wav */,
+				3FC7976221C793050029C4CF /* D.wav */,
 				3F84F5D221C39A37002660EC /* StrongBeat.wav */,
 				3F84F5D121C39A37002660EC /* SubBeat.wav */,
 			);
@@ -825,6 +831,7 @@
 				3FB8279B213E7537008F1196 /* Artboard 73.png in Resources */,
 				3F3560492118342F000BEFF2 /* right-arrow.png in Resources */,
 				3F84F5D321C39A37002660EC /* SubBeat.wav in Resources */,
+				3FC7976321C793050029C4CF /* D.wav in Resources */,
 				3F35600521180B59000BEFF2 /* Artboard 4.png in Resources */,
 				3F35603321180E61000BEFF2 /* p.9_Low_Note.mp3 in Resources */,
 				3FEC61AC211C054400B05A12 /* Artboard 45.png in Resources */,
@@ -845,6 +852,7 @@
 				3F355FFE21180B59000BEFF2 /* Artboard 9.png in Resources */,
 				3F35603A21180E61000BEFF2 /* p.6_High_Note.mp3 in Resources */,
 				3F35602821180E61000BEFF2 /* p1Classical.mp3 in Resources */,
+				3FC7976121C792F80029C4CF /* C.wav in Resources */,
 				3F355FF421180B59000BEFF2 /* Artboard 6.png in Resources */,
 				3F7F1ABD2112B1F000A48E23 /* Assets.xcassets in Resources */,
 				3F355FF321180B59000BEFF2 /* Artboard 5.png in Resources */,
