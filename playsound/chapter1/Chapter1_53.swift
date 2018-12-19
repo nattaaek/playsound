@@ -13,10 +13,11 @@ import AudioKit
 class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
     
     var audioPlayer = AVAudioPlayer()
+    var songPlayer = AVAudioPlayer()
     var recordPlayer = AVAudioRecorder()
     var recordingSession: AVAudioSession!
     
-    let songs = ["StrongBeat","SubBeat","SubBeat","SubBeat","StrongBeat","SubBeat","SubBeat","SubBeat","C","C","C","D","C","C","C"]
+    let songs = ["StrongBeat","SubBeat","SubBeat","SubBeat","StrongBeat","SubBeat","SubBeat","SubBeat","C","C","C","SubBeat","D","D","D","C","C","C","SubBeat","D","D","D"]
     let song = Bundle.main.url(forResource: "p272key", withExtension: "mp3")
     
     var praceticeBool = false
@@ -90,8 +91,6 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         menuView.isHidden = true
         menuPracticeMenu.isHidden = true
         conversationPlay()
@@ -134,28 +133,35 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
         
     }
     
+    func delay(time: Double, closure: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time, execute: closure)
+    }
+    
+    
     //enable song to play
-    var selectedSong: String = ""
     func songPlay(){
         for index in 0..<songs.count {
-            print(Double(tempoSlider.value))
-            let when = DispatchTime.now() + Double(index) * (60.0/tempoSlider.value)
-            DispatchQueue.main.asyncAfter(deadline: when, execute: {
-             self.selectedSong = self.songs[index]
-             self.playSelectedSong()
-                print(index + 60/self.tempoSlider.value)
+            //let when = DispatchTime.now() + (Double(index))
+            /*DispatchQueue.main.asyncAfter(deadline: when, execute: {
+                print(DispatchTime.now())
+            self.playSelectedSong(selectedSong: self.songs[index])
+            })*/
+            delay(time: Double(index), closure: {
+                print(index)
+                self.playSelectedSong(selectedSong: self.songs[index])
             })
         }
     }
     
-    func playSelectedSong() {
+    func playSelectedSong(selectedSong: String) {
         let songURL = Bundle.main.url(forResource: selectedSong, withExtension: "wav")
         do{
-            audioPlayer = try AVAudioPlayer(contentsOf: songURL!)
+            songPlayer = try AVAudioPlayer(contentsOf: songURL!)
         } catch let error {
             print(error.localizedDescription)
         }
-        audioPlayer.play()
+        songPlayer.prepareToPlay()
+        songPlayer.play()
     }
     
     //play conversation sound
