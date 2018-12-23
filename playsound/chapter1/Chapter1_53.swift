@@ -10,17 +10,38 @@ import UIKit
 import AVFoundation
 import AudioKit
 
-class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
+class Chapter1_53: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     
+    // declare variable
     var audioPlayer = AVAudioPlayer()
     var songPlayer = AVAudioPlayer()
-    var recordPlayer = AVAudioRecorder()
-    var recordingSession: AVAudioSession!
+    var recordPlayer : AVAudioRecorder!
+    var tracker: AKFrequencyTracker!
+    var silence: AKBooster!
+    var microphone: AKMicrophone!
     
-    let songs = ["StrongBeat","SubBeat","SubBeat","SubBeat","StrongBeat","SubBeat","SubBeat","SubBeat","C","C","C","SubBeat","D","D","D","C","C","C","SubBeat","D","D","D"]
-    let song = Bundle.main.url(forResource: "p272key", withExtension: "mp3")
+    
+    
+    var songs : [String]!
+    let songsWithMetronome = ["StrongBeat","SubBeat","SubBeat","SubBeat","StrongBeat","SubBeat","SubBeat","SubBeat","C","C","C","SubBeat","D","D","D","SubBeat","C","C","C","SubBeat","D","D","D","SubBeat"]
+    let songsWithoutMetronome = ["C","C","C","SubBeat","D","D","D","SubBeat","C","C","C","SubBeat","D","D","D","SubBeat"]
     
     var praceticeBool = false
+    
+    //declare guidetab label
+    @IBOutlet weak var c1: UILabel!
+    @IBOutlet weak var c2: UILabel!
+    @IBOutlet weak var c3: UILabel!
+    @IBOutlet weak var d1: UILabel!
+    @IBOutlet weak var d2: UILabel!
+    @IBOutlet weak var d3: UILabel!
+    @IBOutlet weak var c4: UILabel!
+    @IBOutlet weak var c5: UILabel!
+    @IBOutlet weak var c6: UILabel!
+    @IBOutlet weak var d4: UILabel!
+    @IBOutlet weak var d5: UILabel!
+    @IBOutlet weak var d6: UILabel!
+    
     
     //menu View
     @IBOutlet weak var menuView: UIView!
@@ -47,7 +68,7 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
     }
     //stop practice song
     @IBAction func practiceStopButton(_ sender: Any) {
-        audioPlayer.stop()
+        songPlayer.stop()
     }
     
     //menu Practice View
@@ -70,13 +91,24 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
     //Record Sound Section
     @IBOutlet weak var recordSwitch: UISwitch!
     @IBAction func recordController(_ sender: Any) {
-        
+        recordOption()
+    }
+    
+    //Metronome Control Section
+    @IBOutlet weak var metronomeSwitch: UISwitch!
+    @IBAction func metronomeSwitchController(_ sender: Any) {
+        metronomeOption()
     }
     
     
+    @IBOutlet weak var guideTabSwitch: UISwitch!
+    @IBAction func guideTabSwitchController(_ sender: Any) {
+        guideTabOptions()
+    }
+    
     // HEAR IT Controller Section
     @IBOutlet weak var hearItSwitch: UISwitch!
-
+    
     @IBAction func hearItChangeController(_ sender: Any) {
         hearItOption()
     }
@@ -94,6 +126,42 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
         menuView.isHidden = true
         menuPracticeMenu.isHidden = true
         conversationPlay()
+        guideTabOptions()
+        metronomeOption()
+        setupRecorder()
+        
+        microphone = AKMicrophone()
+        let filter = AKHighPassFilter(microphone, cutoffFrequency: 200.0, resonance: 0)
+        tracker = AKFrequencyTracker(filter)
+        silence = AKBooster(tracker, gain: 0)
+        
+        AKSettings.audioInputEnabled = true
+        
+    }
+    
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    let fileName : String = "record.m4a"
+    
+    func setupRecorder() {
+        let audioFileName = getDocumentsDirectory().appendingPathComponent(fileName)
+        let recordSetting = [AVFormatIDKey: kAudioFormatAppleLossless ,
+                             AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue,
+                             AVEncoderBitRateKey : 320000,
+                             AVNumberOfChannelsKey: 2 ,
+                             AVSampleRateKey: 44100.2 ] as [String : Any]
+        do {
+            recordPlayer = try AVAudioRecorder(url: audioFileName, settings: recordSetting)
+            recordPlayer.delegate = self
+            recordPlayer.prepareToRecord()
+            
+        } catch {
+            print(error)
+        }
     }
     
     //change background notation to black
@@ -112,20 +180,50 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
     //enable or disable sound of song
     func hearItOption()  {
         if hearItSwitch.isOn {
-            audioPlayer.volume = 1.0
+            songPlayer.volume = 1.0
         } else {
-            audioPlayer.volume = 0.0
+            songPlayer.volume = 0.0
         }
     }
     
     //enable or disable guide tab
     func guideTabOptions() {
-        
+        if guideTabSwitch.isOn {
+            c1.isHidden = false
+            c2.isHidden = false
+            c3.isHidden = false
+            c4.isHidden = false
+            c5.isHidden = false
+            c6.isHidden = false
+            d1.isHidden = false
+            d2.isHidden = false
+            d3.isHidden = false
+            d4.isHidden = false
+            d5.isHidden = false
+            d6.isHidden = false
+        } else {
+            c1.isHidden = true
+            c2.isHidden = true
+            c3.isHidden = true
+            c4.isHidden = true
+            c5.isHidden = true
+            c6.isHidden = true
+            d1.isHidden = true
+            d2.isHidden = true
+            d3.isHidden = true
+            d4.isHidden = true
+            d5.isHidden = true
+            d6.isHidden = true
+        }
     }
     
     //enable or disable metronome
     func metronomeOption()  {
-        
+        if metronomeSwitch.isOn {
+            songs = songsWithoutMetronome
+        } else {
+            songs = songsWithMetronome
+        }
     }
     
     //enable or disable accomp.
@@ -133,23 +231,46 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate {
         
     }
     
-    func delay(time: Double, closure: @escaping () -> ()) {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time, execute: closure)
+    //enable or disable record session
+    func recordOption() {
+        if recordSwitch.isOn {
+            recordPlayer.record()
+        } else {
+            recordPlayer.stop()
+            print(recordPlayer.url)
+        }
     }
     
     
     //enable song to play
     func songPlay(){
+        AudioKit.output = silence
+        try! AudioKit.start()
         for index in 0..<songs.count {
-            //let when = DispatchTime.now() + (Double(index))
-            /*DispatchQueue.main.asyncAfter(deadline: when, execute: {
-                print(DispatchTime.now())
-            self.playSelectedSong(selectedSong: self.songs[index])
-            })*/
-            delay(time: Double(index), closure: {
-                print(index)
+            Timer.scheduledTimer(withTimeInterval: index * (60 / tempoSlider.value), repeats: false) { (timer) in
+                if !self.metronomeSwitch.isOn {
+                    if self.tracker.frequency <= 277 && self.tracker.frequency >= 246 && index >= 9 && index <= 11{
+                        print("C")
+                    } else if self.tracker.frequency >= 276 && self.tracker.frequency <= 311 && index >= 13 && index <= 15 {
+                        print("D")
+                    } else if self.tracker.frequency <= 277 && self.tracker.frequency >= 246 && index >= 17 && index <= 19 {
+                        print("C")
+                    } else if self.tracker.frequency >= 276 && self.tracker.frequency <= 311 && index >= 21 && index <= 23 {
+                        print("D")
+                    }
+                } else {
+                    if self.tracker.frequency <= 277 && self.tracker.frequency >= 246 && index >= 0 && index <= 2{
+                        print("C")
+                    } else if self.tracker.frequency >= 276 && self.tracker.frequency <= 311 && index >= 4 && index <= 6 {
+                        print("D")
+                    } else if self.tracker.frequency <= 277 && self.tracker.frequency >= 246 && index >= 8 && index <= 10 {
+                        print("C")
+                    } else if self.tracker.frequency >= 276 && self.tracker.frequency <= 311 && index >= 12 && index <= 14 {
+                        print("D")
+                    }
+                }
                 self.playSelectedSong(selectedSong: self.songs[index])
-            })
+            }
         }
     }
     
