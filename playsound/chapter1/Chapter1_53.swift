@@ -16,6 +16,7 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDeleg
     var audioPlayer = AVAudioPlayer()
     var songPlayer = AVAudioPlayer()
     var recordPlayer : AVAudioRecorder!
+    var recordSession : AVAudioSession!
     var tracker: AKFrequencyTracker!
     var silence: AKBooster!
     var microphone: AKMicrophone!
@@ -126,17 +127,17 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDeleg
         menuView.isHidden = true
         menuPracticeMenu.isHidden = true
         conversationPlay()
-        guideTabOptions()
         metronomeOption()
+        guideTabOptions()
         setupRecorder()
-        
+    
         microphone = AKMicrophone()
         let filter = AKHighPassFilter(microphone, cutoffFrequency: 200.0, resonance: 0)
         tracker = AKFrequencyTracker(filter)
         silence = AKBooster(tracker, gain: 0)
         
         AKSettings.audioInputEnabled = true
-        
+ 
     }
     
     
@@ -244,32 +245,111 @@ class Chapter1_53: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDeleg
     
     //enable song to play
     func songPlay(){
+        metronomeOption()
         AudioKit.output = silence
         try! AudioKit.start()
         for index in 0..<songs.count {
             Timer.scheduledTimer(withTimeInterval: index * (60 / tempoSlider.value), repeats: false) { (timer) in
                 if !self.metronomeSwitch.isOn {
                     if self.tracker.frequency <= 277 && self.tracker.frequency >= 246 && index >= 9 && index <= 11{
+                        self.changeLabelGuide(index: index)
                         print("C")
                     } else if self.tracker.frequency >= 276 && self.tracker.frequency <= 311 && index >= 13 && index <= 15 {
+                        self.changeLabelGuide(index: index)
                         print("D")
                     } else if self.tracker.frequency <= 277 && self.tracker.frequency >= 246 && index >= 17 && index <= 19 {
+                        self.changeLabelGuide(index: index)
                         print("C")
                     } else if self.tracker.frequency >= 276 && self.tracker.frequency <= 311 && index >= 21 && index <= 23 {
+                        self.changeLabelGuide(index: index)
                         print("D")
                     }
                 } else {
                     if self.tracker.frequency <= 277 && self.tracker.frequency >= 246 && index >= 0 && index <= 2{
+                        self.changeLabelGuide(index: index)
                         print("C")
                     } else if self.tracker.frequency >= 276 && self.tracker.frequency <= 311 && index >= 4 && index <= 6 {
+                        self.changeLabelGuide(index: index)
                         print("D")
                     } else if self.tracker.frequency <= 277 && self.tracker.frequency >= 246 && index >= 8 && index <= 10 {
+                        self.changeLabelGuide(index: index)
                         print("C")
                     } else if self.tracker.frequency >= 276 && self.tracker.frequency <= 311 && index >= 12 && index <= 14 {
+                        self.changeLabelGuide(index: index)
                         print("D")
                     }
                 }
                 self.playSelectedSong(selectedSong: self.songs[index])
+            }
+        }
+    }
+    
+    func changeLabelGuide(index: Int) {
+        if !metronomeSwitch.isOn {
+            switch index {
+            case 9:
+                c1.text = "perfect"
+                break
+            case 10:
+                c2.text = "perfect"
+                break
+            case 11:
+                c3.text = "perfect"
+                break
+            case 13:
+                d1.text = "perfect"
+                break
+            case 14:
+                d2.text = "perfect"
+            case 15:
+                d3.text = "perfect"
+            case 17:
+                c4.text = "perfect"
+            case 18:
+                c5.text = "perfect"
+            case 19:
+                c6.text = "perfect"
+            case 21:
+                d4.text = "perfect"
+            case 22:
+                d5.text = "perfect"
+            case 23:
+                d6.text = "perfect"
+            default:
+                break
+            }
+        } else {
+            switch index {
+            case 0:
+                c1.text = "perfect"
+                break
+            case 1:
+                c2.text = "perfect"
+                break
+            case 2:
+                c3.text = "perfect"
+                break
+            case 4:
+                d1.text = "perfect"
+                break
+            case 5:
+                d2.text = "perfect"
+            case 6:
+                d3.text = "perfect"
+            case 8:
+                c4.text = "perfect"
+            case 9:
+                c5.text = "perfect"
+            case 10:
+                c6.text = "perfect"
+            case 12:
+                d4.text = "perfect"
+            case 13:
+                d5.text = "perfect"
+            case 14:
+                d6.text = "perfect"
+            default:
+                break
             }
         }
     }

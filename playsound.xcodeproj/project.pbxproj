@@ -178,6 +178,20 @@
 		3FEC61C6211C073C00B05A12 /* Chapter1_39.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC61C5211C073C00B05A12 /* Chapter1_39.swift */; };
 		3FEC61C8211C084C00B05A12 /* Chapter1_40.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC61C7211C084C00B05A12 /* Chapter1_40.swift */; };
 		B11A2EC56C7646E3377C3231 /* Pods_playsoundUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92AA52AE4C2C574F26DA2510 /* Pods_playsoundUITests.framework */; };
+		CC4F43DB21D272B500A2D809 /* Chapter1_58.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F43DA21D272B500A2D809 /* Chapter1_58.swift */; };
+		CC4F43DD21D272CE00A2D809 /* Chapter1_59.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F43DC21D272CE00A2D809 /* Chapter1_59.swift */; };
+		CC4F43DF21D272E000A2D809 /* Chapter1_60.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F43DE21D272E000A2D809 /* Chapter1_60.swift */; };
+		CC4F43E121D27A8B00A2D809 /* Chapter1_61.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F43E021D27A8B00A2D809 /* Chapter1_61.swift */; };
+		CC4F43E321D27AA000A2D809 /* Chapter1_62.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F43E221D27AA000A2D809 /* Chapter1_62.swift */; };
+		CC4F43E521D27AAF00A2D809 /* Chapter1_63.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F43E421D27AAF00A2D809 /* Chapter1_63.swift */; };
+		CC4F43E721D27AC000A2D809 /* Chapter1_64.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F43E621D27AC000A2D809 /* Chapter1_64.swift */; };
+		CC4F43E921D27AD100A2D809 /* Chapter1_65.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F43E821D27AD100A2D809 /* Chapter1_65.swift */; };
+		CC4F43EB21DE197400A2D809 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = CC4F43EA21DE197300A2D809 /* awsconfiguration.json */; };
+		CC4F43ED21DE302D00A2D809 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F43EC21DE302D00A2D809 /* LoginViewController.swift */; };
+		CCE657E021D23D240079D921 /* Chapter1_55.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE657DF21D23D240079D921 /* Chapter1_55.swift */; };
+		CCE657E221D23F260079D921 /* Chapter1_56.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE657E121D23F260079D921 /* Chapter1_56.swift */; };
+		CCE657E421D23F3B0079D921 /* Chapter1_57.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE657E321D23F3B0079D921 /* Chapter1_57.swift */; };
+		CCE657E621D244660079D921 /* E.wav in Resources */ = {isa = PBXBuildFile; fileRef = CCE657E521D244660079D921 /* E.wav */; };
 		D8E6C3DD20E4DD7494E9E2EF /* Pods_playsound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0647321426F8D529A80804 /* Pods_playsound.framework */; };
 		DB11BF1E3502E670357703A7 /* Pods_playsoundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7494AA0B72443D835AF5DC1E /* Pods_playsoundTests.framework */; };
 /* End PBXBuildFile section */
@@ -384,6 +398,20 @@
 		92AA52AE4C2C574F26DA2510 /* Pods_playsoundUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playsoundUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9478B0E2416896B718C792D3 /* Pods-playsound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playsound.debug.xcconfig"; path = "Pods/Target Support Files/Pods-playsound/Pods-playsound.debug.xcconfig"; sourceTree = "<group>"; };
 		9BFAD36D6A55F8CFFEA9EE7C /* Pods-playsound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playsound.release.xcconfig"; path = "Pods/Target Support Files/Pods-playsound/Pods-playsound.release.xcconfig"; sourceTree = "<group>"; };
+		CC4F43DA21D272B500A2D809 /* Chapter1_58.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_58.swift; sourceTree = "<group>"; };
+		CC4F43DC21D272CE00A2D809 /* Chapter1_59.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_59.swift; sourceTree = "<group>"; };
+		CC4F43DE21D272E000A2D809 /* Chapter1_60.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_60.swift; sourceTree = "<group>"; };
+		CC4F43E021D27A8B00A2D809 /* Chapter1_61.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_61.swift; sourceTree = "<group>"; };
+		CC4F43E221D27AA000A2D809 /* Chapter1_62.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_62.swift; sourceTree = "<group>"; };
+		CC4F43E421D27AAF00A2D809 /* Chapter1_63.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_63.swift; sourceTree = "<group>"; };
+		CC4F43E621D27AC000A2D809 /* Chapter1_64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_64.swift; sourceTree = "<group>"; };
+		CC4F43E821D27AD100A2D809 /* Chapter1_65.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_65.swift; sourceTree = "<group>"; };
+		CC4F43EA21DE197300A2D809 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		CC4F43EC21DE302D00A2D809 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CCE657DF21D23D240079D921 /* Chapter1_55.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_55.swift; sourceTree = "<group>"; };
+		CCE657E121D23F260079D921 /* Chapter1_56.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_56.swift; sourceTree = "<group>"; };
+		CCE657E321D23F3B0079D921 /* Chapter1_57.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_57.swift; sourceTree = "<group>"; };
+		CCE657E521D244660079D921 /* E.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = E.wav; sourceTree = "<group>"; };
 		E73C1F58D633999CE8ADBF80 /* Pods-playsoundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playsoundTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-playsoundTests/Pods-playsoundTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -524,38 +552,49 @@
 				3FDAE88321196A4C00173A3C /* Chapter1_22.swift */,
 				3FDAE88521196BEB00173A3C /* Chapter1_23.swift */,
 				3FDAE88721196CE400173A3C /* Chapter1_24.swift */,
-				3F654960216337D0007AF119 /* Chapter1_53.swift */,
-				3FA1C884211AD2BD00A586A9 /* Chapter1_26.swift */,
 				3FDAE88921196DDB00173A3C /* Chapter1_25.swift */,
-				3FB827A0213E7CF7008F1196 /* Chapter1_44.swift */,
+				3FA1C884211AD2BD00A586A9 /* Chapter1_26.swift */,
 				3FA1C886211ADA5E00A586A9 /* Chapter1_27.swift */,
-				3F65495C21633137007AF119 /* Chapter1_52.swift */,
 				3FA1C888211ADBC000A586A9 /* Chapter1_28.swift */,
 				3FA1C88A211AE75D00A586A9 /* Chapter1_29.swift */,
 				3FA1C88C211AEAD300A586A9 /* Chapter1_30.swift */,
 				3FA1C88E211AEC2F00A586A9 /* Chapter1_31.swift */,
-				3FB827A2213E7E6F008F1196 /* Chapter1_45.swift */,
-				3FB8279E213E7BFF008F1196 /* Chapter1_43.swift */,
 				3FA1C890211AEFB300A586A9 /* Chapter1_32.swift */,
 				3FEC6195211BF72600B05A12 /* Chapter1_33.swift */,
 				3FEC6197211BF81B00B05A12 /* Chapter1_34.swift */,
-				3FB8279C213E7A97008F1196 /* Chapter1_42.swift */,
-				3FB827AA213E867E008F1196 /* Chapter1_49.swift */,
 				3FEC6199211BF9E200B05A12 /* Chapter1_35.swift */,
 				3FEC61BF211C05D600B05A12 /* Chapter1_36.swift */,
-				3FB827AE213E892B008F1196 /* Chapter1_51.swift */,
-				3FB827A6213E858E008F1196 /* Chapter1_47.swift */,
-				3FB827A8213E8616008F1196 /* Chapter1_48.swift */,
 				3FEC61C1211C067C00B05A12 /* Chapter1_37.swift */,
 				3FEC61C3211C06E800B05A12 /* Chapter1_38.swift */,
-				3FB827A4213E7F37008F1196 /* Chapter1_46.swift */,
-				3FB827AC213E871A008F1196 /* Chapter1_50.swift */,
 				3FEC61C5211C073C00B05A12 /* Chapter1_39.swift */,
-				3FEC61C7211C084C00B05A12 /* Chapter1_40.swift */,
-				3FB82768213E6E2E008F1196 /* Chapter1_40_3.swift */,
 				3FB82766213E6D03008F1196 /* Chapter1_40_2.swift */,
+				3FB82768213E6E2E008F1196 /* Chapter1_40_3.swift */,
+				3FEC61C7211C084C00B05A12 /* Chapter1_40.swift */,
 				3FB8276A213E6F13008F1196 /* Chapter1_41.swift */,
+				3FB8279C213E7A97008F1196 /* Chapter1_42.swift */,
+				3FB8279E213E7BFF008F1196 /* Chapter1_43.swift */,
+				3FB827A0213E7CF7008F1196 /* Chapter1_44.swift */,
+				3FB827A2213E7E6F008F1196 /* Chapter1_45.swift */,
+				3FB827A4213E7F37008F1196 /* Chapter1_46.swift */,
+				3FB827A6213E858E008F1196 /* Chapter1_47.swift */,
+				3FB827A8213E8616008F1196 /* Chapter1_48.swift */,
+				3FB827AA213E867E008F1196 /* Chapter1_49.swift */,
+				3FB827AC213E871A008F1196 /* Chapter1_50.swift */,
+				3FB827AE213E892B008F1196 /* Chapter1_51.swift */,
+				3F65495C21633137007AF119 /* Chapter1_52.swift */,
+				3F654960216337D0007AF119 /* Chapter1_53.swift */,
 				0444FEC6217C726700D49E9E /* Chapter1_54.swift */,
+				CCE657DF21D23D240079D921 /* Chapter1_55.swift */,
+				CCE657E121D23F260079D921 /* Chapter1_56.swift */,
+				CCE657E321D23F3B0079D921 /* Chapter1_57.swift */,
+				CC4F43DA21D272B500A2D809 /* Chapter1_58.swift */,
+				CC4F43DC21D272CE00A2D809 /* Chapter1_59.swift */,
+				CC4F43DE21D272E000A2D809 /* Chapter1_60.swift */,
+				CC4F43E021D27A8B00A2D809 /* Chapter1_61.swift */,
+				CC4F43E221D27AA000A2D809 /* Chapter1_62.swift */,
+				CC4F43E421D27AAF00A2D809 /* Chapter1_63.swift */,
+				CC4F43E621D27AC000A2D809 /* Chapter1_64.swift */,
+				CC4F43E821D27AD100A2D809 /* Chapter1_65.swift */,
 			);
 			path = chapter1;
 			sourceTree = "<group>";
@@ -628,6 +667,7 @@
 		3F7F1AB42112B1F000A48E23 /* playsound */ = {
 			isa = PBXGroup;
 			children = (
+				CC4F43EA21DE197300A2D809 /* awsconfiguration.json */,
 				3F84F5D021C39A1D002660EC /* beatSounds */,
 				3F35604721183424000BEFF2 /* assets */,
 				3F35600C21180E55000BEFF2 /* sounds */,
@@ -635,6 +675,7 @@
 				3F7F1AB52112B1F000A48E23 /* AppDelegate.swift */,
 				3F35600921180C8A000BEFF2 /* chapter1 */,
 				3F7F1AB92112B1F000A48E23 /* Main.storyboard */,
+				CC4F43EC21DE302D00A2D809 /* LoginViewController.swift */,
 				3F7F1ABC2112B1F000A48E23 /* Assets.xcassets */,
 				3F7F1ABE2112B1F000A48E23 /* LaunchScreen.storyboard */,
 				3F7F1AC12112B1F000A48E23 /* Info.plist */,
@@ -665,6 +706,7 @@
 			children = (
 				3FC7976021C792F80029C4CF /* C.wav */,
 				3FC7976221C793050029C4CF /* D.wav */,
+				CCE657E521D244660079D921 /* E.wav */,
 				3F84F5D221C39A37002660EC /* StrongBeat.wav */,
 				3F84F5D121C39A37002660EC /* SubBeat.wav */,
 			);
@@ -705,6 +747,7 @@
 				3F7F1AAE2112B1F000A48E23 /* Sources */,
 				3F7F1AAF2112B1F000A48E23 /* Frameworks */,
 				3F7F1AB02112B1F000A48E23 /* Resources */,
+				2E62AFD24B048B7C847E1053 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -829,6 +872,7 @@
 				3F355FF921180B59000BEFF2 /* Artboard 22.png in Resources */,
 				3FB82798213E7537008F1196 /* Artboard 62.png in Resources */,
 				3FB8279B213E7537008F1196 /* Artboard 73.png in Resources */,
+				CC4F43EB21DE197400A2D809 /* awsconfiguration.json in Resources */,
 				3F3560492118342F000BEFF2 /* right-arrow.png in Resources */,
 				3F84F5D321C39A37002660EC /* SubBeat.wav in Resources */,
 				3FC7976321C793050029C4CF /* D.wav in Resources */,
@@ -861,6 +905,7 @@
 				3F355FF521180B59000BEFF2 /* Artboard 20.png in Resources */,
 				3FB82765213E612D008F1196 /* Artboard 40.png in Resources */,
 				3FB82787213E7537008F1196 /* Artboard 59.png in Resources */,
+				CCE657E621D244660079D921 /* E.wav in Resources */,
 				3FB82796213E7537008F1196 /* Artboard 75.png in Resources */,
 				3F355FFC21180B59000BEFF2 /* Artboard 8.png in Resources */,
 				3FB82795213E7537008F1196 /* Artboard 72.png in Resources */,
@@ -938,6 +983,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2E62AFD24B048B7C847E1053 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-playsound/Pods-playsound-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSDynamoDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-playsound/Pods-playsound-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		609658C3A1CECB72B7ACEA59 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1002,9 +1075,12 @@
 				3FB827A7213E858E008F1196 /* Chapter1_47.swift in Sources */,
 				3FB8279F213E7BFF008F1196 /* Chapter1_43.swift in Sources */,
 				3FDAE88A21196DDB00173A3C /* Chapter1_25.swift in Sources */,
+				CC4F43ED21DE302D00A2D809 /* LoginViewController.swift in Sources */,
 				3F654961216337D0007AF119 /* Chapter1_53.swift in Sources */,
+				CC4F43DB21D272B500A2D809 /* Chapter1_58.swift in Sources */,
 				3F35600B21180CDA000BEFF2 /* Chapter1_1.swift in Sources */,
 				3FDAE88421196A4C00173A3C /* Chapter1_22.swift in Sources */,
+				CC4F43DD21D272CE00A2D809 /* Chapter1_59.swift in Sources */,
 				3FEC6198211BF81B00B05A12 /* Chapter1_34.swift in Sources */,
 				3FDAE87A21195F9700173A3C /* Chapter1_17.swift in Sources */,
 				3FDAE8722119547C00173A3C /* Chapter1_13.swift in Sources */,
@@ -1019,10 +1095,13 @@
 				3FB827A1213E7CF7008F1196 /* Chapter1_44.swift in Sources */,
 				3FB82767213E6D03008F1196 /* Chapter1_40_2.swift in Sources */,
 				3F35604B211834C2000BEFF2 /* Chapter1_5.swift in Sources */,
+				CCE657E221D23F260079D921 /* Chapter1_56.swift in Sources */,
 				0444FEC7217C726700D49E9E /* Chapter1_54.swift in Sources */,
+				CC4F43E521D27AAF00A2D809 /* Chapter1_63.swift in Sources */,
 				3FDAE88621196BEB00173A3C /* Chapter1_23.swift in Sources */,
 				3FDAE874211956DE00173A3C /* Chapter1_14.swift in Sources */,
 				3FEC61C4211C06E800B05A12 /* Chapter1_38.swift in Sources */,
+				CC4F43E721D27AC000A2D809 /* Chapter1_64.swift in Sources */,
 				3F65495D21633137007AF119 /* Chapter1_52.swift in Sources */,
 				3FB827AD213E871A008F1196 /* Chapter1_50.swift in Sources */,
 				3F35604421182E56000BEFF2 /* Chapter1_3.swift in Sources */,
@@ -1038,16 +1117,22 @@
 				3FB827AB213E867E008F1196 /* Chapter1_49.swift in Sources */,
 				3FEC61C6211C073C00B05A12 /* Chapter1_39.swift in Sources */,
 				3FEC61C0211C05D600B05A12 /* Chapter1_36.swift in Sources */,
+				CC4F43E121D27A8B00A2D809 /* Chapter1_61.swift in Sources */,
+				CCE657E021D23D240079D921 /* Chapter1_55.swift in Sources */,
 				3FEC6196211BF72600B05A12 /* Chapter1_33.swift in Sources */,
 				3FDAE87821195F0100173A3C /* Chapter1_16.swift in Sources */,
 				3FDAE876211957AB00173A3C /* Chapter1_15.swift in Sources */,
 				3FA1C88D211AEAD300A586A9 /* Chapter1_30.swift in Sources */,
 				3F35605521183E15000BEFF2 /* Chapter1_10.swift in Sources */,
+				CC4F43E321D27AA000A2D809 /* Chapter1_62.swift in Sources */,
 				3FDAE87C211962A300173A3C /* Chapter1_18.swift in Sources */,
+				CCE657E421D23F3B0079D921 /* Chapter1_57.swift in Sources */,
 				3F35604221181C7D000BEFF2 /* Chapter1_2.swift in Sources */,
 				3FA1C889211ADBC000A586A9 /* Chapter1_28.swift in Sources */,
 				3F35604D21183798000BEFF2 /* Chapter1_6.swift in Sources */,
 				3FDAE8822119686400173A3C /* Chapter1_21.swift in Sources */,
+				CC4F43E921D27AD100A2D809 /* Chapter1_65.swift in Sources */,
+				CC4F43DF21D272E000A2D809 /* Chapter1_60.swift in Sources */,
 				3F35605321183D2F000BEFF2 /* Chapter1_9.swift in Sources */,
 				3FB827AF213E892B008F1196 /* Chapter1_51.swift in Sources */,
 				3FB827A5213E7F37008F1196 /* Chapter1_46.swift in Sources */,
