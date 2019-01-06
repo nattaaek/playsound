@@ -188,6 +188,7 @@
 		CC4F43E921D27AD100A2D809 /* Chapter1_65.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F43E821D27AD100A2D809 /* Chapter1_65.swift */; };
 		CC4F43EB21DE197400A2D809 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = CC4F43EA21DE197300A2D809 /* awsconfiguration.json */; };
 		CC4F43ED21DE302D00A2D809 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F43EC21DE302D00A2D809 /* LoginViewController.swift */; };
+		CC4F43EF21DF2F3300A2D809 /* bg.wav in Resources */ = {isa = PBXBuildFile; fileRef = CC4F43EE21DF2F3300A2D809 /* bg.wav */; };
 		CCE657E021D23D240079D921 /* Chapter1_55.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE657DF21D23D240079D921 /* Chapter1_55.swift */; };
 		CCE657E221D23F260079D921 /* Chapter1_56.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE657E121D23F260079D921 /* Chapter1_56.swift */; };
 		CCE657E421D23F3B0079D921 /* Chapter1_57.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE657E321D23F3B0079D921 /* Chapter1_57.swift */; };
@@ -408,6 +409,7 @@
 		CC4F43E821D27AD100A2D809 /* Chapter1_65.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_65.swift; sourceTree = "<group>"; };
 		CC4F43EA21DE197300A2D809 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		CC4F43EC21DE302D00A2D809 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CC4F43EE21DF2F3300A2D809 /* bg.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bg.wav; sourceTree = "<group>"; };
 		CCE657DF21D23D240079D921 /* Chapter1_55.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_55.swift; sourceTree = "<group>"; };
 		CCE657E121D23F260079D921 /* Chapter1_56.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_56.swift; sourceTree = "<group>"; };
 		CCE657E321D23F3B0079D921 /* Chapter1_57.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1_57.swift; sourceTree = "<group>"; };
@@ -704,6 +706,7 @@
 		3F84F5D021C39A1D002660EC /* beatSounds */ = {
 			isa = PBXGroup;
 			children = (
+				CC4F43EE21DF2F3300A2D809 /* bg.wav */,
 				3FC7976021C792F80029C4CF /* C.wav */,
 				3FC7976221C793050029C4CF /* D.wav */,
 				CCE657E521D244660079D921 /* E.wav */,
@@ -922,6 +925,7 @@
 				3F35600221180B59000BEFF2 /* Artboard 13.png in Resources */,
 				3F355FEF21180B59000BEFF2 /* Artboard 30.png in Resources */,
 				3FEC61AB211C054400B05A12 /* Artboard 38.png in Resources */,
+				CC4F43EF21DF2F3300A2D809 /* bg.wav in Resources */,
 				3FB8279A213E7537008F1196 /* Artboard 76.png in Resources */,
 				3F355FEE21180B59000BEFF2 /* Artboard 7.png in Resources */,
 				3F35603E21180E61000BEFF2 /* p18clap24.mp3 in Resources */,
