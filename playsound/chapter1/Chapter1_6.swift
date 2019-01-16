@@ -1,5 +1,5 @@
 //
-//  Chapter1_6.swift
+//  Chapter1_10.swift
 //  playsound
 //
 //  Created by student on 8/6/18.
@@ -8,28 +8,128 @@
 
 import UIKit
 import AVFoundation
-import Darwin
 
-class Chapter1_6: UIViewController, AVAudioPlayerDelegate {
+class Chapter1_10: UIViewController, AVAudioPlayerDelegate {
+    
+    var conversationSound: AVAudioPlayer = AVAudioPlayer()
+    var answer : String = ""
+    var currentAnswer : String = ""
+    var currentQuestion : Int = 1
+    var isFinished = false
 
-    var conversationSound : AVAudioPlayer = AVAudioPlayer()
+
+    @IBOutlet weak var answer3: UIImageView!
+    @IBOutlet weak var answer2: UIImageView!
+    @IBOutlet weak var answer1: UIImageView!
     
     
-    @IBAction func nextPage(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_7")
-        self.present(vc!, animated: true, completion: nil)
+    func nextPage(){
+        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "1_7")
+        self.present(storyboard!, animated: true, completion: nil)
+    }
+    
+    func retryMusic(){
+        if answer3.image == UIImage(named: "retry.png")  {
+            audioPlay()
+        } else if answer2.image == UIImage(named: "retry.png") {
+            audioPlay()
+        } else {
+            audioPlay()
+        }
+    }
+    
+    
+    @IBOutlet weak var leg3: UIButton!
+    @IBAction func leg3Answer(_ sender: Any) {
+        answer = "low"
+        if answer == currentAnswer {
+            answer3.image = UIImage(named: "correct.png")
+            nextPage()
+        } else {
+            answer3.image = UIImage(named: "retry.png")
+            retryMusic()
+        }
+    }
+    
+    
+    @IBOutlet weak var head3: UIButton!
+    @IBAction func head3Answer(_ sender: Any) {
+        answer = "high"
+        if answer == currentAnswer {
+            answer3.image = UIImage(named: "correect.png")
+            nextPage()
+        } else {
+            answer3.image = UIImage(named: "retry.png")
+            retryMusic()
+        }
+    }
+    
+    
+    @IBOutlet weak var leg2: UIButton!
+    @IBAction func leg2(_ sender: Any) {
+        answer = "low"
+        if answer == currentAnswer {
+            answer2.image = UIImage(named: "correct.png")
+            leg3.isHidden = false
+            head3.isHidden = false
+        } else {
+            answer2.image = UIImage(named: "retry.png")
+            retryMusic()
+        }
+    }
+    
+    @IBOutlet weak var head2: UIButton!
+    @IBAction func head2(_ sender: Any) {
+        answer = "high"
+        if answer == currentAnswer {
+            answer2.image = UIImage(named: "correct.png")
+            leg3.isHidden = false
+            head3.isHidden = false
+        } else {
+            answer2.image = UIImage(named: "retry.png")
+            retryMusic()
+        }
+    }
+    
+    @IBOutlet weak var leg1: UIButton!
+    @IBAction func leg1Answer(_ sender: Any) {
+        answer = "low"
+        if answer == currentAnswer {
+            answer1.image = UIImage(named: "correct.png")
+            leg2.isHidden = false
+            head2.isHidden = false
+        } else {
+            answer1.image = UIImage(named: "retry.png")
+            retryMusic()
+        }
+    }
+    
+    
+    @IBOutlet weak var head1: UIButton!
+    @IBAction func head1Answer(_ sender: Any) {
+        answer  = "high"
+        if answer == currentAnswer {
+            answer1.image = UIImage(named: "correct.png")
+            leg2.isHidden = false
+            head2.isHidden = false
+        } else {
+            answer1.image = UIImage(named: "retry.png")
+            retryMusic()
+        }
     }
     
     func audioPlay() {
-        let path: String
+        var path: String
+
         let num = arc4random_uniform(10) + 1
-        
+            
         if num >= 5 {
             path = Bundle.main.path(forResource: "p5lownote.mp3", ofType: nil)!
+            currentAnswer = "low"
         }else {
             path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
+            currentAnswer = "high"
         }
-        
         
         let url = URL(fileURLWithPath: path)
         do {
@@ -41,15 +141,10 @@ class Chapter1_6: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
-    func audioPlayerDidFinishPlaying( _ player: AVAudioPlayer, successfully flag: Bool) {
-        btnNext.isHidden = false
-    }
     
-    @IBOutlet weak var btnNext: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        btnNext.isHidden = true
-        
         audioPlay()
     }
+
 }
