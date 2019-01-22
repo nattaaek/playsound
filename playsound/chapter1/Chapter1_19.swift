@@ -1,5 +1,5 @@
 //
-//  Chapter1_19.swift
+//  Chapter1_23.swift
 //  playsound
 //
 //  Created by student on 8/7/18.
@@ -14,15 +14,13 @@ class Chapter1_19: UIViewController, AVAudioPlayerDelegate {
     var conversationSound: AVAudioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var btnNext: UIButton!
-    
     @IBAction func nextPage(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_20")
         self.present(vc!, animated: true, completion: nil)
     }
-    
     func audioPlay() {
         
-        let path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
+        let path = Bundle.main.path(forResource: "p21clapwithsound.mp3", ofType: nil)!
         let url = URL(fileURLWithPath: path)
         do {
             conversationSound = try AVAudioPlayer(contentsOf: url)

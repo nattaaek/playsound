@@ -1,5 +1,5 @@
 //
-//  Chapter1_47.swift
+//  Chapter1_51.swift
 //  playsound
 //
 //  Created by student on 9/4/18.
@@ -11,13 +11,13 @@ import AVFoundation
 
 class Chapter1_47: UIViewController, AVAudioPlayerDelegate {
 
-    
     var conversationSound: AVAudioPlayer = AVAudioPlayer()
     
     @IBAction func nextPage(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_48")
         self.present(vc!, animated: true, completion: nil)
     }
+    
     @IBOutlet weak var btnNext: UIButton!
     func audioPlay() {
         
@@ -32,6 +32,7 @@ class Chapter1_47: UIViewController, AVAudioPlayerDelegate {
         }
     }
     
+    
     func audioPlayerDidFinishPlaying( _ player: AVAudioPlayer, successfully flag: Bool) {
         btnNext.isHidden = false
     }
@@ -43,4 +44,5 @@ class Chapter1_47: UIViewController, AVAudioPlayerDelegate {
         audioPlay()
         
     }
+
 }

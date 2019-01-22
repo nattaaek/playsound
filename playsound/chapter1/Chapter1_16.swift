@@ -1,5 +1,5 @@
 //
-//  Chapter1_16.swift
+//  Chapter1_20.swift
 //  playsound
 //
 //  Created by student on 8/7/18.
@@ -22,7 +22,7 @@ class Chapter1_16: UIViewController, AVAudioPlayerDelegate {
     
     func audioPlay() {
         
-        let path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
+        let path = Bundle.main.path(forResource: "p18clap24.mp3", ofType: nil)!
         let url = URL(fileURLWithPath: path)
         do {
             conversationSound = try AVAudioPlayer(contentsOf: url)
@@ -44,5 +44,4 @@ class Chapter1_16: UIViewController, AVAudioPlayerDelegate {
         audioPlay()
         
     }
-
 }

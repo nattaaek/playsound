@@ -1,5 +1,5 @@
 //
-//  Chapter1_41.swift
+//  Chapter1_45.swift
 //  playsound
 //
 //  Created by student on 9/4/18.
@@ -7,55 +7,39 @@
 //
 
 import UIKit
+import AVFoundation
 
-class Chapter1_41: UIViewController {
+class Chapter1_41: UIViewController, AVAudioPlayerDelegate {
 
-    var choice = ""
-    var cnt = 0
-    
-    @IBOutlet weak var btnNext: UIButton!
+    var conversationSound: AVAudioPlayer = AVAudioPlayer()
     
     @IBAction func nextPage(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_42")
         self.present(vc!, animated: true, completion: nil)
     }
-    
-    @IBAction func lionAnswer(_ sender: Any) {
-        if choice == "lion" {
-            cnt += 1
-            if cnt == 2 {
-                btnNext.isHidden = false
-            }
-        } else {
-            let alert = UIAlertController(title: "error", message: "you choose wrong answer", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+    @IBOutlet weak var btnNext: UIButton!
+    func audioPlay() {
+        
+        let path = Bundle.main.path(forResource: "p23.mp3", ofType: nil)!
+        let url = URL(fileURLWithPath: path)
+        do {
+            conversationSound = try AVAudioPlayer(contentsOf: url)
+            conversationSound.delegate = self
+            conversationSound.play()
+        } catch {
+            print(error)
         }
     }
     
-    @IBAction func birdAnswer(_ sender: Any) {
-        if choice == "bird" {
-            cnt += 1
-            if cnt == 2 {
-                btnNext.isHidden = false
-            }
-        } else {
-            let alert = UIAlertController(title: "error", message: "you choose wrong answer", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
+    func audioPlayerDidFinishPlaying( _ player: AVAudioPlayer, successfully flag: Bool) {
+        btnNext.isHidden = false
     }
     
-    @IBAction func birdButton(_ sender: Any) {
-        choice = "bird"
-    }
-    
-    @IBAction func lionButton(_ sender: Any) {
-        choice = "lion"
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         btnNext.isHidden = true
-        // Do any additional setup after loading the view.
+        
+        audioPlay()
+        
     }
 }

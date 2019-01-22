@@ -1,5 +1,5 @@
 //
-//  Chapter1_11.swift
+//  Chapter1_15.swift
 //  playsound
 //
 //  Created by student on 8/7/18.
@@ -11,58 +11,110 @@ import AVFoundation
 
 class Chapter1_11: UIViewController, AVAudioPlayerDelegate {
     
-    func nextPage() {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_12")
-        self.present(vc!, animated: false, completion: nil)
-    }
-    
-
-    
-    
     var conversationSound: AVAudioPlayer = AVAudioPlayer()
+    var currentColor: String = ""
+    var countHands: Int = 0
+    @IBOutlet weak var hand1Style: UIButton!
+    @IBOutlet weak var hand2Style: UIButton!
+    @IBOutlet weak var hand3Style: UIButton!
+    @IBOutlet weak var hand4Style: UIButton!
+    @IBOutlet weak var hand5Style: UIButton!
     
-    var currentAnswer: String = ""
-    var answer : String = ""
+    @IBAction func nextPage(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_12")
+        self.present(vc!, animated: true, completion: nil)
+    }
     
-    @IBAction func head2Answer(_ sender: Any) {
-        answer = "high"
-        if answer == currentAnswer {
-            answer2.image = UIImage(named: "correct.png")
-           nextPage()
+    @IBAction func hand2(_ sender: Any) {
+        if currentColor == "red" {
+            countHands += 1
+            if countHands == 5 {
+                btnNext.isHidden = false
+            }
+        hand2Style.isHidden = true
         }
         else {
-            let alert = UIAlertController(title: "wrong answer", message: "please listen again", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "back", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "Wrong choice", message: "You choose wrong color", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
         }
     }
-    @IBAction func leg2Answer(_ sender: Any) {
-        answer = "low"
-        if answer == currentAnswer {
-            answer2.image = UIImage(named: "correct.png")
-            nextPage()
+    
+    @IBAction func hand1(_ sender: Any) {
+        if currentColor == "blue" {
+            countHands += 1
+            if countHands == 5 {
+                btnNext.isHidden = false
+            }
+        hand1Style.isHidden = true
         }
         else {
-            let alert = UIAlertController(title: "wrong answer", message: "please listen again", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "back", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "Wrong choice", message: "You choose wrong color", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
         }
     }
-    @IBOutlet weak var answer2: UIImageView!
+    
+    @IBAction func hand3(_ sender: Any) {
+        if currentColor == "red" {
+            countHands += 1
+            if countHands == 5 {
+                btnNext.isHidden = false
+            }
+        hand3Style.isHidden = true
+        }
+        else {
+            let alert = UIAlertController(title: "Wrong choice", message: "You choose wrong color", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func hand4(_ sender: Any) {
+        if currentColor == "blue" {
+            countHands += 1
+            if countHands == 5 {
+                btnNext.isHidden = false
+            }
+        hand4Style.isHidden = true
+        }
+        else {
+            let alert = UIAlertController(title: "Wrong choice", message: "You choose wrong color", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
+    @IBAction func hand5(_ sender: Any) {
+        if currentColor == "blue" {
+            countHands += 1
+            if countHands == 5 {
+                btnNext.isHidden = false
+            }
+        hand5Style.isHidden = true
+        }
+        else {
+            let alert = UIAlertController(title: "Wrong choice", message: "You choose wrong color", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @IBOutlet weak var btnNext: UIButton!
+    
+    @IBAction func colorRed(_ sender: Any) {
+        currentColor = "red"
+    }
+    
+    @IBAction func colorBlue(_ sender: Any) {
+        currentColor = "blue"
+    }
+    
     func audioPlay() {
-        var path: String
-        
-        let num = arc4random_uniform(10) + 1
-        
-        if num >= 5 {
-            path = Bundle.main.path(forResource: "p5lownote.mp3", ofType: nil)!
-            currentAnswer = "low"
-        }else {
-            path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
-            currentAnswer = "high"
-        }
-        
+        let path = Bundle.main.path(forResource: "p5lownote.mp3", ofType: nil)!
         let url = URL(fileURLWithPath: path)
+        
         do {
             conversationSound = try AVAudioPlayer(contentsOf: url)
             conversationSound.delegate = self
@@ -70,17 +122,12 @@ class Chapter1_11: UIViewController, AVAudioPlayerDelegate {
         } catch {
             print(error)
         }
-        
-
-        
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        btnNext.isHidden = true
         audioPlay()
-        
         // Do any additional setup after loading the view.
     }
 }
