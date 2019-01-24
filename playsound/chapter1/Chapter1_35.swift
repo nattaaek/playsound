@@ -1,46 +1,61 @@
 //
-//  Chapter1_39.swift
+//  Chapter1_41.swift
 //  playsound
 //
-//  Created by student on 8/9/18.
+//  Created by student on 9/4/18.
 //  Copyright © 2018 harvestidea. All rights reserved.
 //
 
 import UIKit
-import AVFoundation
 
-class Chapter1_35: UIViewController, AVAudioPlayerDelegate {
+class Chapter1_35: UIViewController {
 
-    var conversationSound: AVAudioPlayer = AVAudioPlayer()
+    var choice = ""
+    var cnt = 0
+    
+    @IBOutlet weak var btnNext: UIButton!
     
     @IBAction func nextPage(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_36")
         self.present(vc!, animated: true, completion: nil)
     }
-    @IBOutlet weak var btnNext: UIButton!
-    func audioPlay() {
-        
-        let path = Bundle.main.path(forResource: "p5lownote.mp3", ofType: nil)!
-        let url = URL(fileURLWithPath: path)
-        do {
-            conversationSound = try AVAudioPlayer(contentsOf: url)
-            conversationSound.delegate = self
-            conversationSound.play()
-        } catch {
-            print(error)
+    
+    @IBAction func lionAnswer(_ sender: Any) {
+        if choice == "lion" {
+            cnt += 1
+            if cnt == 2 {
+                btnNext.isHidden = false
+            }
+        } else {
+            let alert = UIAlertController(title: "error", message: "you choose wrong answer", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
-    func audioPlayerDidFinishPlaying( _ player: AVAudioPlayer, successfully flag: Bool) {
-        btnNext.isHidden = false
+    @IBAction func birdAnswer(_ sender: Any) {
+        if choice == "bird" {
+            cnt += 1
+            if cnt == 2 {
+                btnNext.isHidden = false
+            }
+        } else {
+            let alert = UIAlertController(title: "error", message: "you choose wrong answer", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
+    @IBAction func birdButton(_ sender: Any) {
+        choice = "bird"
+    }
+    
+    @IBAction func lionButton(_ sender: Any) {
+        choice = "lion"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         btnNext.isHidden = true
-        
-        audioPlay()
-        
+        // Do any additional setup after loading the view.
     }
-
 }

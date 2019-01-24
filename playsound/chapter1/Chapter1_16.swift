@@ -1,5 +1,5 @@
 //
-//  Chapter1_20.swift
+//  Chapter1_22.swift
 //  playsound
 //
 //  Created by student on 8/7/18.
@@ -11,10 +11,9 @@ import AVFoundation
 
 class Chapter1_16: UIViewController, AVAudioPlayerDelegate {
 
-    var conversationSound: AVAudioPlayer = AVAudioPlayer()
+    var  conversationSound: AVAudioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var btnNext: UIButton!
-    
     @IBAction func nextPage(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_17")
         self.present(vc!, animated: true, completion: nil)
@@ -22,7 +21,7 @@ class Chapter1_16: UIViewController, AVAudioPlayerDelegate {
     
     func audioPlay() {
         
-        let path = Bundle.main.path(forResource: "p18clap24.mp3", ofType: nil)!
+        let path = Bundle.main.path(forResource: "p18", ofType: "mp3")!
         let url = URL(fileURLWithPath: path)
         do {
             conversationSound = try AVAudioPlayer(contentsOf: url)
@@ -44,4 +43,5 @@ class Chapter1_16: UIViewController, AVAudioPlayerDelegate {
         audioPlay()
         
     }
+    
 }

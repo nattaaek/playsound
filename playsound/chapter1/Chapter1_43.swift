@@ -1,5 +1,5 @@
 //
-//  Chapter1_47.swift
+//  Chapter1_49.swift
 //  playsound
 //
 //  Created by student on 9/4/18.
@@ -11,6 +11,7 @@ import AVFoundation
 
 class Chapter1_43: UIViewController, AVAudioPlayerDelegate {
 
+
     
     var conversationSound: AVAudioPlayer = AVAudioPlayer()
     
@@ -21,7 +22,7 @@ class Chapter1_43: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var btnNext: UIButton!
     func audioPlay() {
         
-        let path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
+        let path = Bundle.main.path(forResource: "conversation", ofType: "mp3")!
         let url = URL(fileURLWithPath: path)
         do {
             conversationSound = try AVAudioPlayer(contentsOf: url)
@@ -43,4 +44,5 @@ class Chapter1_43: UIViewController, AVAudioPlayerDelegate {
         audioPlay()
         
     }
+
 }

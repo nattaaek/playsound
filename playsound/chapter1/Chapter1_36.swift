@@ -1,5 +1,5 @@
 //
-//  Chapter1_40_3.swift
+//  Chapter1_42.swift
 //  playsound
 //
 //  Created by student on 9/4/18.
@@ -10,52 +10,19 @@ import UIKit
 import AVFoundation
 
 class Chapter1_36: UIViewController, AVAudioPlayerDelegate {
+
     var conversationSound: AVAudioPlayer = AVAudioPlayer()
-    var answer = ""
-    
-    @IBAction func birdAnswer(_ sender: Any) {
-        if answer == "high" {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_37")
-            self.present(vc!, animated: true, completion: nil)
-        }else{
-            let alert = UIAlertController(title: "Error", message: "wrong choice", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
     
     
-    @IBAction func lionAnswer(_ sender: Any) {
-        if answer == "low" {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_41")
-            self.present(vc!, animated: true, completion: nil)
-        }else{
-            let alert = UIAlertController(title: "Error", message: "wrong choice", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
+    @IBOutlet weak var btnNext: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        audioPlay()
-        // Do any additional setup after loading the view.
+    @IBAction func nextPage(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_37")
+        self.present(vc!, animated: true, completion: nil)
     }
     
     func audioPlay() {
-        var path: String
-        
-        let num = arc4random_uniform(10) + 1
-        
-        if num >= 5 {
-            path = Bundle.main.path(forResource: "p5lownote.mp3", ofType: nil)!
-            answer = "low"
-        }else {
-            path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
-            answer = "high"
-        }
-        
+        let path = Bundle.main.path(forResource: "conversation", ofType: "mp3")!
         let url = URL(fileURLWithPath: path)
         do {
             conversationSound = try AVAudioPlayer(contentsOf: url)
@@ -64,5 +31,17 @@ class Chapter1_36: UIViewController, AVAudioPlayerDelegate {
         } catch {
             print(error)
         }
+    }
+    
+    func audioPlayerDidFinishPlaying( _ player: AVAudioPlayer, successfully flag: Bool) {
+        btnNext.isHidden = false
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        btnNext.isHidden = true
+        
+        audioPlay()
+        
     }
 }

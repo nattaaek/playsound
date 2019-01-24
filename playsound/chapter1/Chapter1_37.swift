@@ -1,5 +1,5 @@
 //
-//  Chapter1_41.swift
+//  Chapter1_43.swift
 //  playsound
 //
 //  Created by student on 9/4/18.
@@ -7,55 +7,127 @@
 //
 
 import UIKit
+import AVFoundation
 
-class Chapter1_37: UIViewController {
+class Chapter1_37: UIViewController, AVAudioPlayerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    var choice = ""
-    var cnt = 0
-    
-    @IBOutlet weak var btnNext: UIButton!
+
+    func removeColor() {
+        if isShow == 0 {
+            colorPalette.isHidden = true
+            isShow = 1
+        }
+        else {
+            colorPalette.isHidden = false
+            isShow = 0
+        }
+    }
     
     @IBAction func nextPage(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_38")
-        self.present(vc!, animated: true, completion: nil)
-    }
-    
-    @IBAction func lionAnswer(_ sender: Any) {
-        if choice == "lion" {
-            cnt += 1
-            if cnt == 2 {
-                btnNext.isHidden = false
-            }
-        } else {
-            let alert = UIAlertController(title: "error", message: "you choose wrong answer", preferredStyle: .alert)
+        if currentColor == "red" {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_38")
+            self.present(vc!, animated: true, completion: nil)
+        }
+        else {
+            let alert = UIAlertController(title: "Wrong color", message: "you choose wrong color", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
     
-    @IBAction func birdAnswer(_ sender: Any) {
-        if choice == "bird" {
-            cnt += 1
-            if cnt == 2 {
-                btnNext.isHidden = false
-            }
-        } else {
-            let alert = UIAlertController(title: "error", message: "you choose wrong answer", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+    var currentColor: String = ""
+    let colors = ["pink","blue","brown","cyan","green","magenta","orange","purple","red","yellow","salmon","lavender"]
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return colors.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        currentColor = colors[indexPath.row]
+        removeColor()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = colorsPalette.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        
+        
+        
+        switch colors[indexPath.row] {
+        case "pink":
+            cell.backgroundColor = UIColor(red: 255/255, green: 192/255, blue: 203/255, alpha: 1.0)
+        case "blue":
+            cell.backgroundColor = UIColor.blue
+        case "brown":
+            cell.backgroundColor = UIColor.brown
+        case "cyan":
+            cell.backgroundColor = UIColor.cyan
+        case "green":
+            cell.backgroundColor = UIColor.green
+        case "magenta":
+            cell.backgroundColor = UIColor.magenta
+        case "orange":
+            cell.backgroundColor = UIColor.orange
+        case "purple":
+            cell.backgroundColor = UIColor.purple
+        case "red":
+            cell.backgroundColor = UIColor.red
+        case "yellow":
+            cell.backgroundColor = UIColor.yellow
+        case "salmon":
+            cell.backgroundColor = UIColor(red: 253/255, green: 171/255, blue: 159/255, alpha: 1.0)
+        case "lavender":
+            cell.backgroundColor = UIColor(red: 191/255, green: 148/255, blue: 228/255, alpha: 1.0)
+        default:
+            cell.backgroundColor = UIColor.white
+        }
+        
+        return cell
+    }
+    
+    
+    @IBOutlet weak var colorsPalette: UICollectionView!
+    
+    var conversationSound: AVAudioPlayer = AVAudioPlayer()
+    var isShow = 1
+    
+    @IBOutlet weak var colorPalette: UIView!
+    
+    @IBAction func showColorPalete(_ sender: Any) {
+        
+        if isShow == 0 {
+            colorPalette.isHidden = true
+            isShow = 1
+        }
+        else {
+            colorPalette.isHidden = false
+            isShow = 0
         }
     }
     
-    @IBAction func birdButton(_ sender: Any) {
-        choice = "bird"
+    func audioPlay() {
+        
+        let path = Bundle.main.path(forResource: "conversation", ofType: "mp3")!
+        let url = URL(fileURLWithPath: path)
+        do {
+            conversationSound = try AVAudioPlayer(contentsOf: url)
+            conversationSound.delegate = self
+            conversationSound.play()
+        } catch {
+            print(error)
+        }
+        
     }
     
-    @IBAction func lionButton(_ sender: Any) {
-        choice = "lion"
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        btnNext.isHidden = true
-        // Do any additional setup after loading the view.
+        colorPalette.isHidden = true
+        audioPlay()
+        self.colorsPalette.delegate = self
+        self.colorsPalette.dataSource = self
     }
+
 }

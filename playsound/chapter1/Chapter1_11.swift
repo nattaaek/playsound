@@ -1,5 +1,5 @@
 //
-//  Chapter1_15.swift
+//  Chapter1_17.swift
 //  playsound
 //
 //  Created by student on 8/7/18.
@@ -10,109 +10,80 @@ import UIKit
 import AVFoundation
 
 class Chapter1_11: UIViewController, AVAudioPlayerDelegate {
-    
+
     var conversationSound: AVAudioPlayer = AVAudioPlayer()
     var currentColor: String = ""
-    var countHands: Int = 0
-    @IBOutlet weak var hand1Style: UIButton!
-    @IBOutlet weak var hand2Style: UIButton!
-    @IBOutlet weak var hand3Style: UIButton!
-    @IBOutlet weak var hand4Style: UIButton!
-    @IBOutlet weak var hand5Style: UIButton!
+    var countFinger: Int = 0
+    
     
     @IBAction func nextPage(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_12")
         self.present(vc!, animated: true, completion: nil)
     }
     
-    @IBAction func hand2(_ sender: Any) {
-        if currentColor == "red" {
-            countHands += 1
-            if countHands == 5 {
+    
+    @IBOutlet weak var finger1Style: UIButton!
+    @IBAction func finger1(_ sender: Any) {
+        if currentColor == "yellow" {
+            countFinger += 1
+            if countFinger == 2 {
                 btnNext.isHidden = false
             }
-        hand2Style.isHidden = true
-        }
-        else {
+            finger1Style.isHidden = true
+        } else {
             let alert = UIAlertController(title: "Wrong choice", message: "You choose wrong color", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
         }
     }
     
-    @IBAction func hand1(_ sender: Any) {
-        if currentColor == "blue" {
-            countHands += 1
-            if countHands == 5 {
+    @IBOutlet weak var finger2Style: UIButton!
+    @IBAction func finger2(_ sender: Any) {
+        if currentColor == "green" {
+            countFinger += 1
+            if countFinger == 2 {
                 btnNext.isHidden = false
             }
-        hand1Style.isHidden = true
-        }
-        else {
+        finger2Style.isHidden = true
+        } else {
             let alert = UIAlertController(title: "Wrong choice", message: "You choose wrong color", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
         }
     }
     
-    @IBAction func hand3(_ sender: Any) {
-        if currentColor == "red" {
-            countHands += 1
-            if countHands == 5 {
-                btnNext.isHidden = false
-            }
-        hand3Style.isHidden = true
-        }
-        else {
-            let alert = UIAlertController(title: "Wrong choice", message: "You choose wrong color", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
-            present(alert, animated: true, completion: nil)
-        }
+    @IBAction func finger3(_ sender: Any) {
+        wrongFingure()
     }
     
-    @IBAction func hand4(_ sender: Any) {
-        if currentColor == "blue" {
-            countHands += 1
-            if countHands == 5 {
-                btnNext.isHidden = false
-            }
-        hand4Style.isHidden = true
-        }
-        else {
-            let alert = UIAlertController(title: "Wrong choice", message: "You choose wrong color", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
-            present(alert, animated: true, completion: nil)
-        }
+    @IBAction func finger4(_ sender: Any) {
+        wrongFingure()
     }
     
+    @IBAction func finger5(_ sender: Any) {
+        wrongFingure()
+    }
     
-    @IBAction func hand5(_ sender: Any) {
-        if currentColor == "blue" {
-            countHands += 1
-            if countHands == 5 {
-                btnNext.isHidden = false
-            }
-        hand5Style.isHidden = true
-        }
-        else {
-            let alert = UIAlertController(title: "Wrong choice", message: "You choose wrong color", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
-            present(alert, animated: true, completion: nil)
-        }
+    func wrongFingure() {
+        let alert = UIAlertController(title: "Wrong choice", message: "You choose wrong finger", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     @IBOutlet weak var btnNext: UIButton!
     
-    @IBAction func colorRed(_ sender: Any) {
-        currentColor = "red"
+    @IBAction func yellowColor(_ sender: Any) {
+        currentColor = "yellow"
     }
     
-    @IBAction func colorBlue(_ sender: Any) {
-        currentColor = "blue"
+    @IBAction func greenColor(_ sender: Any) {
+        currentColor = "green"
     }
+    
+    
     
     func audioPlay() {
-        let path = Bundle.main.path(forResource: "p5lownote.mp3", ofType: nil)!
+        let path = Bundle.main.path(forResource: "conversation.mp3", ofType: nil)!
         let url = URL(fileURLWithPath: path)
         
         do {
@@ -130,4 +101,5 @@ class Chapter1_11: UIViewController, AVAudioPlayerDelegate {
         audioPlay()
         // Do any additional setup after loading the view.
     }
+
 }

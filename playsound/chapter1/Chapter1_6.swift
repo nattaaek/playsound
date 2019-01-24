@@ -1,15 +1,7 @@
-//
-//  Chapter1_10.swift
-//  playsound
-//
-//  Created by student on 8/6/18.
-//  Copyright © 2018 harvestidea. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 
-class Chapter1_10: UIViewController, AVAudioPlayerDelegate {
+class Chapter1_6: UIViewController, AVAudioPlayerDelegate, UIGestureRecognizerDelegate {
     
     var conversationSound: AVAudioPlayer = AVAudioPlayer()
     var answer : String = ""
@@ -18,36 +10,33 @@ class Chapter1_10: UIViewController, AVAudioPlayerDelegate {
     var isFinished = false
 
 
-    @IBOutlet weak var answer3: UIImageView!
-    @IBOutlet weak var answer2: UIImageView!
-    @IBOutlet weak var answer1: UIImageView!
+    @IBOutlet weak var answer3: UIButton!
+    @IBOutlet weak var answer2: UIButton!
+    @IBOutlet weak var answer1: UIButton!
     
+
+    @IBAction func retryMusic(_ sender: Any) {
+        audioPlay()
+    }
     
-    func nextPage(){
-        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "1_7")
+    @IBOutlet weak var btnNext: UIButton!
+    @IBAction func nextPage(_ sender: Any) {
+        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_7")
         self.present(storyboard!, animated: true, completion: nil)
     }
-    
-    func retryMusic(){
-        if answer3.image == UIImage(named: "retry.png")  {
-            audioPlay()
-        } else if answer2.image == UIImage(named: "retry.png") {
-            audioPlay()
-        } else {
-            audioPlay()
-        }
-    }
-    
     
     @IBOutlet weak var leg3: UIButton!
     @IBAction func leg3Answer(_ sender: Any) {
         answer = "low"
         if answer == currentAnswer {
-            answer3.image = UIImage(named: "correct.png")
-            nextPage()
+            answer3.setImage(UIImage(named: "correct.png"), for: .normal)
+            btnNext.isHidden = false
+            answer3.isUserInteractionEnabled = false
+            leg3.isHidden = true
+            head3.isHidden = true
+            audioPlay()
         } else {
-            answer3.image = UIImage(named: "retry.png")
-            retryMusic()
+            answer3.setImage(UIImage(named: "retry.png"), for: .normal)
         }
     }
     
@@ -56,11 +45,15 @@ class Chapter1_10: UIViewController, AVAudioPlayerDelegate {
     @IBAction func head3Answer(_ sender: Any) {
         answer = "high"
         if answer == currentAnswer {
-            answer3.image = UIImage(named: "correect.png")
-            nextPage()
+            answer3.setImage(UIImage(named: "correct.png"), for: .normal)
+            btnNext.isHidden = false
+            answer3.isUserInteractionEnabled = false
+            leg3.isHidden = true
+            head3.isHidden = true
+            audioPlay()
+
         } else {
-            answer3.image = UIImage(named: "retry.png")
-            retryMusic()
+            answer3.setImage(UIImage(named: "retry.png"), for: .normal)
         }
     }
     
@@ -69,12 +62,17 @@ class Chapter1_10: UIViewController, AVAudioPlayerDelegate {
     @IBAction func leg2(_ sender: Any) {
         answer = "low"
         if answer == currentAnswer {
-            answer2.image = UIImage(named: "correct.png")
+            answer2.setImage(UIImage(named: "correct.png"), for: .normal)
             leg3.isHidden = false
             head3.isHidden = false
+            answer2.isUserInteractionEnabled = false
+            leg2.isHidden = true
+            head2.isHidden = true
+            answer3.isHidden = false
+            audioPlay()
+
         } else {
-            answer2.image = UIImage(named: "retry.png")
-            retryMusic()
+            answer2.setImage(UIImage(named: "retry.png"), for: .normal)
         }
     }
     
@@ -82,12 +80,17 @@ class Chapter1_10: UIViewController, AVAudioPlayerDelegate {
     @IBAction func head2(_ sender: Any) {
         answer = "high"
         if answer == currentAnswer {
-            answer2.image = UIImage(named: "correct.png")
+            answer2.setImage(UIImage(named: "correct.png"), for: .normal)
             leg3.isHidden = false
             head3.isHidden = false
+            answer2.isUserInteractionEnabled = false
+            leg2.isHidden = true
+            head2.isHidden = true
+            answer3.isHidden = false
+            audioPlay()
+
         } else {
-            answer2.image = UIImage(named: "retry.png")
-            retryMusic()
+            answer2.setImage(UIImage(named: "retry.png"), for: .normal)
         }
     }
     
@@ -95,12 +98,18 @@ class Chapter1_10: UIViewController, AVAudioPlayerDelegate {
     @IBAction func leg1Answer(_ sender: Any) {
         answer = "low"
         if answer == currentAnswer {
-            answer1.image = UIImage(named: "correct.png")
+            answer1.setImage(UIImage(named: "correct.png"), for: .normal)
             leg2.isHidden = false
             head2.isHidden = false
+            leg1.isHidden = true
+            head1.isHidden = true
+            answer1.isUserInteractionEnabled = false
+            answer2.isHidden = false
+            audioPlay()
+
+
         } else {
-            answer1.image = UIImage(named: "retry.png")
-            retryMusic()
+            answer1.setImage(UIImage(named: "retry.png"), for: .normal)
         }
     }
     
@@ -109,25 +118,31 @@ class Chapter1_10: UIViewController, AVAudioPlayerDelegate {
     @IBAction func head1Answer(_ sender: Any) {
         answer  = "high"
         if answer == currentAnswer {
-            answer1.image = UIImage(named: "correct.png")
+            answer1.setImage(UIImage(named: "correct.png"), for: .normal)
             leg2.isHidden = false
             head2.isHidden = false
+            leg1.isHidden = true
+            head1.isHidden = true
+            answer1.isUserInteractionEnabled = false
+            answer2.isHidden = false
+            audioPlay()
+
+
         } else {
-            answer1.image = UIImage(named: "retry.png")
-            retryMusic()
+            answer1.setImage(UIImage(named: "retry.png"), for: .normal)
         }
     }
     
     func audioPlay() {
         var path: String
-
+        
         let num = arc4random_uniform(10) + 1
-            
+        print(num)
         if num >= 5 {
-            path = Bundle.main.path(forResource: "p5lownote.mp3", ofType: nil)!
+            path = Bundle.main.path(forResource: "p5.mp3", ofType: nil)!
             currentAnswer = "low"
         }else {
-            path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
+            path = Bundle.main.path(forResource: "p4.mp3", ofType: nil)!
             currentAnswer = "high"
         }
         
@@ -145,6 +160,9 @@ class Chapter1_10: UIViewController, AVAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         audioPlay()
+        btnNext.isHidden = true
+        answer2.isHidden = true
+        answer3.isHidden = true
     }
 
 }
