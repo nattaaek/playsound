@@ -2,16 +2,16 @@
 //  Chapter1_58.swift
 //  playsound
 //
-//  Created by SiRiPonG! on 25/12/18.
-//  Copyright © 2018 harvestidea. All rights reserved.
+//  Created by user150172 on 1/27/19.
+//  Copyright © 2019 harvestidea. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class Chapter1_58: UIViewController, AVAudioPlayerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+class Chapter1_58: UIViewController, AVAudioPlayerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
-  
+
     var currentColor: String = ""
     let colors = ["pink","blue","brown","cyan","green","magenta","orange","black","red","yellow","salmon","lavender"]
     
@@ -28,38 +28,38 @@ class Chapter1_58: UIViewController, AVAudioPlayerDelegate, UICollectionViewDele
         
         removeColor()
     }
-    @IBOutlet weak var blueOneButton: UIButton!
-    @IBAction func blueOneController(_ sender: Any) {
-        if currentColor == "blue" {            blueTwoButton.isHidden = false
-            blueOneButton.isHidden = true
+    @IBOutlet weak var redOneButton: UIButton!
+    @IBAction func redOneController(_ sender: Any) {
+        if currentColor == "red" {
+            redTwoButton.isHidden = false
+            redOneButton.isHidden = true
         } else {
             wrongChoice()
         }
     }
     
     
-    @IBOutlet weak var blueTwoButton: UIButton!
-    @IBAction func blueTwoController(_ sender: Any) {
-        if currentColor == "blue" {            blueThreeButton.isHidden = false
-            blueTwoButton.isHidden = true
+    @IBOutlet weak var redTwoButton: UIButton!
+    @IBAction func redTwoController(_ sender: Any) {
+        if currentColor == "blue" {
+            redThreeButton.isHidden = false
+            redTwoButton.isHidden = true
         } else {
             wrongChoice()
         }
     }
     
     
-    @IBOutlet weak var blueThreeButton: UIButton!
-    @IBAction func blueThreeController(_ sender: Any) {
-        if currentColor == "blue" {            nextBtn.isHidden = false
-            blueThreeButton.isHidden = true
+    @IBOutlet weak var redThreeButton: UIButton!
+    @IBAction func redThreeController(_ sender: Any) {
+        if currentColor == "purple" {
+            nextBtn.isHidden = false
+            redThreeButton.isHidden = true
         } else {
             wrongChoice()
         }
     }
     
-    @IBAction func wrongButton(_ sender: Any) {
-        wrongChoice()
-    }
     func wrongChoice() {
         let alert = UIAlertController(title: "error", message: "you doing wrong", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
@@ -69,7 +69,7 @@ class Chapter1_58: UIViewController, AVAudioPlayerDelegate, UICollectionViewDele
     @IBOutlet weak var nextBtn: UIButton!
     
     @IBAction func nextPage(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_59")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_58")
         self.present(vc!, animated: true, completion: nil)
     }
     
@@ -110,6 +110,9 @@ class Chapter1_58: UIViewController, AVAudioPlayerDelegate, UICollectionViewDele
     
     
     
+    @IBAction func wrongButton(_ sender: Any) {
+        wrongChoice()
+    }
     
     @IBOutlet weak var colorsPalette: UICollectionView!
     
@@ -132,7 +135,7 @@ class Chapter1_58: UIViewController, AVAudioPlayerDelegate, UICollectionViewDele
     
     func audioPlay() {
         
-        let path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
+        let path = Bundle.main.path(forResource: "conversation", ofType: "mp3")!
         let url = URL(fileURLWithPath: path)
         do {
             conversationSound = try AVAudioPlayer(contentsOf: url)

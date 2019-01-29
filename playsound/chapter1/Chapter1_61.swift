@@ -1,5 +1,5 @@
 //
-//  Chapter1_61.swift
+//  Chapter1_57.swift
 //  playsound
 //
 //  Created by SiRiPonG! on 25/12/18.
@@ -9,7 +9,8 @@
 import UIKit
 import AVFoundation
 
-class Chapter1_61: UIViewController, AVAudioPlayerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
+class Chapter1_61: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, AVAudioPlayerDelegate {
+
     var currentColor: String = ""
     let colors = ["pink","blue","brown","cyan","green","magenta","orange","black","red","yellow","salmon","lavender"]
     
@@ -26,20 +27,30 @@ class Chapter1_61: UIViewController, AVAudioPlayerDelegate, UICollectionViewData
         
         removeColor()
     }
-    @IBOutlet weak var brownOneButton: UIButton!
-    @IBAction func brownOneController(_ sender: Any) {
-        if currentColor == "brown" {           brownTwoButton.isHidden = false
-            brownOneButton.isHidden = true
+    @IBOutlet weak var redOneButton: UIButton!
+    @IBAction func redOneController(_ sender: Any) {
+        if currentColor == "red" {            redTwoButton.isHidden = false
+            redOneButton.isHidden = true
         } else {
             wrongChoice()
         }
     }
     
     
-    @IBOutlet weak var brownTwoButton: UIButton!
-    @IBAction func brownTwoController(_ sender: Any) {
-        if currentColor == "brown" {            nextBtn.isHidden = false
-            brownTwoButton.isHidden = true
+    @IBOutlet weak var redTwoButton: UIButton!
+    @IBAction func redTwoController(_ sender: Any) {
+        if currentColor == "red" {            redThreeButton.isHidden = false
+            redTwoButton.isHidden = true
+        } else {
+            wrongChoice()
+        }
+    }
+    
+    
+    @IBOutlet weak var redThreeButton: UIButton!
+    @IBAction func redThreeController(_ sender: Any) {
+        if currentColor == "red" {            nextBtn.isHidden = false
+            redThreeButton.isHidden = true
         } else {
             wrongChoice()
         }
@@ -151,4 +162,5 @@ class Chapter1_61: UIViewController, AVAudioPlayerDelegate, UICollectionViewData
         self.colorsPalette.delegate = self
         self.colorsPalette.dataSource = self
     }
+
 }

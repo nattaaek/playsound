@@ -2,17 +2,42 @@
 //  Chapter1_57.swift
 //  playsound
 //
-//  Created by SiRiPonG! on 25/12/18.
-//  Copyright © 2018 harvestidea. All rights reserved.
+//  Created by user150172 on 1/27/19.
+//  Copyright © 2019 harvestidea. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class Chapter1_57: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, AVAudioPlayerDelegate {
+class Chapter1_57: UIViewController, AVAudioPlayerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
 
+
+    
+    func removeColor() {
+        if isShow == 0 {
+            colorPalette.isHidden = true
+            isShow = 1
+        }
+        else {
+            colorPalette.isHidden = false
+            isShow = 0
+        }
+    }
+    
+    @IBAction func nextPage(_ sender: Any) {
+        if currentColor == "purple" {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_58")
+            self.present(vc!, animated: true, completion: nil)
+        }
+        else {
+            let alert = UIAlertController(title: "Wrong color", message: "you choose wrong color", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     var currentColor: String = ""
-    let colors = ["pink","blue","brown","cyan","green","magenta","orange","black","red","yellow","salmon","lavender"]
+    let colors = ["pink","blue","brown","cyan","green","magenta","orange","purple","red","yellow","salmon","lavender"]
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -24,53 +49,13 @@ class Chapter1_57: UIViewController,UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         currentColor = colors[indexPath.row]
-        
         removeColor()
-    }
-    @IBOutlet weak var redOneButton: UIButton!
-    @IBAction func redOneController(_ sender: Any) {
-        if currentColor == "red" {            redTwoButton.isHidden = false
-            redOneButton.isHidden = true
-        } else {
-            wrongChoice()
-        }
-    }
-    
-    
-    @IBOutlet weak var redTwoButton: UIButton!
-    @IBAction func redTwoController(_ sender: Any) {
-        if currentColor == "red" {            redThreeButton.isHidden = false
-            redTwoButton.isHidden = true
-        } else {
-            wrongChoice()
-        }
-    }
-    
-    
-    @IBOutlet weak var redThreeButton: UIButton!
-    @IBAction func redThreeController(_ sender: Any) {
-        if currentColor == "red" {            nextBtn.isHidden = false
-            redThreeButton.isHidden = true
-        } else {
-            wrongChoice()
-        }
-    }
-    
-    func wrongChoice() {
-        let alert = UIAlertController(title: "error", message: "you doing wrong", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Try again", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    @IBOutlet weak var nextBtn: UIButton!
-    
-    @IBAction func nextPage(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_58")
-        self.present(vc!, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = colorsPalette.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        
+        
         
         switch colors[indexPath.row] {
         case "pink":
@@ -87,8 +72,8 @@ class Chapter1_57: UIViewController,UICollectionViewDelegate, UICollectionViewDa
             cell.backgroundColor = UIColor.magenta
         case "orange":
             cell.backgroundColor = UIColor.orange
-        case "black":
-            cell.backgroundColor = UIColor.black
+        case "purple":
+            cell.backgroundColor = UIColor.purple
         case "red":
             cell.backgroundColor = UIColor.red
         case "yellow":
@@ -104,11 +89,6 @@ class Chapter1_57: UIViewController,UICollectionViewDelegate, UICollectionViewDa
         return cell
     }
     
-    
-    
-    @IBAction func wrongButton(_ sender: Any) {
-        wrongChoice()
-    }
     
     @IBOutlet weak var colorsPalette: UICollectionView!
     
@@ -131,7 +111,7 @@ class Chapter1_57: UIViewController,UICollectionViewDelegate, UICollectionViewDa
     
     func audioPlay() {
         
-        let path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
+        let path = Bundle.main.path(forResource: "conversation", ofType: "mp3")!
         let url = URL(fileURLWithPath: path)
         do {
             conversationSound = try AVAudioPlayer(contentsOf: url)
@@ -143,20 +123,8 @@ class Chapter1_57: UIViewController,UICollectionViewDelegate, UICollectionViewDa
         
     }
     
-    func removeColor() {
-        if isShow == 0 {
-            colorPalette.isHidden = true
-            isShow = 1
-        }
-        else {
-            colorPalette.isHidden = false
-            isShow = 0
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextBtn.isHidden = true
         colorPalette.isHidden = true
         audioPlay()
         self.colorsPalette.delegate = self

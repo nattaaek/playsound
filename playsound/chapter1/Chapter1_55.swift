@@ -20,7 +20,7 @@ class Chapter1_55: UIViewController, AVAudioPlayerDelegate {
     }
     
     func playConversationSound()  {
-        let path = Bundle.main.path(forResource: "p4highnote.mp3", ofType: nil)!
+        let path = Bundle.main.path(forResource: "conversation", ofType: "mp3")!
         let url = URL(fileURLWithPath: path)
         do {
             conversationPlayer = try AVAudioPlayer(contentsOf: url)

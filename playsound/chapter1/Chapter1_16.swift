@@ -1,16 +1,9 @@
-//
-//  Chapter1_22.swift
-//  playsound
-//
-//  Created by student on 8/7/18.
-//  Copyright © 2018 harvestidea. All rights reserved.
-//
 
 import UIKit
 import AVFoundation
 
 class Chapter1_16: UIViewController, AVAudioPlayerDelegate {
-
+    
     var  conversationSound: AVAudioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var btnNext: UIButton!
@@ -45,3 +38,4 @@ class Chapter1_16: UIViewController, AVAudioPlayerDelegate {
     }
     
 }
+

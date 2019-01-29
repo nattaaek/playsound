@@ -1,62 +1,18 @@
 //
-//  Chapter1_54.swift
+//  Chapter1_52.swift
 //  playsound
 //
-//  Created by user146100 on 10/21/18.
+//  Created by student on 10/2/18.
 //  Copyright © 2018 harvestidea. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class Chapter1_54: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, AVAudioPlayerDelegate {
+class Chapter1_54: UIViewController, AVAudioPlayerDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
     var currentColor: String = ""
-    let colors = ["pink","blue","purple","cyan","green","magenta","orange","black","red","yellow","salmon","lavender"]
-    var colorsCount = 0
-    
-    
-    @IBOutlet weak var redCatButton: UIButton!
-    @IBAction func redCatButton(_ sender: Any) {
-        if currentColor == "red"{
-            colorsCount += 1
-            redCatButton.isHidden = true
-        }else {
-            let alert = UIAlertController(title: "Wrong color", message: "Please try again", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
-    
-    
-    @IBOutlet weak var blueDogButton: UIButton!
-    @IBAction func blueDogButton(_ sender: Any) {
-        if currentColor == "blue"{
-            colorsCount += 1
-            blueDogButton.isHidden = true
-        }else {
-            let alert = UIAlertController(title: "Wrong color", message: "Please try again", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
-    
-    @IBOutlet weak var elephantPurpleButton: UIButton!
-    @IBAction func elephantPurpleButton(_ sender: Any) {
-        if currentColor == "purple"{
-            colorsCount += 1
-            elephantPurpleButton.isHidden = true
-        }else {
-            let alert = UIAlertController(title: "Wrong color", message: "Please try again", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        
-        if colorsCount == 3 {
-            nextBtn.isHidden = false
-        }
-    }
-    
+    let colors = ["pink","blue","brown","cyan","green","magenta","orange","black","red","yellow","salmon","lavender"]
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -71,11 +27,27 @@ class Chapter1_54: UIViewController,UICollectionViewDelegate, UICollectionViewDa
         
         removeColor()
     }
-
+    var cnt = 0
+    @IBAction func blackBtn(_ sender: Any) {
+        
+        if currentColor == "black" {
+            cnt += 1
+        } else {
+            let alert = UIAlertController(title: "Wrong Color", message: "you choose wrong color", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "try again", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        if cnt == 2 {
+            nextBtn.isHidden = false
+        }
+    }
+    
+    
     @IBOutlet weak var nextBtn: UIButton!
     
     @IBAction func nextPage(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_55")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_49")
         self.present(vc!, animated: true, completion: nil)
     }
     
@@ -87,8 +59,8 @@ class Chapter1_54: UIViewController,UICollectionViewDelegate, UICollectionViewDa
             cell.backgroundColor = UIColor(red: 255/255, green: 192/255, blue: 203/255, alpha: 1.0)
         case "blue":
             cell.backgroundColor = UIColor.blue
-        case "purple":
-            cell.backgroundColor = UIColor.purple
+        case "brown":
+            cell.backgroundColor = UIColor.brown
         case "cyan":
             cell.backgroundColor = UIColor.cyan
         case "green":

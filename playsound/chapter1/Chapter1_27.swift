@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class Chapter1_27: UIViewController, AVAudioPlayerDelegate {
-
+    
     var conversationSound: AVAudioPlayer = AVAudioPlayer()
     
     @IBAction func nextPage(_ sender: Any) {
@@ -43,3 +43,4 @@ class Chapter1_27: UIViewController, AVAudioPlayerDelegate {
         
     }
 }
+
