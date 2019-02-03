@@ -7,24 +7,40 @@
 //
 
 import UIKit
+import AVFoundation
+import AudioKit
 
-class Chapter1_80: UIViewController {
+class Chapter1_80: UIViewController, AVAudioPlayerDelegate {
+    
+    @IBOutlet weak var btnNext: UIButton!
+    var tracker: AKFrequencyTracker!
+    var silence: AKBooster!
+    var microphone: AKMicrophone!
 
+    var count = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        btnNext.isHidden = true
+        microphone = AKMicrophone()
+        let filter = AKHighPassFilter(microphone, cutoffFrequency: 400.0, resonance: 0)
+        tracker = AKFrequencyTracker(filter)
+        silence = AKBooster(tracker, gain: 0)
+        
+        AKSettings.audioInputEnabled = true
+        AudioKit.output = silence
+        try! AudioKit.start()
+            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
+                if self.tracker.frequency >= 330 && self.tracker.frequency <= 328 {
+                    self.count  +=  1
+                    if self.count >= 3 {
+                        self.btnNext.isHidden = false
+                        timer.invalidate()
+                    }
+                }
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func nextPage(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_81")
+        self.present(vc!, animated: true, completion: nil)
     }
-    */
-
 }

@@ -433,6 +433,18 @@ class Chapter1_47: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDeleg
             }
         }
     
+    
+    func audioPlayerDidFinishPlaying(accompPlayer : AVAudioPlayer, successfully flag: Bool) {
+        let alert = UIAlertController(title: "test", message: "test", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "tryagain", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    //Perform get score
+    func performSong() {
+        backgroundPlay()
+    }
+    
     func playSelectedSong() {
         let songURL = Bundle.main.url(forResource: "StrongBeat", withExtension: "wav")
         do{
