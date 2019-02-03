@@ -177,13 +177,13 @@
 		8404A9F821EA250E000DA268 /* p.10_High_Note_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9BC21EA24FD000DA268 /* p.10_High_Note_2.mp3 */; };
 		8404A9F921EA250E000DA268 /* p.7_Low_Note 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9BD21EA24FE000DA268 /* p.7_Low_Note 2.mp3 */; };
 		8404A9FA21EA250E000DA268 /* p71.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9BE21EA24FF000DA268 /* p71.mp3 */; };
-		8404A9FB21EA250E000DA268 /* p.50_Little_Worm_Melody.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9BF21EA2500000DA268 /* p.50_Little_Worm_Melody.mp3 */; };
+		8404A9FB21EA250E000DA268 /* p50melody.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9BF21EA2500000DA268 /* p50melody.mp3 */; };
 		8404A9FC21EA250E000DA268 /* p5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9C021EA2500000DA268 /* p5.mp3 */; };
 		8404A9FD21EA250E000DA268 /* p.42_Little_Worm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9C121EA2501000DA268 /* p.42_Little_Worm.mp3 */; };
 		8404A9FE21EA250E000DA268 /* p.37_Low_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9C221EA2501000DA268 /* p.37_Low_2.mp3 */; };
 		8404A9FF21EA250E000DA268 /* p55.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9C321EA2502000DA268 /* p55.mp3 */; };
 		8404AA0021EA250E000DA268 /* p5222.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9C421EA2502000DA268 /* p5222.mp3 */; };
-		8404AA0121EA250E000DA268 /* p.50_Little_Worm_BT.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9C521EA2503000DA268 /* p.50_Little_Worm_BT.mp3 */; };
+		8404AA0121EA250E000DA268 /* p50bt.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9C521EA2503000DA268 /* p50bt.mp3 */; };
 		8404AA0221EA250E000DA268 /* p.27_2Key.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9C621EA2504000DA268 /* p.27_2Key.mp3 */; };
 		8404AA0321EA250E000DA268 /* p.35_High.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9C721EA2504000DA268 /* p.35_High.mp3 */; };
 		8404AA0421EA250E000DA268 /* p.30_3Key.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8404A9C821EA2504000DA268 /* p.30_3Key.mp3 */; };
@@ -453,13 +453,13 @@
 		8404A9BC21EA24FD000DA268 /* p.10_High_Note_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p.10_High_Note_2.mp3; sourceTree = "<group>"; };
 		8404A9BD21EA24FE000DA268 /* p.7_Low_Note 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "p.7_Low_Note 2.mp3"; sourceTree = "<group>"; };
 		8404A9BE21EA24FF000DA268 /* p71.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p71.mp3; sourceTree = "<group>"; };
-		8404A9BF21EA2500000DA268 /* p.50_Little_Worm_Melody.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p.50_Little_Worm_Melody.mp3; sourceTree = "<group>"; };
+		8404A9BF21EA2500000DA268 /* p50melody.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p50melody.mp3; sourceTree = "<group>"; };
 		8404A9C021EA2500000DA268 /* p5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p5.mp3; sourceTree = "<group>"; };
 		8404A9C121EA2501000DA268 /* p.42_Little_Worm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p.42_Little_Worm.mp3; sourceTree = "<group>"; };
 		8404A9C221EA2501000DA268 /* p.37_Low_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p.37_Low_2.mp3; sourceTree = "<group>"; };
 		8404A9C321EA2502000DA268 /* p55.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p55.mp3; sourceTree = "<group>"; };
 		8404A9C421EA2502000DA268 /* p5222.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p5222.mp3; sourceTree = "<group>"; };
-		8404A9C521EA2503000DA268 /* p.50_Little_Worm_BT.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p.50_Little_Worm_BT.mp3; sourceTree = "<group>"; };
+		8404A9C521EA2503000DA268 /* p50bt.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p50bt.mp3; sourceTree = "<group>"; };
 		8404A9C621EA2504000DA268 /* p.27_2Key.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p.27_2Key.mp3; sourceTree = "<group>"; };
 		8404A9C721EA2504000DA268 /* p.35_High.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p.35_High.mp3; sourceTree = "<group>"; };
 		8404A9C821EA2504000DA268 /* p.30_3Key.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = p.30_3Key.mp3; sourceTree = "<group>"; };
@@ -770,8 +770,8 @@
 				8404A9B621EA24F7000DA268 /* p.46_Classical_ Music.mp3 */,
 				8404A9AD21EA24EB000DA268 /* p.47_Classical_ Music.mp3 */,
 				8404A9A721EA24E6000DA268 /* P.48_Classical_ Music.mp3 */,
-				8404A9C521EA2503000DA268 /* p.50_Little_Worm_BT.mp3 */,
-				8404A9BF21EA2500000DA268 /* p.50_Little_Worm_Melody.mp3 */,
+				8404A9C521EA2503000DA268 /* p50bt.mp3 */,
+				8404A9BF21EA2500000DA268 /* p50melody.mp3 */,
 				8404A99F21EA24DE000DA268 /* p.50_Little_Worm.mp3 */,
 				8404A9A621EA24E6000DA268 /* p52.mp3 */,
 				8404A9B121EA24EF000DA268 /* p5212.mp3 */,
@@ -1064,7 +1064,7 @@
 				3FB8279B213E7537008F1196 /* Artboard 82.png in Resources */,
 				8404A9DC21EA250E000DA268 /* p.8_High_Note.mp3 in Resources */,
 				CC4F43EB21DE197400A2D809 /* awsconfiguration.json in Resources */,
-				8404A9FB21EA250E000DA268 /* p.50_Little_Worm_Melody.mp3 in Resources */,
+				8404A9FB21EA250E000DA268 /* p50melody.mp3 in Resources */,
 				3F3560492118342F000BEFF2 /* right-arrow.png in Resources */,
 				3F84F5D321C39A37002660EC /* SubBeat.wav in Resources */,
 				8404AA0821EA250E000DA268 /* p.30_2Key.mp3 in Resources */,
@@ -1132,7 +1132,7 @@
 				CC4F43EF21DF2F3300A2D809 /* bg.wav in Resources */,
 				8404A9E321EA250E000DA268 /* P.48_Classical_ Music.mp3 in Resources */,
 				3FB8279A213E7537008F1196 /* Artboard 85.png in Resources */,
-				8404AA0121EA250E000DA268 /* p.50_Little_Worm_BT.mp3 in Resources */,
+				8404AA0121EA250E000DA268 /* p50bt.mp3 in Resources */,
 				3F355FEE21180B59000BEFF2 /* Artboard 7.png in Resources */,
 				8404A9FF21EA250E000DA268 /* p55.mp3 in Resources */,
 				8AB9120E21FD2FFC008CC08C /* Artboard 55.png in Resources */,

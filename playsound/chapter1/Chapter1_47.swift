@@ -16,6 +16,7 @@ class Chapter1_47: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDeleg
     var audioPlayer = AVAudioPlayer()
     var songPlayer = AVAudioPlayer()
     var accompPlayer = AVAudioPlayer()
+    var performPlayer = AVAudioPlayer()
     var recordPlayer : AVAudioRecorder!
     var recordSession : AVAudioSession!
     var tracker: AKFrequencyTracker!
@@ -109,7 +110,7 @@ class Chapter1_47: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDeleg
     //perform Button
     @IBAction func performButton(_ sender: Any) {
         praceticeBool = false
-        songPlay()
+        performSong()
     }
     
     //Record Sound Section
@@ -434,15 +435,36 @@ class Chapter1_47: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDeleg
         }
     
     
-    func audioPlayerDidFinishPlaying(accompPlayer : AVAudioPlayer, successfully flag: Bool) {
-        let alert = UIAlertController(title: "test", message: "test", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "tryagain", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+    func audioPlayerDidFinishPlaying( _ performPlayer : AVAudioPlayer , successfully flag: Bool) {
+        
+            print("test")
+        
     }
     
     //Perform get score
     func performSong() {
-        backgroundPlay()
+        var index = 0
+        self.performPlay()
+        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { (timer) in
+            if self.tracker.frequency <= 277 && self.tracker.frequency >= 246 && (index >= 0 && index <= 2) || (index >= 8 && index <= 10){
+                self.changeLabelGuide(index: index, isCorrect: true)
+                index += 1
+                self.guideTabChangeController(index: index)
+            } else if self.tracker.frequency <= 311 && self.tracker.frequency >= 276 && (index >= 4 && index <= 6) || (index >= 12 && index <= 14) {
+                self.changeLabelGuide(index: index, isCorrect: true)
+                index += 1
+                self.guideTabChangeController(index: index)
+            } else if index == 3 || index == 7 || index == 11 || index == 15{
+                self.changeLabelGuide(index: index, isCorrect: true)
+                index += 1
+                self.guideTabChangeController(index: index)
+            } else if index == self.songsWithMetronome.count{
+                timer.invalidate()
+            } else {
+                self.changeLabelGuide(index: index, isCorrect: false)
+                index += 1
+            }
+        }
     }
     
     func playSelectedSong() {
@@ -487,12 +509,27 @@ class Chapter1_47: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDeleg
             else { return }
         do {
             try accompPlayer = AVAudioPlayer(contentsOf: melodySound)
+            accompPlayer.delegate = self
+
         } catch let error {
             print(error.localizedDescription)
         }
-        
         accompPlayer.prepareToPlay()
         accompPlayer.play()
+    }
+    
+    func performPlay() {
+        guard let melodySound = Bundle.main.url(forResource: "p50bt", withExtension: "mp3")
+            else { return }
+        do {
+            try performPlayer = AVAudioPlayer(contentsOf: melodySound)
+            performPlayer.delegate = self
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        performPlayer.prepareToPlay()
+        performPlayer.play()
     }
     
     func hideGuideTab() {
