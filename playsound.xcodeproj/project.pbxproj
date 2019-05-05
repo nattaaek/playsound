@@ -1217,7 +1217,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-playsound/Pods-playsound-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-playsound/Pods-playsound-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework",
@@ -1234,7 +1234,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-playsound/Pods-playsound-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-playsound/Pods-playsound-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		609658C3A1CECB72B7ACEA59 /* [CP] Check Pods Manifest.lock */ = {
