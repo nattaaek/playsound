@@ -1,0 +1,6 @@
+framework module Pods_playsoundUITests {
+  umbrella header "Pods-playsoundUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
