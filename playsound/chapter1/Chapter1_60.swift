@@ -21,7 +21,7 @@ class Chapter1_60: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDeleg
     var silence: AKBooster!
     var microphone: AKMicrophone!
     
-        let songsWithMetronome = ["StrongBeat","SubBeat","SubBeat","SubBeat","StrongBeat","SubBeat","SubBeat","SubBeat","C","C","C","SubBeat","D","D","D","SubBeat","C","C","C","SubBeat","D","D","D","SubBeat"]
+        let songsWithMetronome = ["StrongBeat","SubBeat","SubBeat","SubBeat","StrongBeat","SubBeat","SubBeat","SubBeat","C","D","E","SubBeat","E","D","C","SubBeat","C","D","E","SubBeat","E","D","C","SubBeat"]
     
     var praceticeBool = false
     
