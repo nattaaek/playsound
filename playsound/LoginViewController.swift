@@ -17,6 +17,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,6 +73,11 @@ class LoginViewController: UIViewController {
         loginButton.frame.size.height = height;
         loginButton.setTitle("LOGIN", for: UIControl.State.normal)
         loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: textWidth)
+    }
+    
+    
+    @IBAction func doLogin(_ sender: Any) {
+
     }
     
     @objc func dismissKeyboard() {
