@@ -15,7 +15,7 @@ class Chapter1_47: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDeleg
     // declare variable
     var audioPlayer = AVAudioPlayer()
     var songPlayer = AVAudioPlayer()
-    var accompPlayer = AVAudioPlayer()
+    var accompPlayer : AVAudioPlayer?
     var performPlayer = AVAudioPlayer()
     var recordPlayer : AVAudioRecorder!
     var recordSession : AVAudioSession!
@@ -93,7 +93,7 @@ class Chapter1_47: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDeleg
     @IBAction func practiceStopButton(_ sender: Any) {
         songPlayer.stop()
         audioPlayer.stop()
-        accompPlayer.stop()
+        accompPlayer?.stop()
     }
     
     //menu Practice View
@@ -500,8 +500,8 @@ class Chapter1_47: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDeleg
             print(error.localizedDescription)
         }
         
-        accompPlayer.prepareToPlay()
-        accompPlayer.play()
+        accompPlayer?.prepareToPlay()
+        accompPlayer?.play()
     }
     
     func melodyPlay() {
@@ -509,13 +509,13 @@ class Chapter1_47: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDeleg
             else { return }
         do {
             try accompPlayer = AVAudioPlayer(contentsOf: melodySound)
-            accompPlayer.delegate = self
+            accompPlayer?.delegate = self
 
         } catch let error {
             print(error.localizedDescription)
         }
-        accompPlayer.prepareToPlay()
-        accompPlayer.play()
+        accompPlayer?.prepareToPlay()
+        accompPlayer?.play()
     }
     
     func performPlay() {
