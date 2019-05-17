@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DQb-ch-cZT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xlO-fV-MCa">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="2Ph-S0-6i6">
             <objects>
-                <viewController id="xlO-fV-MCa" customClass="LoginViewController" customModule="playsound" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="xlO-fV-MCa" customClass="LoginViewController" customModule="playsound" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0hw-Q9-VM2"/>
                         <viewControllerLayoutGuide type="bottom" id="2AP-cg-vz3"/>
