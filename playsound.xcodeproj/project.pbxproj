@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22B4229E228EF6C800D5FAEB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4229D228EF6C800D5FAEB /* RegisterViewController.swift */; };
+		22B422A0228EFC0100D5FAEB /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B4229F228EFC0000D5FAEB /* user.png */; };
+		22B422A4228F090B00D5FAEB /* playsound-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 22B422A3228F090B00D5FAEB /* playsound-logo.png */; };
 		3F355FE821180B59000BEFF2 /* Artboard 33.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F355FC721180B57000BEFF2 /* Artboard 33.png */; };
 		3F355FE921180B59000BEFF2 /* Artboard 28.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F355FC821180B57000BEFF2 /* Artboard 28.png */; };
 		3F355FEA21180B59000BEFF2 /* Artboard 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F355FC921180B57000BEFF2 /* Artboard 3.png */; };
@@ -274,6 +277,9 @@
 /* Begin PBXFileReference section */
 		0C0647321426F8D529A80804 /* Pods_playsound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playsound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103F1915D44ABD7B20E9B4B7 /* Pods-playsoundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playsoundUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-playsoundUITests/Pods-playsoundUITests.release.xcconfig"; sourceTree = "<group>"; };
+		22B4229D228EF6C800D5FAEB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		22B4229F228EFC0000D5FAEB /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		22B422A3228F090B00D5FAEB /* playsound-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "playsound-logo.png"; path = "../../../../Downloads/playsound-logo.png"; sourceTree = "<group>"; };
 		233A92ACE8379EB06529AC43 /* Pods-playsoundUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playsoundUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-playsoundUITests/Pods-playsoundUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F355FC721180B57000BEFF2 /* Artboard 33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard 33.png"; sourceTree = "<group>"; };
 		3F355FC821180B57000BEFF2 /* Artboard 28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Artboard 28.png"; sourceTree = "<group>"; };
@@ -807,6 +813,8 @@
 		3F35604721183424000BEFF2 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				22B422A3228F090B00D5FAEB /* playsound-logo.png */,
+				22B4229F228EFC0000D5FAEB /* user.png */,
 				84193A8721EF8E4D00C7964E /* retry.png */,
 				3FDAE86B21193E8B00173A3C /* correct.png */,
 				3F3560482118342F000BEFF2 /* right-arrow.png */,
@@ -848,6 +856,7 @@
 				3F7F1AB52112B1F000A48E23 /* AppDelegate.swift */,
 				3F35600921180C8A000BEFF2 /* chapter1 */,
 				3F7F1AB92112B1F000A48E23 /* Main.storyboard */,
+				22B4229D228EF6C800D5FAEB /* RegisterViewController.swift */,
 				CC4F43EC21DE302D00A2D809 /* LoginViewController.swift */,
 				3F7F1ABC2112B1F000A48E23 /* Assets.xcassets */,
 				3F7F1ABE2112B1F000A48E23 /* LaunchScreen.storyboard */,
@@ -985,23 +994,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = harvestidea;
 				TargetAttributes = {
 					3F7F1AB12112B1F000A48E23 = {
 						CreatedOnToolsVersion = 8.3.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					3F7F1AC52112B1F000A48E23 = {
 						CreatedOnToolsVersion = 8.3.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3F7F1AB12112B1F000A48E23;
 					};
 					3F7F1AD02112B1F000A48E23 = {
 						CreatedOnToolsVersion = 8.3.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3F7F1AB12112B1F000A48E23;
 					};
@@ -1009,7 +1018,7 @@
 			};
 			buildConfigurationList = 3F7F1AAD2112B1F000A48E23 /* Build configuration list for PBXProject "playsound" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -1110,6 +1119,7 @@
 				8404AA0321EA250E000DA268 /* p.35_High.mp3 in Resources */,
 				8404AA1321EA250E000DA268 /* P.22_Classical_ Music.mp3 in Resources */,
 				8404AA0B21EA250E000DA268 /* p75.mp3 in Resources */,
+				22B422A4228F090B00D5FAEB /* playsound-logo.png in Resources */,
 				CCE657E621D244660079D921 /* E.wav in Resources */,
 				3FB82796213E7537008F1196 /* Artboard 84.png in Resources */,
 				3F355FFC21180B59000BEFF2 /* Artboard 8.png in Resources */,
@@ -1166,6 +1176,7 @@
 				8404A9E921EA250E000DA268 /* p.47_Classical_ Music.mp3 in Resources */,
 				3FB82786213E7537008F1196 /* Artboard 77.png in Resources */,
 				3FB82761213E5EA9008F1196 /* Artboard 15.png in Resources */,
+				22B422A0228EFC0100D5FAEB /* user.png in Resources */,
 				3FEC61A7211C054400B05A12 /* Artboard 42.png in Resources */,
 				8404A9DE21EA250E000DA268 /* P.17_Classical_ Music.mp3 in Resources */,
 				8404A9E021EA250E000DA268 /* p70.mp3 in Resources */,
@@ -1217,7 +1228,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-playsound/Pods-playsound-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-playsound/Pods-playsound-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework",
@@ -1234,7 +1245,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-playsound/Pods-playsound-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-playsound/Pods-playsound-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		609658C3A1CECB72B7ACEA59 /* [CP] Check Pods Manifest.lock */ = {
@@ -1349,6 +1360,7 @@
 				3FEC61C0211C05D600B05A12 /* Chapter1_32.swift in Sources */,
 				CC4F43E121D27A8B00A2D809 /* Chapter1_65.swift in Sources */,
 				8AB3249221FD817D00510F7A /* Chapter1_52.swift in Sources */,
+				22B4229E228EF6C800D5FAEB /* RegisterViewController.swift in Sources */,
 				CCE657E021D23D240079D921 /* Chapter1_55.swift in Sources */,
 				3FEC6196211BF72600B05A12 /* Chapter1_29.swift in Sources */,
 				8AB324A421FD944C00510F7A /* Chapter1_72.swift in Sources */,
@@ -1439,6 +1451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1498,6 +1511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1559,7 +1573,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.th.harvestidea.playsound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1576,7 +1590,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.th.harvestidea.playsound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1590,7 +1604,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.th.harvestidea.playsoundTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/playsound.app/playsound";
 			};
 			name = Debug;
@@ -1605,7 +1619,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.th.harvestidea.playsoundTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/playsound.app/playsound";
 			};
 			name = Release;
@@ -1619,7 +1633,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.th.harvestidea.playsoundUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = playsound;
 			};
 			name = Debug;
@@ -1633,7 +1647,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.th.harvestidea.playsoundUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = playsound;
 			};
 			name = Release;
