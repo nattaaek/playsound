@@ -28,8 +28,9 @@ class Chapter1_5: UIViewController, AVAudioPlayerDelegate {
     
     // action
     @IBAction func nextPage(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_6")
-        self.present(vc!, animated: true, completion: nil)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_6") as! Chapter1_6
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     func audioPlay() {

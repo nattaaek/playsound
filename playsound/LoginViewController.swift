@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AWSDynamoDB
 
 class LoginViewController: UIViewController {
 

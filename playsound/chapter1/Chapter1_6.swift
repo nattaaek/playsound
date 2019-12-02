@@ -21,8 +21,9 @@ class Chapter1_6: UIViewController, AVAudioPlayerDelegate, UIGestureRecognizerDe
     
     @IBOutlet weak var btnNext: UIButton!
     @IBAction func nextPage(_ sender: Any) {
-        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_7")
-        self.present(storyboard!, animated: true, completion: nil)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_7") as! Chapter1_7
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBOutlet weak var leg3: UIButton!
@@ -137,7 +138,6 @@ class Chapter1_6: UIViewController, AVAudioPlayerDelegate, UIGestureRecognizerDe
         var path: String
         
         let num = arc4random_uniform(10) + 1
-        print(num)
         if num >= 5 {
             path = Bundle.main.path(forResource: "p5.mp3", ofType: nil)!
             currentAnswer = "low"
@@ -161,6 +161,10 @@ class Chapter1_6: UIViewController, AVAudioPlayerDelegate, UIGestureRecognizerDe
         super.viewDidLoad()
         audioPlay()
         btnNext.isHidden = true
+        head2.isHidden = true
+        head3.isHidden = true
+        leg2.isHidden = true
+        leg3.isHidden = true
         answer2.isHidden = true
         answer3.isHidden = true
     }

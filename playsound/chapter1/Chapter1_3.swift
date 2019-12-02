@@ -2,7 +2,7 @@
 //  Chapter1_3.swift
 //  playsound
 //
-//  Created by student on 8/6/18.
+//  Created by Nattaaek Wattanuyan on 8/6/18.
 //  Copyright © 2018 harvestidea. All rights reserved.
 //
 
@@ -24,9 +24,10 @@ class Chapter1_3: UIViewController, AVAudioPlayerDelegate {
     
     //Action
     @IBAction func nextPage(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_4")
-        self.present(vc!, animated: true, completion: nil)
-    
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "chapter1_4") as! Chapter1_4
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        conversationSound.stop()
     }
     
     func audioPlay() {
@@ -44,8 +45,4 @@ class Chapter1_3: UIViewController, AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying( _ player: AVAudioPlayer, successfully flag: Bool) {
         btnNext.isHidden = false
     }
-    
-    
-
-
 }
